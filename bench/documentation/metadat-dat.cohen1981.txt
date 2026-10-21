@@ -1,0 +1,83 @@
+_S_t_u_d_i_e_s _o_n _t_h_e _R_e_l_a_t_i_o_n_s_h_i_p _b_e_t_w_e_e_n _C_o_u_r_s_e _I_n_s_t_r_u_c_t_o_r _R_a_t_i_n_g_s _a_n_d
+_S_t_u_d_e_n_t _A_c_h_i_e_v_e_m_e_n_t
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Results from 20 studies on the correlation between course
+     instructor ratings and student achievement.
+
+_U_s_a_g_e:
+
+     dat.cohen1981
+     
+_F_o_r_m_a_t:
+
+     The data frame contains the following columns:
+
+       *study*    'character'  study author(s) and year                      
+       *sample*   'character'  course type                                   
+       *control*  'character'  ability control                               
+       *ni*       'numeric'    sample size of the study (number of sections) 
+       *ri*       'numeric'    observed correlation                          
+      
+_D_e_t_a_i_l_s:
+
+     The studies included in this dataset examined to what extent
+     students' ratings of a course instructor correlated with their
+     achievement in the course. Instead of correlating individual
+     ratings and achievement scores, the studies were carried out in
+     multisection courses, in which the sections had different
+     instructors but all sections used a common achievement measure
+     (e.g., a final exam). The correlation coefficients reflect the
+     correlation between the mean instructor rating and the mean
+     achievement score of each section. Hence, the unit of analysis are
+     the sections, not the individuals.
+
+     Note that this dataset (extracted from Table A.3 in Cooper &
+     Hedges, 1994) only contains studies with at least 10 sections.
+
+_C_o_n_c_e_p_t_s:
+
+     education, correlation coefficients
+
+_A_u_t_h_o_r(_s):
+
+     Wolfgang Viechtbauer, <mailto:wvb@metafor-project.org>,
+     <https://www.metafor-project.org>
+
+_S_o_u_r_c_e:
+
+     Cooper, H., & Hedges, L. V. (1994). Appendix A: Data Sets. In H.
+     Cooper & L. V. Hedges (Eds.), _The handbook of research synthesis_
+     (pp. 543-547). New York: Russell Sage Foundation.
+
+_R_e_f_e_r_e_n_c_e_s:
+
+     Cohen, P. A. (1981). Student ratings of instruction and student
+     achievement: A meta-analysis of multisection validity studies.
+     _Review of Educational Research_, *51*(3), 281-309.
+     https://doi.org/10.3102/00346543051003281
+
+_E_x_a_m_p_l_e_s:
+
+     ### copy data into 'dat' and examine data
+     dat <- dat.cohen1981
+     dat[c(1,4,5)]
+     
+     ## Not run:
+     
+     ### load metafor package
+     library(metafor)
+     
+     ### calculate r-to-z transformed correlations and corresponding sampling variances
+     dat <- escalc(measure="ZCOR", ri=ri, ni=ni, data=dat[c(1,4,5)])
+     dat
+     
+     ### meta-analysis of the transformed correlations using a random-effects model
+     res <- rma(yi, vi, data=dat, digits=2)
+     res
+     
+     ### predicted average correlation with 95% CI
+     predict(res, transf=transf.ztor)
+     ## End(Not run)
+     

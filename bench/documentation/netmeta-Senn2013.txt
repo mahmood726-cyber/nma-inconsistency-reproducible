@@ -1,0 +1,71 @@
+_N_e_t_w_o_r_k _m_e_t_a-_a_n_a_l_y_s_i_s _i_n _d_i_a_b_e_t_e_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Network meta-analysis in diabetes comparing effects of a number of
+     drugs on the HbA1c value.
+
+     These data are used as an example in Senn et al. (2013) and have
+     been preprocessed for use in R package netmeta.
+
+_F_o_r_m_a_t:
+
+     A data frame with the following columns:
+
+                *_TE_*  treatment effect                   
+              *_seTE_*  standard error of treatment effect 
+            *_treat1_*  treatment 1                        
+            *_treat2_*  treatment 2                        
+       *_treat1.long_*  treatment 1 (full treatment names) 
+       *_treat2.long_*  treatment 2 (full treatment names) 
+           *_studlab_*  Study label                        
+      
+_D_e_t_a_i_l_s:
+
+     This data set is in comparison-based format. The data in long
+     arm-based format are available in 'Senn2013' in R package
+     *metabook*.
+
+     Treatment labels provided by columns 'treat1' and 'treat2' have
+     been abbreviated:
+
+        * acar = Acarbose
+
+        * benf = Benfluorex
+
+        * metf = Metformin
+
+        * migl = Miglitol
+
+        * piog = Pioglitazone
+
+        * plac = Placebo
+
+        * rosi = Rosiglitazone
+
+        * sita = Sitagliptin
+
+        * sulf = Sulfonylurea
+
+        * vild = Vildagliptin
+
+     Full treatment names are available in columns 'treat1.long' and
+     'treat2.long'.
+
+_S_o_u_r_c_e:
+
+     Senn S, Gavini F, Magrez D, Scheen A (2013): Issues in performing
+     a network meta-analysis. _Statistical Methods in Medical
+     Research_, *22*, 169-89
+
+_S_e_e _A_l_s_o:
+
+     'netmeta'
+
+_E_x_a_m_p_l_e_s:
+
+     head(Senn2013)
+     
+     # Example using netmeta():
+     # example(netmeta)
+     

@@ -1,0 +1,72 @@
+_S_t_u_d_i_e_s _o_n _t_h_e _P_r_e_v_a_l_e_n_c_e _o_f _D_e_p_r_e_s_s_i_o_n _A_f_t_e_r _M_y_o_c_a_r_d_i_a_l _I_n_f_a_r_c_t_i_o_n
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Results from 19 studies assessing the prevalence of depression
+     after myocardial infarction
+
+_U_s_a_g_e:
+
+     dat.feng2019
+     
+_F_o_r_m_a_t:
+
+     The data frame contains the following columns:
+
+       *author*         'character'  first author                    
+       *year*           'integer'    publication year                
+       *region*         'character'  country                         
+       *design*         'character'  study design                    
+       *source*         'character'  sample source                   
+       *age*            'numeric'    mean age                        
+       *males*          'numeric'    percentage of males             
+       *first*          'numeric'    percentage of first-time MI     
+       *questionnaire*  'character'  self-report questionnaire       
+       *interview*      'character'  structured interview            
+       *timing*         'character'  timing of depression assessment 
+       *depr*           'integer'    subjects with depression        
+       *n*              'integer'    sample size                     
+      
+_D_e_t_a_i_l_s:
+
+     This data set comes from a meta-analysis with 19 studies to
+     estimate the prevalence of depression after a myocardial
+     infarction. The variables 'depr' and 'n' contain the number of
+     depressive patients and the total number of patients.
+
+_C_o_n_c_e_p_t_s:
+
+     psychology, cardiology, prevalence
+
+_A_u_t_h_o_r(_s):
+
+     Guido Schwarzer, <mailto:guido.schwarzer@uniklinik-freiburg.de>,
+     <https://github.com/guido-s/>
+
+_S_o_u_r_c_e:
+
+     Feng, L., Li, L., Liu, W., Yang, J., Wang, Q., Shi, L., & Luo, M.
+     (2019). Prevalence of depression in myocardial infarction: A
+     PRISMA-compliant meta-analysis. _Medicine_, *98*(8), e14596.
+     https://doi.org/10.1097/md.0000000000014596
+
+_E_x_a_m_p_l_e_s:
+
+     ### Show results of first six studies
+     head(dat.feng2019)
+     
+     ## Not run:
+     
+     ### Load meta package
+     suppressPackageStartupMessages(library(meta))
+     
+     ### Conduct random effects meta-analysis
+     mp1 <- metaprop(depr, n, data = dat.feng2019,
+       studlab = paste(author, year),
+       common = FALSE, prediction = TRUE)
+     
+     ### Create forest plot
+     forest(mp1, digits = 3, xlim = c(0, 1),
+       print.pval.Q = FALSE, details = TRUE)
+     ## End(Not run)
+     

@@ -1,0 +1,18 @@
+[
+  {
+    "stored": "results/app-original.json.xz",
+    "original_name": "app-original.json",
+    "original_bytes": 130813893,
+    "original_sha256": "ca5cab0e0d679875a61d945ea19e6c9cadbb0ef2dc985a2fa84317764835d453",
+    "stored_bytes": 944992,
+    "stored_sha256": "7d4b9a817fffee1548590b75dd5fa254d001f159927e86d97fe7006d6cc92024"
+  },
+  {
+    "stored": "results/app-patched.json.xz",
+    "original_name": "app-patched.json",
+    "original_bytes": 41832663,
+    "original_sha256": "66500e1f79f6f5d4787a5bc80b055e086d0cb31dce4aa1538f9b74eaedfdb421",
+    "stored_bytes": 397144,
+    "stored_sha256": "1fbe5c7c681d33e5b06a63dbecbfcf03ac7e0bc930cbeca7aaad846b1108df69"
+  }
+]

@@ -1,0 +1,94 @@
+{
+  "commit": "7966530de875d22253f0557c7b447ed9d917685d",
+  "configuration_count": 540,
+  "dataset_count": 127,
+  "included_datasets": 36,
+  "original": {
+    "passed": 79869,
+    "checks": 83592,
+    "categories": {
+      "contract": {
+        "checks": 4260,
+        "passed": 3866
+      },
+      "coverage": {
+        "checks": 1625,
+        "passed": 1625
+      },
+      "display": {
+        "checks": 2648,
+        "passed": 2501
+      },
+      "export": {
+        "checks": 21669,
+        "passed": 21375
+      },
+      "numerical": {
+        "checks": 17928,
+        "passed": 16523
+      },
+      "plot": {
+        "checks": 34175,
+        "passed": 33674
+      },
+      "refusal": {
+        "checks": 1287,
+        "passed": 305
+      }
+    }
+  },
+  "patched": {
+    "passed": 76601,
+    "checks": 76601,
+    "categories": {
+      "contract": {
+        "checks": 4260,
+        "passed": 4260
+      },
+      "coverage": {
+        "checks": 1625,
+        "passed": 1625
+      },
+      "display": {
+        "checks": 2265,
+        "passed": 2265
+      },
+      "export": {
+        "checks": 21717,
+        "passed": 21717
+      },
+      "numerical": {
+        "checks": 17928,
+        "passed": 17928
+      },
+      "plot": {
+        "checks": 27519,
+        "passed": 27519
+      },
+      "refusal": {
+        "checks": 1287,
+        "passed": 1287
+      }
+    }
+  },
+  "focused_original": {
+    "passed": 194,
+    "checks": 319
+  },
+  "focused_patched": {
+    "passed": 319,
+    "checks": 319
+  },
+  "reference_statuses": {
+    "refused": 249,
+    "ok": 291
+  },
+  "refusal_reasons": {
+    "Multi-arm studies are unsupported: correlated contrasts require study covariance.": 204,
+    "The treatment network is disconnected.": 33,
+    "At least 3 valid contrasts are required.": 12
+  },
+  "browser_evidence": false,
+  "execution": "Node shipped inline engine + renderer + shared exporter via minimal DOM adapter",
+  "multiarm_parity": false
+}

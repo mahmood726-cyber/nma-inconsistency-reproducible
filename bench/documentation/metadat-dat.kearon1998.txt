@@ -1,0 +1,148 @@
+_S_t_u_d_i_e_s _o_n _t_h_e _A_c_c_u_r_a_c_y _o_f _V_e_n_o_u_s _U_l_t_r_a_s_o_n_o_g_r_a_p_h_y _f_o_r _t_h_e _D_i_a_g_n_o_s_i_s _o_f
+_D_e_e_p _V_e_n_o_u_s _T_h_r_o_m_b_o_s_i_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Results from diagnostic accuracy studies examining the accuracy of
+     venous ultrasonography for the diagnosis of deep venous
+     thrombosis.
+
+_U_s_a_g_e:
+
+     dat.kearon1998
+     
+_F_o_r_m_a_t:
+
+     The data frame contains the following columns:
+
+       *id*        'numeric'    study id                                                    
+       *author*    'character'  study author(s)                                             
+       *year*      'numeric'    publication year                                            
+       *patients*  'character'  patient group (either symptomatic or asymptomatic patients) 
+       *tp*        'numeric'    number of true positives                                    
+       *np*        'numeric'    number of positive patients (cases)                         
+       *tn*        'numeric'    number of true negatives                                    
+       *nn*        'numeric'    number of negative patients (non-cases)                     
+      
+_D_e_t_a_i_l_s:
+
+     The studies included in the dataset examined the accuracy of
+     venous ultrasonography for the diagnossis of a first deep venous
+     thrombosis in symptomatic and asymptomatic patients. Cases and
+     non-cases were determined based on contrast venography. Venous
+     ultrasonography was then used to make a diagnosis, leading to a
+     given number of true positives and negatives.
+
+     A subset of this dataset (using only the studies with asymptomatic
+     patients) was used by Deeks et al. (2005) to illustrate methods
+     for detecting publication bias (or small-study effects) in
+     meta-analyses of diagnostic accuracy studies.
+
+_C_o_n_c_e_p_t_s:
+
+     medicine, odds ratios, diagnostic accuracy studies, multivariate
+     models, publication bias
+
+_A_u_t_h_o_r(_s):
+
+     Wolfgang Viechtbauer, <mailto:wvb@metafor-project.org>,
+     <https://www.metafor-project.org>
+
+_S_o_u_r_c_e:
+
+     Kearon, C., Julian, J. A., Math, M., Newman, T. E., & Ginsberg, J.
+     S. (1998). Noninvasive diagnosis of deep venous thrombosis.
+     _Annals of Internal Medicine_, *128*(8), 663-677.
+     https://doi.org/10.7326/0003-4819-128-8-199804150-00011
+
+_R_e_f_e_r_e_n_c_e_s:
+
+     Deeks, J. J., Macaskill, P., & Irwig, L. (2005). The performance
+     of tests of publication bias and other sample size effects in
+     systematic reviews of diagnostic test accuracy was assessed.
+     _Journal of Clinical Epidemiology_, *58*(9), 882-893.
+     https://doi.org/10.1016/j.jclinepi.2005.01.016
+
+_E_x_a_m_p_l_e_s:
+
+     ### copy data into 'dat' and examine data
+     dat <- dat.kearon1998
+     head(dat)
+     
+     ## Not run:
+     
+     ### load metafor package
+     library(metafor)
+     
+     ### calculate diagnostic log odds ratios and corresponding sampling variances
+     dat <- escalc(measure="OR", ai=tp, n1i=np, ci=nn-tn, n2i=nn, data=dat, add=1/2, to="all")
+     head(dat)
+     
+     ### fit random-effects model for the symptomatic patients
+     res <- rma(yi, vi, data=dat, subset=patients=="symptomatic")
+     res
+     
+     ### fit random-effects model for the asymptomatic patients
+     res <- rma(yi, vi, data=dat, subset=patients=="asymptomatic")
+     res
+     
+     ### estimated average diagnostic odds ratio (with 95% CI)
+     predict(res, transf=exp, digits=2)
+     
+     ### regression test for funnel plot asymmetry using SE as predictor
+     reg <- regtest(res, model="lm")
+     reg
+     
+     ### corresponding funnel plot
+     funnel(res, atransf=exp, xlim=c(0,7), at=log(c(1,10,100,1000)), ylim=c(0,1.5), steps=4)
+     ys <- seq(0, 2, length=100)
+     lines(coef(reg$fit)[1] + coef(reg$fit)[2]*ys, ys, lwd=2, lty=3)
+     
+     ### regression test for funnel plot asymmetry using total sample size as predictor
+     reg <- regtest(res, model="lm", predictor="ni")
+     reg
+     
+     ### corresponding funnel plot
+     funnel(res, yaxis="ni", atransf=exp, xlim=c(0,7), at=log(c(1,10,100,1000)), ylim=c(0,300), steps=4)
+     ys <- seq(0, 300, length=100)
+     lines(coef(reg$fit)[1] + coef(reg$fit)[2]*ys, ys, lwd=2, lty=3)
+     
+     ### regression test for funnel plot asymmetry using 1/sqrt(ESS) as predictor (Deeks et al., 2005)
+     dat$invessi <- 1/(4*dat$np) + 1/(4*dat$nn)
+     tmp <- rma(yi, invessi, data=dat, subset=patients=="asymptomatic")
+     reg <- regtest(tmp, model="lm")
+     reg
+     
+     ### corresponding funnel plot
+     funnel(tmp, atransf=exp, xlim=c(0,7), at=log(c(1,10,100,1000)), ylim=c(0,0.15), steps=4,
+            refline=coef(res), level=0, ylab="1/root(ess)")
+     ys <- seq(0, 0.2, length=100)
+     lines(coef(reg$fit)[1] + coef(reg$fit)[2]*ys, ys, lwd=2, lty=3)
+     
+     ### convert data to long format
+     dat <- to.long(measure="OR", ai=tp, n1i=np, ci=tn, n2i=nn,
+                    data=dat.kearon1998, subset=patients=="asymptomatic", append=FALSE)
+     dat$group <- factor(dat$group, levels=c(1,2), labels=c("sensitivity", "specificity"))
+     dat
+     
+     ### calculate logit-transformed sensitivities
+     dat <- escalc(measure="PLO", xi=out1, mi=out2, data=dat, add=1/2, to="all",
+                   include=group=="sensitivity")
+     dat
+     
+     ### calculate logit-transformed specificities
+     dat <- escalc(measure="PLO", xi=out1, mi=out2, data=dat, add=1/2, to="all",
+                   include=group=="specificity")
+     dat
+     
+     ### bivariate random-effects model for logit sensitivity and specificity
+     res <- rma.mv(yi, vi, mods = ~ 0 + group, random = ~ group | study, struct="UN", data=dat)
+     res
+     
+     ### estimated average sensitivity and specificity based on the model
+     predict(res, newmods = rbind(c(1,0),c(0,1)), transf=transf.ilogit, tau2.levels=c(1,2), digits=2)
+     
+     ### estimated average diagnostic odds ratio based on the model
+     predict(res, newmods = c(1,1), transf=exp, digits=2)
+     ## End(Not run)
+     

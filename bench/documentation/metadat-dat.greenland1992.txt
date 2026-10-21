@@ -1,0 +1,72 @@
+_C_a_s_e-_C_o_n_t_r_o_l _S_t_u_d_i_e_s _o_n _t_h_e _I_m_p_a_c_t _o_f _A_l_c_o_h_o_l _C_o_n_s_u_m_p_t_i_o_n _o_n _B_r_e_a_s_t
+_C_a_n_c_e_r _R_i_s_k
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Results from 16 case-control studies evaluating the impact of
+     alcohol consumption on breast cancer risk.
+
+_U_s_a_g_e:
+
+     dat.greenland1992
+     
+_F_o_r_m_a_t:
+
+     The data frame contains the following columns:
+
+       *author*  'character'  first author            
+       *year*    'integer'    publication year        
+       *b*       'numeric'    adjusted log risk ratio 
+       *SE*      'numeric'    standard error          
+      
+_D_e_t_a_i_l_s:
+
+     Greenland and Longecker (1992) describe a method to combine trend
+     estimates from summarized dose-response data. A meta-analysis of
+     16 case-control studies evaluating the impact of alcohol
+     consumption on breast cancer risk was used as an illustrative
+     example. The estimates are the increase in the log relative risk
+     of breast cancer associated with an average daily alcohol
+     consumption of 1g.
+
+     Data are provided in Greenland and Longecker (1992), Table 3.
+
+_C_o_n_c_e_p_t_s:
+
+     epidemiology, risk ratios
+
+_A_u_t_h_o_r(_s):
+
+     Guido Schwarzer, <mailto:guido.schwarzer@uniklinik-freiburg.de>,
+     <https://github.com/guido-s/>
+
+_S_o_u_r_c_e:
+
+     Greenland, S., & Longnecker, M. P. (1992). Methods for trend
+     estimation from summarized dose-response data, with applications
+     to meta-analysis. _American Journal of Epidemiology_, *135*(11),
+     1301-1309. https://doi.org/10.1093/oxfordjournals.aje.a116237
+
+_E_x_a_m_p_l_e_s:
+
+     ### Show first 6 rows of the dataset
+     head(dat.greenland1992)
+     
+     ## Not run:
+     
+     ### Load meta package
+     suppressPackageStartupMessages(library(meta))
+     
+     ### Inverse variance method
+     mg <- metagen(b, SE, data = dat.greenland1992,
+       studlab = paste(author, year), sm = "RR",
+       random = FALSE, overall.hetstat = FALSE,
+       backtransf = FALSE)
+     
+     ### Overall result
+     print(mg, digits = 5)
+     
+     ### Standard error for common effect estimate
+     round(mg$seTE.common, 5)
+     ## End(Not run)
+     

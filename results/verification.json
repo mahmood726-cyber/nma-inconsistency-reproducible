@@ -1,0 +1,13 @@
+{
+  "configuration_keys": 540,
+  "unique_exact_coverage": true,
+  "reference_errors": 0,
+  "patched_checks": 76601,
+  "patched_passed": 76601,
+  "focused_checks": 319,
+  "focused_passed": 319,
+  "patch_replay_matches": true,
+  "source_files_unchanged": true,
+  "portable_path_scan": true,
+  "browser_evidence": false
+}

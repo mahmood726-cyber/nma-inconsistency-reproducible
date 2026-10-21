@@ -1,0 +1,1 @@
+{"key":"netmeta::Stowe2010::change::MD::full::DL","status":"refused","reason":"Multi-arm studies are unsupported: correlated contrasts require study covariance.","scope":"input-support gate; not a numerical netmeta success","warnings":[],"seconds":0.010000000000019327}

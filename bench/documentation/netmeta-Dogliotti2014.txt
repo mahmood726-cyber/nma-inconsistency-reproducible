@@ -1,0 +1,44 @@
+_N_e_t_w_o_r_k _m_e_t_a-_a_n_a_l_y_s_i_s _o_f _a_n_t_i_t_h_r_o_m_b_o_t_i_c _t_r_e_a_t_m_e_n_t_s _i_n _p_a_t_i_e_n_t_s _w_i_t_h
+_n_o_n-_v_a_l_v_u_l_a_r _a_t_r_i_a_l _f_i_b_r_i_l_l_a_t_i_o_n
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     This dataset comes from a systematic review aiming to determine
+     the effects of eight antithrombotic treatments in reducing the
+     incidence of major thrombotic events in patients with non-valvular
+     atrial fibrillation (Dogliotti et al., 2014). The review included
+     20 studies (79,808 participants), four of which were three-arm
+     studies. The primary outcome is stroke reduction.
+
+_F_o_r_m_a_t:
+
+     A data frame with the following columns:
+
+           *_study_*  study label                            
+              *_id_*  study ID                               
+       *_treatment_*  treatment                              
+          *_stroke_*  number of strokes                      
+           *_total_*  number of individuals in treatment arm 
+      
+_N_o_t_e:
+
+     The dataset Dogliotti2014 is identical to dataset 'Dogliotti2014'
+     in R package *metabook*.
+
+_S_o_u_r_c_e:
+
+     Dogliotti A, Paolasso E, Giugliano RP (2014): Current and new oral
+     antithrombotics in non-valvular atrial fibrillation: a network
+     meta-analysis of 79 808 patients. _Heart_, *100*, 396-405
+
+_S_e_e _A_l_s_o:
+
+     'Dogliotti2014', 'pairwise', 'metabin', 'netmetabin'
+
+_E_x_a_m_p_l_e_s:
+
+     head(Dogliotti2014)
+     
+     # Example using pairwise(), netmeta() and netmetabin():
+     # example(Dogliotti2014, package = "metabook")
+     

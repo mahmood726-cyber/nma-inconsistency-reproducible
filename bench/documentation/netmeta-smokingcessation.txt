@@ -1,0 +1,44 @@
+_N_e_t_w_o_r_k _m_e_t_a-_a_n_a_l_y_s_i_s _o_f _i_n_t_e_r_v_e_n_t_i_o_n_s _f_o_r _s_m_o_k_i_n_g _c_e_s_s_a_t_i_o_n
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Network meta-analysis comparing the effects of a number of
+     interventions for smoking cessation.
+
+     These data are used as an example in Dias et al. (2013), page 651.
+
+_F_o_r_m_a_t:
+
+     A data frame with the following columns:
+
+       *_event1_*  number of individuals with successful 
+                   smoking cessation in arm 1            
+           *_n1_*  number of individuals in arm 1        
+       *_event2_*  number of individuals with successful 
+                   smoking cessation in arm 2            
+           *_n2_*  number of individuals in arm 2        
+       *_event3_*  number of individuals with successful 
+                   smoking cessation in arm 3            
+           *_n3_*  number of individuals in arm 3        
+       *_treat1_*  treatment 1                           
+       *_treat2_*  treatment 2                           
+       *_treat3_*  treatment 3                           
+      
+_S_o_u_r_c_e:
+
+     Dias S, Welton NJ, Sutton AJ, Caldwell DM, Lu G and Ades AE
+     (2013): Evidence Synthesis for Decision Making 4: Inconsistency in
+     networks of evidence based on randomized controlled trials.
+     _Medical Decision Making_, *33*, 641-56
+
+_S_e_e _A_l_s_o:
+
+     'pairwise', 'metabin', 'netmeta', 'netgraph.netmeta'
+
+_E_x_a_m_p_l_e_s:
+
+     data(smokingcessation)
+     head(smokingcessation)
+     
+     # Examples: example(netmeta)
+     

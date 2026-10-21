@@ -1,0 +1,80 @@
+_S_t_u_d_i_e_s _o_n _t_h_e _E_f_f_e_c_t_s _o_f _D_i_u_r_e_t_i_c_s _i_n _P_r_e_g_n_a_n_c_y
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Results from 9 studies examining the effects of diuretics in
+     pregnancy on various outcomes.
+
+_U_s_a_g_e:
+
+     dat.collins1985b
+     
+_F_o_r_m_a_t:
+
+     The data frame contains the following columns:
+
+       *id*       'numeric'    study number                                                                   
+       *author*   'character'  study author(s)                                                                
+       *year*     'numeric'    publication year                                                               
+       *pre.nti*  'numeric'    number of women in treatment group followed up for pre-eclampsia outcome       
+       *pre.nci*  'numeric'    number of women in control/placebo group followed up for pre-eclampsia outcome 
+       *pre.xti*  'numeric'    number of women in treatment group with any form of pre-eclampsia              
+       *pre.xci*  'numeric'    number of women in control/placebo group with any form of pre-eclampsia        
+       *oedema*   'numeric'    dummy variable indicating whether oedema was a diagnostic criterion            
+       *fup.nti*  'numeric'    number of women in treatment group followed up for mortality outcomes          
+       *fup.nci*  'numeric'    number of women in control/placebo group followed up for mortality outcomes    
+       *ped.xti*  'numeric'    number of perinatal deaths in treatment group                                  
+       *ped.xci*  'numeric'    number of perinatal deaths in control/placebo group                            
+       *stb.xti*  'numeric'    number of stillbirths in treatment group                                       
+       *stb.xci*  'numeric'    number of stillbirths in control/placebo group                                 
+       *ned.xti*  'numeric'    number of neonatal deaths in treatment group                                   
+       *ned.xci*  'numeric'    number of neonatal deaths in control/placebo group                             
+      
+_D_e_t_a_i_l_s:
+
+     The 9 studies in this dataset examined the effects of diuretics in
+     pregnancy on various outcomes, including the presence of any form
+     of pre-eclampsia, perinatal death, stillbirth, and neonatal death.
+
+_C_o_n_c_e_p_t_s:
+
+     medicine, obstetrics, odds ratios, Peto's method
+
+_A_u_t_h_o_r(_s):
+
+     Wolfgang Viechtbauer, <mailto:wvb@metafor-project.org>,
+     <https://www.metafor-project.org>
+
+_S_o_u_r_c_e:
+
+     Collins, R., Yusuf, S., & Peto, R. (1985). Overview of randomised
+     trials of diuretics in pregnancy. _British Medical Journal_,
+     *290*(6461), 17-23. https://doi.org/10.1136/bmj.290.6461.17
+
+_E_x_a_m_p_l_e_s:
+
+     ### copy data into 'dat' and examine data
+     dat <- dat.collins1985b
+     dat
+     
+     ## Not run:
+     
+     ### load metafor package
+     library(metafor)
+     
+     ### calculate (log) odds ratio and sampling variance
+     dat <- escalc(measure="OR", n1i=pre.nti, n2i=pre.nci, ai=pre.xti, ci=pre.xci, data=dat)
+     summary(dat, digits=2, transf=exp)
+     
+     ### meta-analysis using Peto's method for any form of pre-eclampsia
+     rma.peto(n1i=pre.nti, n2i=pre.nci, ai=pre.xti, ci=pre.xci, data=dat, digits=2)
+     
+     ### meta-analysis including only studies where oedema was not a diagnostic criterion
+     rma.peto(n1i=pre.nti, n2i=pre.nci, ai=pre.xti, ci=pre.xci, data=dat, digits=2, subset=(oedema==0))
+     
+     ### meta-analyses of mortality outcomes (perinatal deaths, stillbirths, and neonatal deaths)
+     rma.peto(n1i=fup.nti, n2i=fup.nci, ai=ped.xti, ci=ped.xci, data=dat, digits=2)
+     rma.peto(n1i=fup.nti, n2i=fup.nci, ai=stb.xti, ci=stb.xci, data=dat, digits=2)
+     rma.peto(n1i=fup.nti, n2i=fup.nci, ai=ned.xti, ci=ned.xci, data=dat, digits=2)
+     ## End(Not run)
+     

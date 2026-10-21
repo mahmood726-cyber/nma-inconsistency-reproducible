@@ -1,0 +1,58 @@
+{
+ "walkthrough": [
+  {
+   "step": "fresh-load",
+   "clicks": 0,
+   "typed": 0,
+   "selects": 0,
+   "splits": 6
+  },
+  {
+   "step": "real-example",
+   "clicks": 1,
+   "typed": 0,
+   "selects": 0,
+   "looRows": 29
+  },
+  {
+   "step": "own-data-pasted",
+   "clicks": 1,
+   "typed": 1,
+   "selects": 0,
+   "rows": 22
+  },
+  {
+   "step": "model-changed-core-output",
+   "clicks": 1,
+   "typed": 1,
+   "selects": 1,
+   "dbt": "Design-by-treatment Q = 2.36, df = 3, p = 0.500. no evidence of inconsistency\n\nModel: PM τ² = 0.5609.",
+   "splits": 6,
+   "loo": "Removing any single study leaves the global test on the same side of 0.05 (global p ranged from 0.320 to 0.766 across single-study removals); this concerns the stability of the test result, not evidence of consistency. No node-split p-value crosses 0.05 when any single study is removed."
+  },
+  {
+   "step": "exported",
+   "clicks": 3,
+   "typed": 1,
+   "selects": 1,
+   "files": [
+    "nma-inconsistency-report.md",
+    "nma-inconsistency-PM.R"
+   ]
+  }
+ ],
+ "clicksToCoreOutput": {
+  "freshLoad": 0,
+  "realExample": 1,
+  "ownData": "paste only (0 clicks; re-runs after 500 ms)",
+  "modelChange": "1 selection"
+ },
+ "totalClicks": 3,
+ "typed": 1,
+ "selects": 1,
+ "axeFullPage": {
+  "rules": "wcag2a,wcag2aa,wcag21a,wcag21aa",
+  "violations": [],
+  "passes": 29
+ }
+}

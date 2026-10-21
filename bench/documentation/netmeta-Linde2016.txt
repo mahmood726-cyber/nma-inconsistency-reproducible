@@ -1,0 +1,43 @@
+_N_e_t_w_o_r_k _m_e_t_a-_a_n_a_l_y_s_i_s _o_f _p_r_i_m_a_r_y _c_a_r_e _d_e_p_r_e_s_s_i_o_n _t_r_e_a_t_m_e_n_t_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Network meta-analysis of 22 treatments (including placebo and
+     usual care) for the primary care of depression.
+
+_F_o_r_m_a_t:
+
+     A data frame with the following columns:
+
+                *_id_*  Study ID                                  
+            *_author_*  First author                              
+              *_year_*  Year of publication                       
+            *_treat1_*  First treatment (abbreviated)             
+            *_treat2_*  Second treatment (abbreviated)            
+       *_treat1.long_*  First treatment                           
+       *_treat2.long_*  Second treatment                          
+              *_lnOR_*  Response after treatment (log odds ratio) 
+            *_selnOR_*  Standard error of log odds ratio          
+             *_resp1_*  Responder (first treatment)               
+                *_n1_*  Sample size (first treatment)             
+             *_resp2_*  Responder (second treatment)              
+                *_n2_*  Sample size (second treatment)            
+      
+_S_o_u_r_c_e:
+
+     Linde K, R<c3><bc>cker G, Schneider A et al. (2016): Questionable
+     assumptions hampered interpretation of a network meta-analysis of
+     primary care depression treatments. _Journal of Clinical
+     Epidemiology_, *71*, 86-96
+
+_S_e_e _A_l_s_o:
+
+     'netmeta', 'netcomb'
+
+_E_x_a_m_p_l_e_s:
+
+     head(Linde2016)
+     
+     # Example using pairwise(), netmeta() and netcomb():
+     # example(Linde2016, package = "metabook")
+     

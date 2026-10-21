@@ -1,0 +1,40 @@
+_N_e_t_w_o_r_k _m_e_t_a-_a_n_a_l_y_s_i_s _o_n _b_l_o_o_d _l_o_s_s _d_u_r_i_n_g _l_i_v_e_r _t_r_a_n_s_p_l_a_n_t_a_t_i_o_n
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Network meta-analysis comparing the effects of a number of
+     interventions for decreasing blood loss and blood transfusion
+     requirements during liver transplantation.
+
+_F_o_r_m_a_t:
+
+     A data frame with the following columns:
+
+           *_study_*  study information (first author, year)    
+       *_treatment_*  treatment                                 
+           *_death_*  mortality at 60 days post-transplantation 
+               *_n_*  number of individuals in treatment arm    
+      
+_N_o_t_e:
+
+     The dataset Gurusamy2011 is identical to dataset 'Gurusamy2011' in
+     R package *metabook*.
+
+_S_o_u_r_c_e:
+
+     Gurusamy KS, Pissanou T, Pikhart H, Vaughan J, Burroughs AK,
+     Davidson BR (2011): Methods to decrease blood loss and transfusion
+     requirements for liver transplantation. _Cochrane Database of
+     Systematic Reviews_, CD009052
+
+_S_e_e _A_l_s_o:
+
+     'Gurusamy2011', 'pairwise', 'metabin', 'netmetabin'
+
+_E_x_a_m_p_l_e_s:
+
+     head(Gurusamy2011)
+     
+     # Example using pairwise() and netmetabin():
+     # example(Gurusamy2011, package = "metabook")
+     

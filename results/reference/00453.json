@@ -1,0 +1,1 @@
+{"key":"metadat::dat.linde2016::resp::OR::full::PM","status":"refused","reason":"Multi-arm studies are unsupported: correlated contrasts require study covariance.","scope":"input-support gate; not a numerical netmeta success","warnings":[],"seconds":0.12999999999999545,"pm_reference":"uncentered package QE"}

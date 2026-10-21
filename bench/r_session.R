@@ -1,0 +1,5 @@
+cat(R.version.string, "\n.libPaths():\n")
+print(.libPaths())
+for (p in c("netmeta","meta","metadat","metafor","jsonlite")) cat(p,as.character(packageVersion(p)),"\n")
+suppressPackageStartupMessages(library(netmeta))
+source("json17.R")

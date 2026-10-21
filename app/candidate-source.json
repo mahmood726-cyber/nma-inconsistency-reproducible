@@ -1,0 +1,98 @@
+{
+  "source": "allmeta v1.8.0",
+  "commit": "1cb3f8409c7af75ed41f7e1811f9c502f900fc79",
+  "repository": "https://github.com/mahmood726-cyber/allmeta",
+  "release": "v1.8.0",
+  "release_doi": "10.5281/zenodo.23515177",
+  "pull_request_heads": {
+    "143": "0bea27b258fe73a1f7a1dbd90693c5ce7a8eb4b9",
+    "160": "dd9f2a863dffc0f34f715442f1698633cfb133a2"
+  },
+  "historical_plus_capture_commit": "5373102e219ea1154b845496a68d2150703b91af",
+  "comparison_rule": "Exact committed bytes: every file equals its v1.8.0 Git blob.",
+  "files": {
+    "hub/app-style.css": "905dba05ebb123f3c3baec8b5691830b48eb9c9092648f5cba71be0efc6a12a6",
+    "hub/shared/a11y-landmarks.js": "f7a89f3c72dd80f666d16d52592a7e60f45fba62efc9dfeb4c2faf7fb0e8b5a2",
+    "hub/shared/chart-export-auto.js": "a9c86241bb5b291b42d0a14ba388e952d2126ba5bd9ca747407ac2466543c00d",
+    "hub/shared/results-export.js": "aa484e6bd3cbe2098e677e171b07fdc82ab73027637d56e3b59635aa831b545d",
+    "LICENSE": "9ef93bba7449dd90d4d56d657049842fc7ff0b073fb669b79daf267d68c1c8c6",
+    "nma-inconsistency/index.html": "23d2ad71d0cef30842323c6bd24ca4a4eb4cdcdd0e2321620021572701e88d24",
+    "nma-inconsistency/README.md": "139a6e0c1cc91d1f5cd988bb94c154b759c471e3e9a28fe718139adb34167843",
+    "shared/app-flow.js": "733458866c716ed4f3ecefea64e9374c49b12eb33cd56b9ab5ec0e0cf5eb8c77",
+    "shared/autosave.js": "919165910d2b46a674b5ec1c81c01bce4d3c0779a86232ec032c994274980f1c",
+    "shared/build-info.js": "232a5a903b1fcc451fede886d11688a80c0dce736d60a3613cc8ef5d41c94668",
+    "shared/forced-colors.css": "a26b396b0b5b683ea06fca129855e3aba34805348e2d8d4e811ef74b44f5e96e",
+    "shared/ma-comparisons-v1.js": "52c278b571c2fdb9a3fc386baf7b8a23cf2191b32550e044d75024cd9222781b",
+    "shared/ma-studies-v1.js": "416fce0f8ec6432e432c050f9bfc9005d74ac5ad389744198d8530ea6096cb11"
+  },
+  "git_blobs": {
+    "hub/app-style.css": "24574bf090eaa4ec0ab3c24aa965069f1ca7d4ea",
+    "hub/shared/a11y-landmarks.js": "293c9ad23a84810b4831da3cc2834899c75af9e8",
+    "hub/shared/chart-export-auto.js": "a676066ee5f77219fc09b0bfb973293307dd6840",
+    "hub/shared/results-export.js": "0de1e0d5dce72e0216ab6cf865d5b04d7cc4cf44",
+    "LICENSE": "79542999a30ac4e2e976d671f579635aa1172bbd",
+    "nma-inconsistency/index.html": "aba39271b49c08096f557968d685a42d3af58458",
+    "nma-inconsistency/README.md": "a6207988a9d4a0bb3488fdba8a33848531ba464b",
+    "shared/app-flow.js": "41bbae7ec6a862373fe56c7803fcf5444fc0de51",
+    "shared/autosave.js": "5bfa20ac20b95d986277de1eb5a67cf19829d569",
+    "shared/build-info.js": "ba55c2cace553c364f22ceb13b30c41fbda826e5",
+    "shared/forced-colors.css": "abbfcf01b6b7c4fd2e2f550d8b034a0b97c71466",
+    "shared/ma-comparisons-v1.js": "05b0cbb3fc7d3243e6c6b5bb7d445b3a344f3e88",
+    "shared/ma-studies-v1.js": "1f570a3fc26ce767984e03a6387d54e02fae1580"
+  },
+  "release_repin": [
+    {
+      "path": "app/patched/hub/shared/results-export.js",
+      "upstream": "hub/shared/results-export.js",
+      "previous_sha256": "1f8f2094425bae641077543017fa0bcdc85128b9aef4d7edfbb8a0023cade85f",
+      "new_sha256": "aa484e6bd3cbe2098e677e171b07fdc82ab73027637d56e3b59635aa831b545d"
+    },
+    {
+      "path": "app/patched/shared/build-info.js",
+      "upstream": "shared/build-info.js",
+      "previous_sha256": "5e830962d74b2a8ab4d2cbf1a822976e78cc0c29db5cda1e45acc052f981b333",
+      "new_sha256": "232a5a903b1fcc451fede886d11688a80c0dce736d60a3613cc8ef5d41c94668"
+    }
+  ],
+  "previous_candidate": {
+    "source": "allmeta v1.8.0 candidate e61378c",
+    "commit": "e61378ce260911af311fc45a3f91e239f15f7c5b",
+    "files": {
+      "hub/app-style.css": "905dba05ebb123f3c3baec8b5691830b48eb9c9092648f5cba71be0efc6a12a6",
+      "hub/shared/a11y-landmarks.js": "f7a89f3c72dd80f666d16d52592a7e60f45fba62efc9dfeb4c2faf7fb0e8b5a2",
+      "hub/shared/chart-export-auto.js": "a9c86241bb5b291b42d0a14ba388e952d2126ba5bd9ca747407ac2466543c00d",
+      "hub/shared/results-export.js": "1f8f2094425bae641077543017fa0bcdc85128b9aef4d7edfbb8a0023cade85f",
+      "LICENSE": "9ef93bba7449dd90d4d56d657049842fc7ff0b073fb669b79daf267d68c1c8c6",
+      "nma-inconsistency/index.html": "23d2ad71d0cef30842323c6bd24ca4a4eb4cdcdd0e2321620021572701e88d24",
+      "nma-inconsistency/README.md": "139a6e0c1cc91d1f5cd988bb94c154b759c471e3e9a28fe718139adb34167843",
+      "shared/app-flow.js": "733458866c716ed4f3ecefea64e9374c49b12eb33cd56b9ab5ec0e0cf5eb8c77",
+      "shared/autosave.js": "919165910d2b46a674b5ec1c81c01bce4d3c0779a86232ec032c994274980f1c",
+      "shared/build-info.js": "5e830962d74b2a8ab4d2cbf1a822976e78cc0c29db5cda1e45acc052f981b333",
+      "shared/forced-colors.css": "a26b396b0b5b683ea06fca129855e3aba34805348e2d8d4e811ef74b44f5e96e",
+      "shared/ma-comparisons-v1.js": "52c278b571c2fdb9a3fc386baf7b8a23cf2191b32550e044d75024cd9222781b",
+      "shared/ma-studies-v1.js": "416fce0f8ec6432e432c050f9bfc9005d74ac5ad389744198d8530ea6096cb11"
+    },
+    "replaced": [
+      {
+        "path": "app/patched/nma-inconsistency/index.html",
+        "upstream": "nma-inconsistency/index.html",
+        "old_sha256": "620cd30b5900760fc3c69ef06b4e482f0a584bd6f3aa4693ed5f2ba3063b57da",
+        "new_sha256": "23d2ad71d0cef30842323c6bd24ca4a4eb4cdcdd0e2321620021572701e88d24"
+      },
+      {
+        "path": "app/patched/shared/build-info.js",
+        "upstream": "shared/build-info.js",
+        "old_sha256": "6f060b43201ff6b4bfde714a3042745138c28d60f0f1abd436e6f3b8f4735d3e",
+        "new_sha256": "5e830962d74b2a8ab4d2cbf1a822976e78cc0c29db5cda1e45acc052f981b333"
+      },
+      {
+        "path": "app/patched/shared/ma-comparisons-v1.js",
+        "upstream": "shared/ma-comparisons-v1.js",
+        "old_sha256": "7a7f0f7c302043754806792c4fa8e4291a4aa4d4f6d3d47e7ef9383599054b62",
+        "new_sha256": "52c278b571c2fdb9a3fc386baf7b8a23cf2191b32550e044d75024cd9222781b"
+      }
+    ]
+  },
+  "plus_identical_files": 30,
+  "validation": "See RELEASE_EQUIVALENCE.md: Node captures and the plus replay re-run on these bytes; R not re-run."
+}

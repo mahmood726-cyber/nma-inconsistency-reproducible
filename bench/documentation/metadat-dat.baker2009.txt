@@ -1,0 +1,102 @@
+_S_t_u_d_i_e_s _o_n _P_h_a_r_m_a_c_o_l_o_g_i_c _T_r_e_a_t_m_e_n_t_s _f_o_r _C_h_r_o_n_i_c _O_b_s_t_r_u_c_t_i_v_e _P_u_l_m_o_n_a_r_y
+_D_i_s_e_a_s_e
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Results from 39 trials examining pharmacologic treatments for
+     chronic obstructive pulmonary disease (COPD).
+
+_U_s_a_g_e:
+
+     dat.baker2009
+     
+_F_o_r_m_a_t:
+
+     The data frame contains the following columns:
+
+       *study*      'character'  study label                                               
+       *year*       'numeric'    year of publication                                       
+       *id*         'numeric'    study ID                                                  
+       *treatment*  'character'  treatment                                                 
+       *exac*       'numeric'    number of individuals with one or more COPD exacerbations 
+       *total*      'numeric'    number of individuals                                     
+      
+_D_e_t_a_i_l_s:
+
+     This dataset comes from a systematic review of randomized
+     controlled trials on pharmacologic treatments for chronic
+     obstructive pulmonary disease (COPD) (Baker et al., 2009).
+
+     The primary outcome, occurrence of one or more episodes of COPD
+     exacerbation, is binary (yes / no). For this outcome, five drug
+     treatments (fluticasone, budesonide, salmeterol, formoterol,
+     tiotropium) and two combinations (fluticasone + salmeterol,
+     budesonide + formoterol) were compared to placebo. The authors
+     considered the two combinations as separate treatments instead of
+     evaluating the individual components.
+
+_C_o_n_c_e_p_t_s:
+
+     medicine, pulmonology, odds ratios, network meta-analysis,
+     component network meta-analysis
+
+_A_u_t_h_o_r(_s):
+
+     Guido Schwarzer, <mailto:guido.schwarzer@uniklinik-freiburg.de>,
+     <https://github.com/guido-s/>
+
+_S_o_u_r_c_e:
+
+     Baker, W. L., Baker, E. L., & Coleman, C. I. (2009). Pharmacologic
+     treatments for chronic obstructive pulmonary disease: A
+     mixed-treatment comparison meta-analysis. _Pharmacotherapy: The
+     Journal of Human Pharmacology and Drug Therapy_, *29*(8), 891-905.
+     https://doi.org/10.1592/phco.29.8.891
+
+_E_x_a_m_p_l_e_s:
+
+     ### Show first 6 rows of the dataset
+     head(dat.baker2009)
+     
+     ## Not run:
+     
+     ### Load netmeta package
+     suppressPackageStartupMessages(library(netmeta))
+     
+     ### Print odds ratios and confidence limits with two digits
+     oldset <- settings.meta(digits = 2)
+     
+     ### Transform data from long arm-based format to contrast-based
+     ### format. Argument 'sm' has to be used for odds ratio as summary
+     ### measure; by default the risk ratio is used in the metabin function
+     ### called internally.
+     pw <- pairwise(treatment, exac, total, studlab = paste(study, year),
+       data = dat.baker2009, sm = "OR")
+     
+     ### Conduct random effects network meta-analysis (NMA)
+     ### with placebo as reference
+     net <- netmeta(pw, common = FALSE, ref = "plac")
+     
+     ### Show network graph
+     netgraph(net, seq = "optimal", start = "prcomp",
+       labels = gsub("+", " +\n", trts, fixed = TRUE),
+       plastic = TRUE, thickness = "se.fixed", number = TRUE,
+       points = TRUE, cex.points = 5, col.points = "red",
+       offset = 0.025)
+     
+     ### Print and plot results for network meta-analysis
+     net
+     forest(net)
+     
+     ### Conduct component network meta-analysis (CNMA)
+     cnet <- netcomb(net)
+     cnet
+     
+     ### Compare results of NMA and additive CNMA
+     nb <- netbind(net, cnet, name = c("Standard NMA", "Additive CNMA"))
+     forest(nb)
+     
+     ### Use previous settings
+     settings.meta(oldset)
+     ## End(Not run)
+     

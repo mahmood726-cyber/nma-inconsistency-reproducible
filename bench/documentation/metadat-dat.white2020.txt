@@ -1,0 +1,77 @@
+_S_t_u_d_i_e_s _o_n _t_h_e _R_e_l_a_t_i_o_n_s_h_i_p _b_e_t_w_e_e_n _S_e_x_u_a_l _S_i_g_n_a_l _E_x_p_r_e_s_s_i_o_n _a_n_d
+_I_n_d_i_v_i_d_u_a_l _Q_u_a_l_i_t_y
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Results from 41 studies examining the relationship between
+     measures of individual quality and the expression of structurally
+     coloured sexual signals.
+
+_U_s_a_g_e:
+
+     dat.white2020
+     
+_F_o_r_m_a_t:
+
+     The object is a data frame which contains the following columns:
+
+       *study_id*         'character'  study-level ID                                                              
+       *obs*              'character'  observation-level ID                                                        
+       *exp_obs*          'character'  whether the study is observational or experimental                          
+       *control*          'numeric'    whether the study did (1) or did not (0) include a non-sexual control trait 
+       *class*            'character'  class of the study organisms                                                
+       *genus*            'character'  class of the study organisms                                                
+       *species*          'character'  species of the study organisms                                              
+       *sex*              'character'  sex of the study organisms                                                  
+       *iridescent*       'numeric'    whether the colour signals were iridescent (1) or not (0)                   
+       *col_var*          'character'  the colour variable quantified                                              
+       *col_component*    'character'  whether the colour variable is chromatic or achromatic                      
+       *quality_measure*  'character'  the measure of individual quality used                                      
+       *region*           'character'  the body region from which colour was sampled                               
+       *n*                'numeric'    study sample size                                                           
+       *r*                'numeric'    Pearson's correlation coefficient                                           
+      
+_D_e_t_a_i_l_s:
+
+     The 186 rows in this dataset come from 41 experimental and
+     observational studies reporting on the correlation between
+     measures of individual quality (age, body condition, immune
+     function, parasite resistance) and the expression of structurally
+     coloured sexual signals across 28 species. The purpose of this
+     meta-analysis was to test whether structural colour signals show
+     heightened condition-dependent expression, as predicted by
+     evolutionary models of 'honest' signalling.
+
+_C_o_n_c_e_p_t_s:
+
+     ecology, evolution, correlation coefficients
+
+_A_u_t_h_o_r(_s):
+
+     Thomas E. White, <mailto:thomas.white@sydney.edu.au>
+
+_S_o_u_r_c_e:
+
+     White, T. E. (2020). Structural colours reflect individual
+     quality: A meta-analysis. _Biology Letters_, *16*(4), 20200001.
+     https://doi.org/10.1098/rsbl.2020.0001
+
+_E_x_a_m_p_l_e_s:
+
+     ### copy data into 'dat' and examine data
+     dat <- dat.white2020
+     head(dat, 10)
+     
+     ## Not run:
+     
+     ### load metafor package
+     library(metafor)
+     
+     ### calculate r-to-z transformed correlations and corresponding sampling variances
+     dat <- escalc(measure="ZCOR", ri=r, ni=n, data=dat)
+     
+     ### fit multilevel meta-analytic model
+     res <- rma.mv(yi, vi, random = list(~ 1 | study_id, ~ 1 | obs), data=dat)
+     res
+     ## End(Not run)
+     

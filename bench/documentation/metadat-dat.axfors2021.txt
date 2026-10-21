@@ -1,0 +1,90 @@
+_M_o_r_t_a_l_i_t_y _O_u_t_c_o_m_e_s _w_i_t_h _H_y_d_r_o_x_y_c_h_l_o_r_o_q_u_i_n_e _a_n_d _C_h_l_o_r_o_q_u_i_n_e _i_n _C_O_V_I_D-_1_9
+_f_r_o_m _a_n _I_n_t_e_r_n_a_t_i_o_n_a_l _C_o_l_l_a_b_o_r_a_t_i_v_e _M_e_t_a-_A_n_a_l_y_s_i_s _o_f _R_a_n_d_o_m_i_z_e_d _T_r_i_a_l_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Results from 33 trials examining the effectiveness of
+     hydroxychloroquine or chloroquine in patients with COVID-19.
+
+_U_s_a_g_e:
+
+     dat.axfors2021
+     
+_F_o_r_m_a_t:
+
+     The data frame contains the following columns:
+
+       *id*                 'character'  registry number                                                
+       *acronym*            'character'  shortened registry number                                      
+       *patient_setting*    'character'  patient setting                                                
+       *blinding_exact*     'character'  study blinding                                                 
+       *high_dose*          'character'  high or low dose of medication                                 
+       *Published*          'character'  publication status                                             
+       *hcq_cq*             'character'  medication type (hcq = hydroxychloroquine or cq = chloroquine) 
+       *hcq_arm_event*      'numeric'    number of deaths in the treatment group                        
+       *hcq_arm_total*      'numeric'    number of patients in the treatment group                      
+       *control_arm_event*  'numeric'    number of deaths in the control group                          
+       *control_arm_total*  'numeric'    number of patients in the control group                        
+       *Control*            'character'  control group type (Standard of Care or Placebo)               
+      
+_D_e_t_a_i_l_s:
+
+     The dataset includes the results from 33 published and unpublished
+     randomized clinical trials that examined the effectiveness of
+     hydroxychloroquine or chloroquine in patients with COVID-19. The
+     results given here are focused on the total mortality in the
+     treatment versus control groups.
+
+_C_o_n_c_e_p_t_s:
+
+     medicine, covid-19, odds ratios
+
+_A_u_t_h_o_r(_s):
+
+     W. Kyle Hamilton <mailto:whamilton@ucmerced.edu>
+     <https://kylehamilton.com>
+
+_S_o_u_r_c_e:
+
+     Axfors, C., Schmitt, A., Janiaud, P., van <e2><80><99>t Hooft, J., Moher, D.,
+     Goodman, S., <e2><80><a6> Hemkens, L. G. (2021, March 9). Hydroxychloroquine
+     and chloroquine for survival in COVID-19: An international
+     collaborative meta-analysis of randomized trials.
+     https://doi.org/10.17605/OSF.IO/QESV4
+
+_R_e_f_e_r_e_n_c_e_s:
+
+     Axfors, C., Schmitt, A. M., Janiaud, P., van<e2><80><99>t Hooft, J.,
+     Abd-Elsalam, S., Abdo, E. F., Abella, B. S., Akram, J., Amaravadi,
+     R. K., Angus, D. C., Arabi, Y. M., Azhar, S., Baden, L. R., Baker,
+     A. W., Belkhir, L., Benfield, T., Berrevoets, M. A. H., Chen,
+     C.-P., Chen, T.-C., <e2><80><a6> Hemkens, L. G. (2021). Mortality outcomes
+     with hydroxychloroquine and chloroquine in COVID-19 from an
+     international collaborative meta-analysis of randomized trials.
+     Nature Communications, 12(1), 2349.
+     https://doi.org/10.1038/s41467-021-22446-z
+
+_E_x_a_m_p_l_e_s:
+
+     # copy data into 'dat' and examine data
+     dat <- dat.axfors2021
+     dat
+     
+     ## Not run:
+     
+     # load metafor package
+     library(metafor)
+     
+     # calculate log odds ratios and corresponding sampling variances
+     dat <- escalc(measure="OR", ai=hcq_arm_event, n1i=hcq_arm_total,
+                                 ci=control_arm_event, n2i=control_arm_total, data=dat)
+     
+     # meta-analysis Hydroxychloroquine
+     res_hcq <- rma(yi, vi, subset=(hcq_cq=="hcq"), slab = id, data=dat)
+     print(res_hcq, digits=2)
+     
+     # meta-analysis Chloroquine
+     res_cq <- rma(yi, vi, subset=(hcq_cq=="cq"), slab = id, data=dat)
+     print(res_cq, digits=2)
+     ## End(Not run)
+     

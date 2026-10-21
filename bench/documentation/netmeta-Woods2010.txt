@@ -1,0 +1,40 @@
+_C_o_u_n_t _s_t_a_t_i_s_t_i_c_s _o_f _s_u_r_v_i_v_a_l _d_a_t_a
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Count mortality statistics in randomised controlled trials of
+     treatments for chronic obstructive pulmonary disease (Woods et al.
+     (2010), Table 1).
+
+_F_o_r_m_a_t:
+
+     A data frame with the following columns:
+
+          *_author_*  first author / study name           
+       *_treatment_*  treatment                           
+               *_r_*  number of deaths in treatment arm   
+               *_N_*  number of patients in treatment arm 
+      
+_N_o_t_e:
+
+     The dataset Woods2010 is identical to dataset 'Woods2010' in R
+     package *metabook*.
+
+_S_o_u_r_c_e:
+
+     Woods BS, Hawkins N, Scott DA (2010): Network meta-analysis on the
+     log-hazard scale, combining count and hazard ratio statistics
+     accounting for multi-arm trials: A tutorial. _BMC Medical Research
+     Methodology_, *10*, 54
+
+_S_e_e _A_l_s_o:
+
+     'pairwise', 'metabin', 'netmeta'
+
+_E_x_a_m_p_l_e_s:
+
+     head(Woods2010)
+     
+     # Example using pairwise() and netmeta():
+     # example(Woods2010, package = "metabook")
+     

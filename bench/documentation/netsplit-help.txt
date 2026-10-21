@@ -1,0 +1,382 @@
+_S_p_l_i_t _d_i_r_e_c_t _a_n_d _i_n_d_i_r_e_c_t _e_v_i_d_e_n_c_e _i_n _n_e_t_w_o_r_k _m_e_t_a-_a_n_a_l_y_s_i_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Methods to split network estimates into the contribution of direct
+     and indirect evidence and to test for local inconsistency in
+     network meta-analysis.
+
+_U_s_a_g_e:
+
+     ## S3 method for class 'netmeta'
+     netsplit(
+       x,
+       method,
+       upper = TRUE,
+       reference.group = x$reference.group,
+       baseline.reference = x$baseline.reference,
+       show = gs("show"),
+       overall = TRUE,
+       direct = TRUE,
+       indirect = TRUE,
+       only.reference = FALSE,
+       ci = FALSE,
+       test = show %in% c("all", "with.direct", "both"),
+       order = NULL,
+       nchar.trts = x$nchar.trts,
+       sep.trts = x$sep.trts,
+       quote.trts = "",
+       tol.direct = 5e-04,
+       common = x$common,
+       random = x$random,
+       backtransf = x$backtransf,
+       warn = FALSE,
+       warn.deprecated = gs("warn.deprecated"),
+       verbose = FALSE,
+       ...
+     )
+     
+     ## S3 method for class 'netsplit'
+     print(
+       x,
+       common = x$x$common,
+       random = x$x$random,
+       show = x$show,
+       overall = x$overall,
+       direct = x$direct,
+       indirect = x$indirect,
+       ci = x$ci,
+       test = x$test,
+       only.reference = x$only.reference,
+       sortvar = NULL,
+       subset = NULL,
+       nchar.trts = x$nchar.trts,
+       digits = gs("digits"),
+       digits.stat = gs("digits.stat"),
+       digits.pval = gs("digits.pval"),
+       digits.prop = max(gs("digits.pval") - 2, 2),
+       text.NA = gs("lab.NA"),
+       backtransf = x$backtransf,
+       scientific.pval = gs("scientific.pval"),
+       big.mark = gs("big.mark"),
+       legend = gs("legend"),
+       indent = TRUE,
+       warn.deprecated = gs("warn.deprecated"),
+       ...
+     )
+     
+_A_r_g_u_m_e_n_t_s:
+
+       x: An object of class 'netmeta' or 'netsplit'.
+
+  method: A character string indicating which method to split direct
+          and indirect evidence is to be used. Either
+          '"Back-calculation"' or '"SIDDE"', can be abbreviated. See
+          Details.
+
+   upper: A logical indicating whether treatment comparisons should be
+          selected from the lower or upper triangle of the treatment
+          effect matrices (see list elements 'TE.common' and
+          'TE.random' in the 'netmeta' object). Ignored if argument
+          'order' is provided.
+
+reference.group: Reference treatment. Ignored if argument 'order' is
+          provided.
+
+baseline.reference: A logical indicating whether results should be
+          expressed as comparisons of other treatments versus the
+          reference treatment or vice versa. This argument is only
+          considered if 'reference.group' is not equal to '""' and
+          argument'order' is not provided.
+
+    show: A character string indicating which comparisons should be
+          printed (see Details).
+
+ overall: A logical indicating whether estimates from network
+          meta-analysis should be printed.
+
+  direct: A logical indicating whether direct estimates should be
+          printed.
+
+indirect: A logical indicating whether indirect estimates should be
+          printed.
+
+only.reference: A logical indicating whether only comparisons with the
+          reference group should be printed.
+
+      ci: A logical indicating whether confidence intervals should be
+          printed in addition to treatment estimates.
+
+    test: A logical indicating whether results of a test comparing
+          direct and indirect estimates should be printed.
+
+   order: A optional character or numerical vector specifying the order
+          of treatments in comparisons.
+
+nchar.trts: A numeric defining the minimum number of characters used to
+          create unique treatment names.
+
+sep.trts: A character string used in comparison names as separator
+          between treatment labels, e.g., " vs ".
+
+quote.trts: A character used to print around treatment labels.
+
+tol.direct: A numeric defining the maximum deviation of the direct
+          evidence proportion from 0 or 1 to classify a comparison as
+          providing only indirect or direct evidence, respectively.
+
+  common: A logical indicating whether results for the common effects
+          network meta-analysis should be printed.
+
+  random: A logical indicating whether results for the random effects
+          network meta-analysis should be printed.
+
+backtransf: A logical indicating whether printed results should be back
+          transformed. For example, if 'backtransf = TRUE', results for
+          'sm = "OR"' are printed as odds ratios rather than log odds
+          ratios.
+
+    warn: A logical indicating whether warnings should be printed.
+
+warn.deprecated: A logical indicating whether warnings should be
+          printed if deprecated arguments are used.
+
+ verbose: A logical indicating whether progress information should be
+          printed.
+
+     ...: Additional arguments.
+
+ sortvar: An optional vector used to sort comparisons (must be of same
+          length as the total number of comparisons).
+
+  subset: An optional logical vector specifying a subset of comparisons
+          to print (must be of same length as the total number of
+          comparisons) .
+
+  digits: Minimal number of significant digits, see 'print.default'.
+
+digits.stat: Minimal number of significant digits for z-value of test
+          of agreement between direct and indirect evidence, see
+          'print.default'.
+
+digits.pval: Minimal number of significant digits for p-value of test
+          of agreement between direct and indirect evidence, see
+          'print.default'.
+
+digits.prop: Minimal number of significant digits for direct evidence
+          proportions, see 'print.default'.
+
+ text.NA: A character string specifying text printed for missing
+          values.
+
+scientific.pval: A logical specifying whether p-values should be
+          printed in scientific notation, e.g., 1.2345e-01 instead of
+          0.12345.
+
+big.mark: A character used as thousands separator.
+
+  legend: A logical indicating whether a legend should be printed.
+
+  indent: A logical indicating whether items in the legend should be
+          indented.
+
+_D_e_t_a_i_l_s:
+
+     A comparison of direct and indirect treatment estimates can serve
+     as check for consistency of network meta-analysis (Dias et al.,
+     2010).
+
+     This function provides two methods to derive indirect estimates:
+
+        * Separate Indirect from Direct Evidence (SIDE) using a
+          back-calculation method ('method = "Back-calculation"') based
+          on the _direct evidence proportion_ to calculate the indirect
+          evidence (K<c3><b6>nig et al., 2013);
+
+        * Separate Indirect from Direct Design Evidence (SIDDE) as
+          described in Efthimiou et al. (2019).
+
+     Note, for the back-calculation method, indirect treatment
+     estimates are already calculated in 'netmeta' and this function
+     combines and prints these estimates in a user-friendly way.
+     Furthermore, this method is not available for the Mantel-Haenszel
+     and non-central hypergeometric distribution approach implemented
+     in 'netmetabin'.
+
+     For the random-effects model, the direct treatment estimates are
+     based on the common between-study variance tau^2 from the network
+     meta-analysis, i.e. the square of list element 'x$tau'.
+
+     Argument 'show' determines which comparisons are printed:
+
+       "all"            All comparisons                               
+       "both"           Only comparisons contributing both direct and 
+                        indirect evidence                             
+       "with.direct"    Comparisons providing direct evidence         
+       "direct.only"    Comparisons providing only direct             
+                        evidence                                      
+       "indirect.only"  Comparisons providing only indirect           
+                        evidence                                      
+      
+     Wilson et al. (2026) introduced a scatter plot of direct and
+     indirect estimates to visualise local consistency in a network
+     meta-analysis. Alternatively, a forest plot with direct and
+     indirect estimates can be generated.
+
+     The node-splitting method and SIDDE can be compute-intensive in
+     large networks. Crude information on the computation progress is
+     printed if argument 'verbose = TRUE'. In addition, computation
+     times are printed if R package *tictoc* is installed.
+
+_V_a_l_u_e:
+
+     An object of class 'netsplit' with corresponding 'print' 'forest',
+     and 'plot' functions. The object is a list containing the
+     following components:
+
+common, random: As defined above.
+
+comparison: A vector with treatment comparisons.
+
+prop.common, prop.random: A vector with direct evidence proportions
+          (common / random effects model).
+
+common, random: Results of network meta-analysis (common / random
+          effects model), i.e., data frame with columns comparison, TE,
+          seTE, lower, upper, z, and p.
+
+direct.common, direct.random: Network meta-analysis results based on
+          direct evidence (common / random effects model), i.e., data
+          frame with columns comparison, TE, seTE, lower, upper, z, and
+          p.
+
+indirect.common, indirect.random: Network meta-analysis results based
+          on indirect evidence (common / random effects model), i.e.,
+          data frame with columns comparison, TE, seTE, lower, upper,
+          z, and p.
+
+compare.common, compare.random: Comparison of direct and indirect
+          evidence in network meta-analysis (common / random effects
+          model), i.e., data frame with columns comparison, TE, seTE,
+          lower, upper, z, and p.
+
+      sm: A character string indicating underlying summary measure
+
+level.ma: The level used to calculate confidence intervals for pooled
+          estimates.
+
+  tictoc: Computation times for node-splitting method or SIDDE (if R
+          package *tictoc* is installed).
+
+ version: Version of R package netmeta used to create object.
+
+_A_u_t_h_o_r(_s):
+
+     Guido Schwarzer <mailto:guido.schwarzer@uniklinik-freiburg.de>,
+     Gerta R<c3><bc>cker <mailto:gerta.ruecker@uniklinik-freiburg.de>, Orestis
+     Efthimiou <mailto:oremiou@gmail.com>
+
+_R_e_f_e_r_e_n_c_e_s:
+
+     Dias S, Welton NJ, Caldwell DM, Ades AE (2010): Checking
+     consistency in mixed treatment comparison meta-analysis.
+     _Statistics in Medicine_, *29*, 932-44
+
+     Efthimiou O, R<c3><bc>cker G, Schwarzer G, Higgins J, Egger M, Salanti G
+     (2019): A Mantel-Haenszel model for network meta-analysis of rare
+     events. _Statistics in Medicine_, *38*, 2992-3012
+
+     K<c3><b6>nig J, Krahn U, Binder H (2013): Visualizing the flow of
+     evidence in network meta-analysis and characterizing mixed
+     treatment comparisons. _Statistics in Medicine_, *32*, 5414-29
+
+     Puhan MA, Sch<c3><bc>nemann HJ, Murad MH, et al. (2014): A GRADE working
+     group approach for rating the quality of treatment effect
+     estimates from network meta-analysis. _British Medical Journal_,
+     *349*, g5630
+
+     Wilson H, Sch<c3><b6>nstein A, Robson S, Bonofiglio F (2026): A novel
+     approach for visualizing local consistency in network
+     meta-analysis. _Research Synthesis Methods_, 1-15
+
+_S_e_e _A_l_s_o:
+
+     'forest.netsplit', 'plot.netsplit', 'netmeta', 'netmetabin',
+     'netmeasures', 'Woods2010', 'Senn2013', 'Dong2013'
+
+_E_x_a_m_p_l_e_s:
+
+     #
+     # 1) COPD example
+     #
+     
+     pw1 <- pairwise(treatment, event = r, n = N,
+       studlab = author, data = Woods2010, sm = "OR")
+     #
+     nma1 <- netmeta(pw1)
+     #
+     print(netsplit(nma1), digits = 2)
+     
+     
+     print(netsplit(nma1), digits = 2,
+       backtransf = FALSE, common = FALSE)
+     
+     # Sort by increasing number of studies in direct comparisons
+     print(netsplit(nma1), digits = 2, sortvar = k)
+     # Sort by decreasing number of studies in direct comparisons
+     print(netsplit(nma1), digits = 2, sortvar = -k)
+     
+     # Sort by increasing evidence proportion under common effects model
+     print(netsplit(nma1), digits = 2, sortvar = prop.common)
+     # Sort by decreasing evidence proportion under common effects model
+     print(netsplit(nma1), digits = 2, sortvar = -prop.common)
+     
+     # Sort by decreasing evidence proportion under common effects model
+     # and number of studies
+     print(netsplit(nma1), digits = 2, sortvar = cbind(-prop.common, -k))
+     
+     #
+     # 2) Diabetes example
+     #
+     
+     pw2 <- pairwise(studlab = study, treat = treatment,
+       n = n, mean = mean, sd = sd, data = Senn2013,
+       varnames = c("MD", "seMD"))
+     nma2 <- netmeta(pw2, reference = "plac")
+     #
+     ns2 <- netsplit(nma2)
+     #
+     print(ns2, digits = 2)
+     # Layout of Puhan et al. (2014), Table 1
+     print(ns2, digits = 2, ci = TRUE, test = FALSE)
+     
+     # Forest plot showing comparisons contributing both direct and
+     # indirect evidence
+     #
+     forest(ns2, fontsize = 6, spacing = 0.5, addrow.subgroups = FALSE)
+     
+     # Scatter plot to evaluate local inconsistency
+     #
+     plot(ns2)
+     
+     # Forest plot showing comparisons contributing direct evidence
+     #
+     forest(ns2, fontsize = 6, spacing = 0.5, addrow.subgroups = FALSE,
+       show = "with.direct")
+     
+     # Forest plot only showing network estimates compared to reference
+     # group and prediction intervals
+     #
+     forest(ns2, fontsize = 8, spacing = 0.75, show = "all",
+       only.reference = TRUE, prediction = TRUE,
+       direct = FALSE, indirect = FALSE)
+     
+     #
+     # 3) Another COPD example
+     #
+     
+     pw3 <- pairwise(treatment, death, randomized, studlab = id,
+       data = Dong2013, sm = "OR")
+     nma3 <- netmetabin(pw3)
+     netsplit(nma3)
+     

@@ -1,0 +1,83 @@
+[
+ {
+  "key": "netmeta::Dogliotti2014::stroke::RR::two-arm-only::PM",
+  "archive_index": 24,
+  "model": "PM",
+  "k": 16,
+  "loops": true,
+  "base": "00024-base.R",
+  "loo": "00024-loo.R"
+ },
+ {
+  "key": "netmeta::Linde2015::loss::RR::two-arm-only::DL",
+  "archive_index": 95,
+  "model": "DL",
+  "k": 52,
+  "loops": true,
+  "base": "00095-base.R",
+  "loo": "00095-loo.R"
+ },
+ {
+  "key": "netmeta::smokingcessation::cessation::RR::two-arm-only::DL",
+  "archive_index": 185,
+  "model": "DL",
+  "k": 22,
+  "loops": true,
+  "base": "00185-base.R",
+  "loo": "00185-loo.R"
+ },
+ {
+  "key": "metadat::dat.dong2013::death::OR::two-arm-only::FE",
+  "archive_index": 316,
+  "model": "FE",
+  "k": 31,
+  "loops": true,
+  "base": "00316-base.R",
+  "loo": "00316-loo.R"
+ },
+ {
+  "key": "metadat::dat.dong2013::death::RR::two-arm-only::DL",
+  "archive_index": 323,
+  "model": "DL",
+  "k": 31,
+  "loops": true,
+  "base": "00323-base.R",
+  "loo": "00323-loo.R"
+ },
+ {
+  "key": "metadat::dat.gurusamy2011::death::OR::two-arm-only::PM",
+  "archive_index": 342,
+  "model": "PM",
+  "k": 13,
+  "loops": true,
+  "base": "00342-base.R",
+  "loo": "00342-loo.R"
+ },
+ {
+  "key": "metadat::dat.linde2015::loss.ae::OR::two-arm-only::FE",
+  "archive_index": 430,
+  "model": "FE",
+  "k": 51,
+  "loops": true,
+  "base": "00430-base.R",
+  "loo": "00430-loo.R"
+ },
+ {
+  "key": "metadat::dat.linde2015::loss.ae::OR::two-arm-only::PM",
+  "archive_index": 432,
+  "model": "PM",
+  "k": 51,
+  "loops": true,
+  "base": "00432-base.R",
+  "loo": "00432-loo.R"
+ },
+ {
+  "key": "metadat::dat.senn2013::change::SMD::two-arm-only::FE",
+  "archive_index": 502,
+  "model": "FE",
+  "k": 25,
+  "loops": true,
+  "base": "00502-base.R",
+  "loo": "00502-loo.R"
+ }
+]

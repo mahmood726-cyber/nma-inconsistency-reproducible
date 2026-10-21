@@ -1,0 +1,44 @@
+_N_e_t_w_o_r_k _m_e_t_a-_a_n_a_l_y_s_i_s _o_f _d_i_e_t_a_r_y _f_a_t
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Network meta-analysis comparing the effects of two diets to
+     control on mortality.
+
+     The data are rates, given as the number of deaths and
+     person-years. These data are used as an example in the
+     supplemental material of Dias et al. (2013).
+
+_F_o_r_m_a_t:
+
+     A data frame with the following columns:
+
+       *_treat1_*  treatment 1           
+       *_treat2_*  treatment 2           
+       *_treat3_*  treatment 3           
+       *_years1_*  person years arm 1    
+       *_years2_*  person years arm 2    
+       *_years3_*  person years arm 3    
+           *_d1_*  events (deaths) arm 1 
+           *_d2_*  events (deaths) arm 2 
+           *_d3_*  events (deaths) arm 3 
+           *_ID_*  study ID              
+      
+_S_o_u_r_c_e:
+
+     Dias S, Sutton AJ, Ades AE and Welton NJ (2013): Evidence
+     synthesis for decision making 2: A generalized linear modeling
+     framework for pairwise and network meta-analysis of randomized
+     controlled trials. _Medical Decision Making_, *33*, 607-17
+
+_S_e_e _A_l_s_o:
+
+     'pairwise', 'metainc', 'netmeta', 'netgraph.netmeta'
+
+_E_x_a_m_p_l_e_s:
+
+     data(dietaryfat)
+     head(dietaryfat)
+     
+     # Examples: example(netmeta)
+     

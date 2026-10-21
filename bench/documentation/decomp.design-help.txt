@@ -1,0 +1,168 @@
+_D_e_s_i_g_n-_b_a_s_e_d _d_e_c_o_m_p_o_s_i_t_i_o_n _o_f _C_o_c_h_r_a_n'_s _Q _i_n _n_e_t_w_o_r_k _m_e_t_a-_a_n_a_l_y_s_i_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     This function performs a design-based decomposition of Cochran's Q
+     for assessing the homogeneity in the whole network, the
+     homogeneity within designs, and the homogeneity/consistency
+     between designs. It allows also an assessment of the consistency
+     assumption after detaching the effect of single designs.
+
+_U_s_a_g_e:
+
+     decomp.design(
+       x,
+       tau.preset = x$tau.preset,
+       warn = gs("warn"),
+       nchar.trts = x$nchar.trts
+     )
+     
+_A_r_g_u_m_e_n_t_s:
+
+       x: An object of class 'netmeta'.
+
+tau.preset: An optional value for the square-root of the between-study
+          variance tau^2 (see Details).
+
+    warn: A logical indicating whether warnings should be printed.
+
+nchar.trts: A numeric defining the minimum number of characters used to
+          create unique treatment names.
+
+_D_e_t_a_i_l_s:
+
+     In the context of network meta-analysis and the assessment of the
+     homogeneity and consistency assumption, a generalised Cochran's Q
+     statistic for multivariate meta-analysis can be used as shown in
+     Krahn et al. (2013). This Q statistic can be decomposed in a sum
+     of within-design Q statistics and one between-designs Q statistic
+     that incorporates the concept of design inconsistency, see Higgins
+     et al. (2012).
+
+     For assessing the inconsistency in a random effects model, the
+     between-designs Q statistic can be calculated based on a full
+     design-by-treatment interaction random effects model (see Higgins
+     et al., 2012). This Q statistic will be automatically given in the
+     output (tau^2 estimated by the method of moments (see Jackson et
+     al., 2012). Alternatively, the square-root of the between-study
+     variance can be prespecified by argument 'tau.preset' to obtain a
+     between-designs Q statistic (in 'Q.inc.random'), its
+     design-specific contributions 'Q.inc.design.random.preset') as
+     well as residuals after detaching of single designs
+     ('residuals.inc.detach.random.preset').
+
+     Since an inconsistent treatment effect of one design can
+     simultaneously inflate several residuals, Krahn et al. (2013)
+     suggest for locating the inconsistency in a network to fit a set
+     of extended models allowing for example for a deviating effect of
+     each study design in turn. The recalculated between-designs Q
+     statistics are given in list component 'Q.inc.detach'. The change
+     of the inconsistency contribution of single designs can be
+     investigated in more detail by a net heat plot (see function
+     netheat). Designs where only one treatment is involved in other
+     designs of the network or where the removal of corresponding
+     studies would lead to a splitting of the network do not contribute
+     to the inconsistency assessment. These designs are not included in
+     'Q.inc.detach'.
+
+_V_a_l_u_e:
+
+     Network meta-analysis with a single design: 'NULL'. Otherwise, a
+     list containing the following components:
+
+Q.decomp: Data frame with Q statistics (variable 'Q') based on the
+          common effects model to assess the homogeneity/consistency in
+          the whole network, within designs, and between designs.
+          Corresponding degrees of freedom ('df') and p-values
+          ('p.val') are also given.
+
+Q.het.design: Data frame with design-specific decomposition of the
+          within-designs Q statistic ('Q') of the common effects model,
+          corresponding degrees of freedom ('df') and p-values
+          ('p.val') are given.
+
+Q.inc.detach: Data frame with between-designs Q statistics ('Q') of the
+          common effects model after detaching of single designs,
+          corresponding degrees of freedom ('df') and p-values
+          ('p.val') are given.
+
+Q.inc.design: A named vector with contributions of single designs to
+          the between design Q statistic given in 'Q.decomp'.
+
+Q.inc.random: Data frame with between-designs Q statistic ('Q') based
+          on a random effects model with square-root of between-study
+          variance 'tau.within' estimated embedded in a full
+          design-by-treatment interaction model, corresponding degrees
+          of freedom ('df') and p-value ('p.val').
+
+Q.inc.random.preset: Data frame with between-designs Q statistic ('Q')
+          based on a random effects model with prespecified square-root
+          of between-study variance 'tau.preset' in the case if
+          argument 'tau.preset' is not NULL, corresponding degrees of
+          freedom ('df') and p-value ('p.val').
+
+Q.inc.design.random.preset: A named vector with contributions of single
+          designs to the between design Q statistic based on a random
+          effects model with prespecified square-root of between-study
+          variance 'tau.preset' in the case if argument 'tau.preset' is
+          given.
+
+residuals.inc.detach: Matrix with residuals, i.e. design-specific
+          direct estimates minus the corresponding network estimates
+          after detaching the design of the column.
+
+residuals.inc.detach.random.preset: Matrix with residuals analogous to
+          'residuals.inc.detach' but based on a random effects model
+          with prespecified square-root of between-study variance
+          'tau.preset' in the case if argument 'tau.preset' is not
+          NULL.
+
+    call: Function call.
+
+ version: Version of R package netmeta used to create object.
+
+_A_u_t_h_o_r(_s):
+
+     Ulrike Krahn <mailto:ulrike.krahn@bayer.com>, Jochem K<c3><b6>nig
+     <mailto:koenigjo@uni-mainz.de>
+
+_R_e_f_e_r_e_n_c_e_s:
+
+     Higgins JPT, Jackson D, Barrett JK, Lu G, Ades AE, White IR
+     (2012): Consistency and inconsistency in network meta-analysis:
+     concepts and models for multi-arm studies. _Research Synthesis
+     Methods_, *3*, 98-110
+
+     Krahn U, Binder H, K<c3><b6>nig J (2013): A graphical tool for locating
+     inconsistency in network meta-analyses. _BMC Medical Research
+     Methodology_, *13*, 35
+
+     Jackson D, White IR and Riley RD (2012): Quantifying the impact of
+     between-study heterogeneity in multivariate meta-analyses.
+     _Statistics in Medicine_, *31*, 3805-20
+
+_S_e_e _A_l_s_o:
+
+     netmeta, netheat
+
+_E_x_a_m_p_l_e_s:
+
+     # Only consider first five studies (to reduce runtime of example)
+     #
+     studies <- unique(Senn2013$study)
+     Senn2013.5 <- subset(Senn2013, study %in% studies[1:5])
+     
+     # Transform data from long arm-based to contrast-based format
+     #
+     pw <- pairwise(studlab = study, treat = treatment,
+       n = n, mean = mean, sd = sd, data = Senn2013.5,
+       varnames = c("MD", "seMD"))
+     
+     # Conduct network meta-analysis
+     #
+     nma <- netmeta(pw)
+     
+     # Decomposition of Cochran's Q
+     #
+     decomp.design(nma)
+     

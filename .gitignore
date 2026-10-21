@@ -1,0 +1,5 @@
+.validate-work/
+.verify-*/
+.slim-work/
+__pycache__/
+.pytest_cache/

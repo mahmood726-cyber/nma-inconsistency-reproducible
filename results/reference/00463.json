@@ -1,0 +1,1 @@
+{"key":"metadat::dat.lopez2019::standardized-change::MD::full::FE","status":"refused","reason":"Multi-arm studies are unsupported: correlated contrasts require study covariance.","scope":"input-support gate; not a numerical netmeta success","warnings":[],"seconds":0.10000000000002274,"pm_reference":"uncentered package QE"}

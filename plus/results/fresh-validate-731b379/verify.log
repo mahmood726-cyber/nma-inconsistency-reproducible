@@ -1,0 +1,2 @@
+ARCHIVE PASS: 838 pinned files; 758 identical to the validation-bundle manifest (733 via reversible CRLF-to-LF normalization); 80 archive-authored; 13 original assets match upstream 7966530; fix.patch replay matches 13 patched files; 540 configurations with exact keyed coverage; release placeholders pending
+exit=0 

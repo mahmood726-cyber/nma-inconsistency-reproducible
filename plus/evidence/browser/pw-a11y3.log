@@ -1,0 +1,11 @@
+start 19/10/2026 19:35:26.97 
+
+Running 1 test using 1 worker
+
+[1/1] [chromium] › a11y-sweep.spec.mjs:43:1 › a11y portfolio sweep (discovery baseline)
+[chromium] › a11y-sweep.spec.mjs:43:1 › a11y portfolio sweep (discovery baseline)
+a11y sweep: 76/76 apps, 12 distinct rules, 41 instances
+
+  1 passed (2.6m)
+exit=0 
+done 19/10/2026 19:38:03.92 

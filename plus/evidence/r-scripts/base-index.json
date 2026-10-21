@@ -1,0 +1,1457 @@
+[
+ {
+  "key": "netmeta::Baker2009::exac::OR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00004-base.R"
+ },
+ {
+  "key": "netmeta::Baker2009::exac::OR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00005-base.R"
+ },
+ {
+  "key": "netmeta::Baker2009::exac::OR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00006-base.R"
+ },
+ {
+  "key": "netmeta::Baker2009::exac::RR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00010-base.R"
+ },
+ {
+  "key": "netmeta::Baker2009::exac::RR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00011-base.R"
+ },
+ {
+  "key": "netmeta::Baker2009::exac::RR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00012-base.R"
+ },
+ {
+  "key": "netmeta::Dogliotti2014::stroke::OR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00016-base.R"
+ },
+ {
+  "key": "netmeta::Dogliotti2014::stroke::OR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00017-base.R"
+ },
+ {
+  "key": "netmeta::Dogliotti2014::stroke::OR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00018-base.R"
+ },
+ {
+  "key": "netmeta::Dogliotti2014::stroke::RR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00022-base.R"
+ },
+ {
+  "key": "netmeta::Dogliotti2014::stroke::RR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00023-base.R"
+ },
+ {
+  "key": "netmeta::Dogliotti2014::stroke::RR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00024-base.R"
+ },
+ {
+  "key": "netmeta::Dong2013::death::OR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00028-base.R"
+ },
+ {
+  "key": "netmeta::Dong2013::death::OR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00029-base.R"
+ },
+ {
+  "key": "netmeta::Dong2013::death::OR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00030-base.R"
+ },
+ {
+  "key": "netmeta::Dong2013::death::RR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00034-base.R"
+ },
+ {
+  "key": "netmeta::Dong2013::death::RR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00035-base.R"
+ },
+ {
+  "key": "netmeta::Dong2013::death::RR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00036-base.R"
+ },
+ {
+  "key": "netmeta::Franchini2012::change::MD::two-arm-only::FE",
+  "model": "FE",
+  "base": "00040-base.R"
+ },
+ {
+  "key": "netmeta::Franchini2012::change::MD::two-arm-only::DL",
+  "model": "DL",
+  "base": "00041-base.R"
+ },
+ {
+  "key": "netmeta::Franchini2012::change::MD::two-arm-only::PM",
+  "model": "PM",
+  "base": "00042-base.R"
+ },
+ {
+  "key": "netmeta::Franchini2012::change::SMD::two-arm-only::FE",
+  "model": "FE",
+  "base": "00046-base.R"
+ },
+ {
+  "key": "netmeta::Franchini2012::change::SMD::two-arm-only::DL",
+  "model": "DL",
+  "base": "00047-base.R"
+ },
+ {
+  "key": "netmeta::Franchini2012::change::SMD::two-arm-only::PM",
+  "model": "PM",
+  "base": "00048-base.R"
+ },
+ {
+  "key": "netmeta::Gurusamy2011::death::OR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00052-base.R"
+ },
+ {
+  "key": "netmeta::Gurusamy2011::death::OR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00053-base.R"
+ },
+ {
+  "key": "netmeta::Gurusamy2011::death::OR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00054-base.R"
+ },
+ {
+  "key": "netmeta::Gurusamy2011::death::RR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00058-base.R"
+ },
+ {
+  "key": "netmeta::Gurusamy2011::death::RR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00059-base.R"
+ },
+ {
+  "key": "netmeta::Gurusamy2011::death::RR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00060-base.R"
+ },
+ {
+  "key": "netmeta::Linde2015::resp::OR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00064-base.R"
+ },
+ {
+  "key": "netmeta::Linde2015::resp::OR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00065-base.R"
+ },
+ {
+  "key": "netmeta::Linde2015::resp::OR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00066-base.R"
+ },
+ {
+  "key": "netmeta::Linde2015::resp::RR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00070-base.R"
+ },
+ {
+  "key": "netmeta::Linde2015::resp::RR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00071-base.R"
+ },
+ {
+  "key": "netmeta::Linde2015::resp::RR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00072-base.R"
+ },
+ {
+  "key": "netmeta::Linde2015::remi::OR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00076-base.R"
+ },
+ {
+  "key": "netmeta::Linde2015::remi::OR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00077-base.R"
+ },
+ {
+  "key": "netmeta::Linde2015::remi::OR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00078-base.R"
+ },
+ {
+  "key": "netmeta::Linde2015::remi::RR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00082-base.R"
+ },
+ {
+  "key": "netmeta::Linde2015::remi::RR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00083-base.R"
+ },
+ {
+  "key": "netmeta::Linde2015::remi::RR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00084-base.R"
+ },
+ {
+  "key": "netmeta::Linde2015::loss::OR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00088-base.R"
+ },
+ {
+  "key": "netmeta::Linde2015::loss::OR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00089-base.R"
+ },
+ {
+  "key": "netmeta::Linde2015::loss::OR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00090-base.R"
+ },
+ {
+  "key": "netmeta::Linde2015::loss::RR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00094-base.R"
+ },
+ {
+  "key": "netmeta::Linde2015::loss::RR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00095-base.R"
+ },
+ {
+  "key": "netmeta::Linde2015::loss::RR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00096-base.R"
+ },
+ {
+  "key": "netmeta::Linde2015::loss.ae::OR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00100-base.R"
+ },
+ {
+  "key": "netmeta::Linde2015::loss.ae::OR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00101-base.R"
+ },
+ {
+  "key": "netmeta::Linde2015::loss.ae::OR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00102-base.R"
+ },
+ {
+  "key": "netmeta::Linde2015::loss.ae::RR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00106-base.R"
+ },
+ {
+  "key": "netmeta::Linde2015::loss.ae::RR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00107-base.R"
+ },
+ {
+  "key": "netmeta::Linde2015::loss.ae::RR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00108-base.R"
+ },
+ {
+  "key": "netmeta::Linde2015::ae::OR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00112-base.R"
+ },
+ {
+  "key": "netmeta::Linde2015::ae::OR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00113-base.R"
+ },
+ {
+  "key": "netmeta::Linde2015::ae::OR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00114-base.R"
+ },
+ {
+  "key": "netmeta::Linde2015::ae::RR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00118-base.R"
+ },
+ {
+  "key": "netmeta::Linde2015::ae::RR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00119-base.R"
+ },
+ {
+  "key": "netmeta::Linde2015::ae::RR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00120-base.R"
+ },
+ {
+  "key": "netmeta::Senn2013::stored::MD::two-arm-only::FE",
+  "model": "FE",
+  "base": "00130-base.R"
+ },
+ {
+  "key": "netmeta::Senn2013::stored::MD::two-arm-only::DL",
+  "model": "DL",
+  "base": "00131-base.R"
+ },
+ {
+  "key": "netmeta::Senn2013::stored::MD::two-arm-only::PM",
+  "model": "PM",
+  "base": "00132-base.R"
+ },
+ {
+  "key": "netmeta::Stowe2010::change::MD::two-arm-only::FE",
+  "model": "FE",
+  "base": "00136-base.R"
+ },
+ {
+  "key": "netmeta::Stowe2010::change::MD::two-arm-only::DL",
+  "model": "DL",
+  "base": "00137-base.R"
+ },
+ {
+  "key": "netmeta::Stowe2010::change::MD::two-arm-only::PM",
+  "model": "PM",
+  "base": "00138-base.R"
+ },
+ {
+  "key": "netmeta::Stowe2010::change::SMD::two-arm-only::FE",
+  "model": "FE",
+  "base": "00142-base.R"
+ },
+ {
+  "key": "netmeta::Stowe2010::change::SMD::two-arm-only::DL",
+  "model": "DL",
+  "base": "00143-base.R"
+ },
+ {
+  "key": "netmeta::Stowe2010::change::SMD::two-arm-only::PM",
+  "model": "PM",
+  "base": "00144-base.R"
+ },
+ {
+  "key": "netmeta::dietaryfat::death::IRR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00160-base.R"
+ },
+ {
+  "key": "netmeta::dietaryfat::death::IRR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00161-base.R"
+ },
+ {
+  "key": "netmeta::dietaryfat::death::IRR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00162-base.R"
+ },
+ {
+  "key": "netmeta::parkinson::change::MD::two-arm-only::FE",
+  "model": "FE",
+  "base": "00166-base.R"
+ },
+ {
+  "key": "netmeta::parkinson::change::MD::two-arm-only::DL",
+  "model": "DL",
+  "base": "00167-base.R"
+ },
+ {
+  "key": "netmeta::parkinson::change::MD::two-arm-only::PM",
+  "model": "PM",
+  "base": "00168-base.R"
+ },
+ {
+  "key": "netmeta::parkinson::change::SMD::two-arm-only::FE",
+  "model": "FE",
+  "base": "00172-base.R"
+ },
+ {
+  "key": "netmeta::parkinson::change::SMD::two-arm-only::DL",
+  "model": "DL",
+  "base": "00173-base.R"
+ },
+ {
+  "key": "netmeta::parkinson::change::SMD::two-arm-only::PM",
+  "model": "PM",
+  "base": "00174-base.R"
+ },
+ {
+  "key": "netmeta::smokingcessation::cessation::OR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00178-base.R"
+ },
+ {
+  "key": "netmeta::smokingcessation::cessation::OR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00179-base.R"
+ },
+ {
+  "key": "netmeta::smokingcessation::cessation::OR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00180-base.R"
+ },
+ {
+  "key": "netmeta::smokingcessation::cessation::RR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00184-base.R"
+ },
+ {
+  "key": "netmeta::smokingcessation::cessation::RR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00185-base.R"
+ },
+ {
+  "key": "netmeta::smokingcessation::cessation::RR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00186-base.R"
+ },
+ {
+  "key": "metadat::dat.axfors2021::event::OR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00190-base.R"
+ },
+ {
+  "key": "metadat::dat.axfors2021::event::OR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00191-base.R"
+ },
+ {
+  "key": "metadat::dat.axfors2021::event::OR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00192-base.R"
+ },
+ {
+  "key": "metadat::dat.axfors2021::event::RR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00196-base.R"
+ },
+ {
+  "key": "metadat::dat.axfors2021::event::RR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00197-base.R"
+ },
+ {
+  "key": "metadat::dat.axfors2021::event::RR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00198-base.R"
+ },
+ {
+  "key": "metadat::dat.baker2009::exac::OR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00202-base.R"
+ },
+ {
+  "key": "metadat::dat.baker2009::exac::OR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00203-base.R"
+ },
+ {
+  "key": "metadat::dat.baker2009::exac::OR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00204-base.R"
+ },
+ {
+  "key": "metadat::dat.baker2009::exac::RR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00208-base.R"
+ },
+ {
+  "key": "metadat::dat.baker2009::exac::RR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00209-base.R"
+ },
+ {
+  "key": "metadat::dat.baker2009::exac::RR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00210-base.R"
+ },
+ {
+  "key": "metadat::dat.chiarito2020::mi::OR::full::FE",
+  "model": "FE",
+  "base": "00211-base.R"
+ },
+ {
+  "key": "metadat::dat.chiarito2020::mi::OR::full::DL",
+  "model": "DL",
+  "base": "00212-base.R"
+ },
+ {
+  "key": "metadat::dat.chiarito2020::mi::OR::full::PM",
+  "model": "PM",
+  "base": "00213-base.R"
+ },
+ {
+  "key": "metadat::dat.chiarito2020::mi::RR::full::FE",
+  "model": "FE",
+  "base": "00214-base.R"
+ },
+ {
+  "key": "metadat::dat.chiarito2020::mi::RR::full::DL",
+  "model": "DL",
+  "base": "00215-base.R"
+ },
+ {
+  "key": "metadat::dat.chiarito2020::mi::RR::full::PM",
+  "model": "PM",
+  "base": "00216-base.R"
+ },
+ {
+  "key": "metadat::dat.chiarito2020::stroke::OR::full::FE",
+  "model": "FE",
+  "base": "00217-base.R"
+ },
+ {
+  "key": "metadat::dat.chiarito2020::stroke::OR::full::DL",
+  "model": "DL",
+  "base": "00218-base.R"
+ },
+ {
+  "key": "metadat::dat.chiarito2020::stroke::OR::full::PM",
+  "model": "PM",
+  "base": "00219-base.R"
+ },
+ {
+  "key": "metadat::dat.chiarito2020::stroke::RR::full::FE",
+  "model": "FE",
+  "base": "00220-base.R"
+ },
+ {
+  "key": "metadat::dat.chiarito2020::stroke::RR::full::DL",
+  "model": "DL",
+  "base": "00221-base.R"
+ },
+ {
+  "key": "metadat::dat.chiarito2020::stroke::RR::full::PM",
+  "model": "PM",
+  "base": "00222-base.R"
+ },
+ {
+  "key": "metadat::dat.chiarito2020::death::OR::full::FE",
+  "model": "FE",
+  "base": "00223-base.R"
+ },
+ {
+  "key": "metadat::dat.chiarito2020::death::OR::full::DL",
+  "model": "DL",
+  "base": "00224-base.R"
+ },
+ {
+  "key": "metadat::dat.chiarito2020::death::OR::full::PM",
+  "model": "PM",
+  "base": "00225-base.R"
+ },
+ {
+  "key": "metadat::dat.chiarito2020::death::RR::full::FE",
+  "model": "FE",
+  "base": "00226-base.R"
+ },
+ {
+  "key": "metadat::dat.chiarito2020::death::RR::full::DL",
+  "model": "DL",
+  "base": "00227-base.R"
+ },
+ {
+  "key": "metadat::dat.chiarito2020::death::RR::full::PM",
+  "model": "PM",
+  "base": "00228-base.R"
+ },
+ {
+  "key": "metadat::dat.chiarito2020::vdeath::OR::full::FE",
+  "model": "FE",
+  "base": "00229-base.R"
+ },
+ {
+  "key": "metadat::dat.chiarito2020::vdeath::OR::full::DL",
+  "model": "DL",
+  "base": "00230-base.R"
+ },
+ {
+  "key": "metadat::dat.chiarito2020::vdeath::OR::full::PM",
+  "model": "PM",
+  "base": "00231-base.R"
+ },
+ {
+  "key": "metadat::dat.chiarito2020::vdeath::RR::full::FE",
+  "model": "FE",
+  "base": "00232-base.R"
+ },
+ {
+  "key": "metadat::dat.chiarito2020::vdeath::RR::full::DL",
+  "model": "DL",
+  "base": "00233-base.R"
+ },
+ {
+  "key": "metadat::dat.chiarito2020::vdeath::RR::full::PM",
+  "model": "PM",
+  "base": "00234-base.R"
+ },
+ {
+  "key": "metadat::dat.collins1985a::b::OR::full::FE",
+  "model": "FE",
+  "base": "00235-base.R"
+ },
+ {
+  "key": "metadat::dat.collins1985a::b::OR::full::DL",
+  "model": "DL",
+  "base": "00236-base.R"
+ },
+ {
+  "key": "metadat::dat.collins1985a::b::OR::full::PM",
+  "model": "PM",
+  "base": "00237-base.R"
+ },
+ {
+  "key": "metadat::dat.collins1985a::b::RR::full::FE",
+  "model": "FE",
+  "base": "00238-base.R"
+ },
+ {
+  "key": "metadat::dat.collins1985a::b::RR::full::DL",
+  "model": "DL",
+  "base": "00239-base.R"
+ },
+ {
+  "key": "metadat::dat.collins1985a::b::RR::full::PM",
+  "model": "PM",
+  "base": "00240-base.R"
+ },
+ {
+  "key": "metadat::dat.collins1985a::o::OR::full::FE",
+  "model": "FE",
+  "base": "00241-base.R"
+ },
+ {
+  "key": "metadat::dat.collins1985a::o::OR::full::DL",
+  "model": "DL",
+  "base": "00242-base.R"
+ },
+ {
+  "key": "metadat::dat.collins1985a::o::OR::full::PM",
+  "model": "PM",
+  "base": "00243-base.R"
+ },
+ {
+  "key": "metadat::dat.collins1985a::o::RR::full::FE",
+  "model": "FE",
+  "base": "00244-base.R"
+ },
+ {
+  "key": "metadat::dat.collins1985a::o::RR::full::DL",
+  "model": "DL",
+  "base": "00245-base.R"
+ },
+ {
+  "key": "metadat::dat.collins1985a::o::RR::full::PM",
+  "model": "PM",
+  "base": "00246-base.R"
+ },
+ {
+  "key": "metadat::dat.collins1985a::d::OR::full::FE",
+  "model": "FE",
+  "base": "00247-base.R"
+ },
+ {
+  "key": "metadat::dat.collins1985a::d::OR::full::DL",
+  "model": "DL",
+  "base": "00248-base.R"
+ },
+ {
+  "key": "metadat::dat.collins1985a::d::OR::full::PM",
+  "model": "PM",
+  "base": "00249-base.R"
+ },
+ {
+  "key": "metadat::dat.collins1985a::d::RR::full::FE",
+  "model": "FE",
+  "base": "00250-base.R"
+ },
+ {
+  "key": "metadat::dat.collins1985a::d::RR::full::DL",
+  "model": "DL",
+  "base": "00251-base.R"
+ },
+ {
+  "key": "metadat::dat.collins1985a::d::RR::full::PM",
+  "model": "PM",
+  "base": "00252-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::rnic1::MD::full::FE",
+  "model": "FE",
+  "base": "00253-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::rnic1::MD::full::DL",
+  "model": "DL",
+  "base": "00254-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::rnic1::MD::full::PM",
+  "model": "PM",
+  "base": "00255-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::rnic1::SMD::full::FE",
+  "model": "FE",
+  "base": "00256-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::rnic1::SMD::full::DL",
+  "model": "DL",
+  "base": "00257-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::rnic1::SMD::full::PM",
+  "model": "PM",
+  "base": "00258-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::rnic2::MD::full::FE",
+  "model": "FE",
+  "base": "00259-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::rnic2::MD::full::DL",
+  "model": "DL",
+  "base": "00260-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::rnic2::MD::full::PM",
+  "model": "PM",
+  "base": "00261-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::rnic2::SMD::full::FE",
+  "model": "FE",
+  "base": "00262-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::rnic2::SMD::full::DL",
+  "model": "DL",
+  "base": "00263-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::rnic2::SMD::full::PM",
+  "model": "PM",
+  "base": "00264-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::rngoal1::OR::full::FE",
+  "model": "FE",
+  "base": "00265-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::rngoal1::OR::full::DL",
+  "model": "DL",
+  "base": "00266-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::rngoal1::OR::full::PM",
+  "model": "PM",
+  "base": "00267-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::rngoal1::RR::full::FE",
+  "model": "FE",
+  "base": "00268-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::rngoal1::RR::full::DL",
+  "model": "DL",
+  "base": "00269-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::rngoal1::RR::full::PM",
+  "model": "PM",
+  "base": "00270-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::rngoal2::OR::full::FE",
+  "model": "FE",
+  "base": "00271-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::rngoal2::OR::full::DL",
+  "model": "DL",
+  "base": "00272-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::rngoal2::OR::full::PM",
+  "model": "PM",
+  "base": "00273-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::rngoal2::RR::full::FE",
+  "model": "FE",
+  "base": "00274-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::rngoal2::RR::full::DL",
+  "model": "DL",
+  "base": "00275-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::rngoal2::RR::full::PM",
+  "model": "PM",
+  "base": "00276-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::snic1::MD::full::FE",
+  "model": "FE",
+  "base": "00277-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::snic1::MD::full::DL",
+  "model": "DL",
+  "base": "00278-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::snic1::MD::full::PM",
+  "model": "PM",
+  "base": "00279-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::snic1::SMD::full::FE",
+  "model": "FE",
+  "base": "00280-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::snic1::SMD::full::DL",
+  "model": "DL",
+  "base": "00281-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::snic1::SMD::full::PM",
+  "model": "PM",
+  "base": "00282-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::snic2::MD::full::FE",
+  "model": "FE",
+  "base": "00283-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::snic2::MD::full::DL",
+  "model": "DL",
+  "base": "00284-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::snic2::MD::full::PM",
+  "model": "PM",
+  "base": "00285-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::snic2::SMD::full::FE",
+  "model": "FE",
+  "base": "00286-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::snic2::SMD::full::DL",
+  "model": "DL",
+  "base": "00287-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::snic2::SMD::full::PM",
+  "model": "PM",
+  "base": "00288-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::sngoal1::OR::full::FE",
+  "model": "FE",
+  "base": "00289-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::sngoal1::OR::full::DL",
+  "model": "DL",
+  "base": "00290-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::sngoal1::OR::full::PM",
+  "model": "PM",
+  "base": "00291-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::sngoal1::RR::full::FE",
+  "model": "FE",
+  "base": "00292-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::sngoal1::RR::full::DL",
+  "model": "DL",
+  "base": "00293-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::sngoal1::RR::full::PM",
+  "model": "PM",
+  "base": "00294-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::sngoal2::OR::full::FE",
+  "model": "FE",
+  "base": "00295-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::sngoal2::OR::full::DL",
+  "model": "DL",
+  "base": "00296-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::sngoal2::OR::full::PM",
+  "model": "PM",
+  "base": "00297-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::sngoal2::RR::full::FE",
+  "model": "FE",
+  "base": "00298-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::sngoal2::RR::full::DL",
+  "model": "DL",
+  "base": "00299-base.R"
+ },
+ {
+  "key": "metadat::dat.dagostino1998::sngoal2::RR::full::PM",
+  "model": "PM",
+  "base": "00300-base.R"
+ },
+ {
+  "key": "metadat::dat.dogliotti2014::stroke::OR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00304-base.R"
+ },
+ {
+  "key": "metadat::dat.dogliotti2014::stroke::OR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00305-base.R"
+ },
+ {
+  "key": "metadat::dat.dogliotti2014::stroke::OR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00306-base.R"
+ },
+ {
+  "key": "metadat::dat.dogliotti2014::stroke::RR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00310-base.R"
+ },
+ {
+  "key": "metadat::dat.dogliotti2014::stroke::RR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00311-base.R"
+ },
+ {
+  "key": "metadat::dat.dogliotti2014::stroke::RR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00312-base.R"
+ },
+ {
+  "key": "metadat::dat.dong2013::death::OR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00316-base.R"
+ },
+ {
+  "key": "metadat::dat.dong2013::death::OR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00317-base.R"
+ },
+ {
+  "key": "metadat::dat.dong2013::death::OR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00318-base.R"
+ },
+ {
+  "key": "metadat::dat.dong2013::death::RR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00322-base.R"
+ },
+ {
+  "key": "metadat::dat.dong2013::death::RR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00323-base.R"
+ },
+ {
+  "key": "metadat::dat.dong2013::death::RR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00324-base.R"
+ },
+ {
+  "key": "metadat::dat.franchini2012::change::MD::two-arm-only::FE",
+  "model": "FE",
+  "base": "00328-base.R"
+ },
+ {
+  "key": "metadat::dat.franchini2012::change::MD::two-arm-only::DL",
+  "model": "DL",
+  "base": "00329-base.R"
+ },
+ {
+  "key": "metadat::dat.franchini2012::change::MD::two-arm-only::PM",
+  "model": "PM",
+  "base": "00330-base.R"
+ },
+ {
+  "key": "metadat::dat.franchini2012::change::SMD::two-arm-only::FE",
+  "model": "FE",
+  "base": "00334-base.R"
+ },
+ {
+  "key": "metadat::dat.franchini2012::change::SMD::two-arm-only::DL",
+  "model": "DL",
+  "base": "00335-base.R"
+ },
+ {
+  "key": "metadat::dat.franchini2012::change::SMD::two-arm-only::PM",
+  "model": "PM",
+  "base": "00336-base.R"
+ },
+ {
+  "key": "metadat::dat.gurusamy2011::death::OR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00340-base.R"
+ },
+ {
+  "key": "metadat::dat.gurusamy2011::death::OR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00341-base.R"
+ },
+ {
+  "key": "metadat::dat.gurusamy2011::death::OR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00342-base.R"
+ },
+ {
+  "key": "metadat::dat.gurusamy2011::death::RR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00346-base.R"
+ },
+ {
+  "key": "metadat::dat.gurusamy2011::death::RR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00347-base.R"
+ },
+ {
+  "key": "metadat::dat.gurusamy2011::death::RR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00348-base.R"
+ },
+ {
+  "key": "metadat::dat.hart1999::event::OR::full::FE",
+  "model": "FE",
+  "base": "00349-base.R"
+ },
+ {
+  "key": "metadat::dat.hart1999::event::OR::full::DL",
+  "model": "DL",
+  "base": "00350-base.R"
+ },
+ {
+  "key": "metadat::dat.hart1999::event::OR::full::PM",
+  "model": "PM",
+  "base": "00351-base.R"
+ },
+ {
+  "key": "metadat::dat.hart1999::event::RR::full::FE",
+  "model": "FE",
+  "base": "00352-base.R"
+ },
+ {
+  "key": "metadat::dat.hart1999::event::RR::full::DL",
+  "model": "DL",
+  "base": "00353-base.R"
+ },
+ {
+  "key": "metadat::dat.hart1999::event::RR::full::PM",
+  "model": "PM",
+  "base": "00354-base.R"
+ },
+ {
+  "key": "metadat::dat.hartmannboyce2018::event::OR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00358-base.R"
+ },
+ {
+  "key": "metadat::dat.hartmannboyce2018::event::OR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00359-base.R"
+ },
+ {
+  "key": "metadat::dat.hartmannboyce2018::event::OR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00360-base.R"
+ },
+ {
+  "key": "metadat::dat.hartmannboyce2018::event::RR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00364-base.R"
+ },
+ {
+  "key": "metadat::dat.hartmannboyce2018::event::RR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00365-base.R"
+ },
+ {
+  "key": "metadat::dat.hartmannboyce2018::event::RR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00366-base.R"
+ },
+ {
+  "key": "metadat::dat.hasselblad1998::xi::OR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00370-base.R"
+ },
+ {
+  "key": "metadat::dat.hasselblad1998::xi::OR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00371-base.R"
+ },
+ {
+  "key": "metadat::dat.hasselblad1998::xi::OR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00372-base.R"
+ },
+ {
+  "key": "metadat::dat.hasselblad1998::xi::RR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00376-base.R"
+ },
+ {
+  "key": "metadat::dat.hasselblad1998::xi::RR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00377-base.R"
+ },
+ {
+  "key": "metadat::dat.hasselblad1998::xi::RR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00378-base.R"
+ },
+ {
+  "key": "metadat::dat.laopaiboon2015::event::OR::full::FE",
+  "model": "FE",
+  "base": "00379-base.R"
+ },
+ {
+  "key": "metadat::dat.laopaiboon2015::event::OR::full::DL",
+  "model": "DL",
+  "base": "00380-base.R"
+ },
+ {
+  "key": "metadat::dat.laopaiboon2015::event::OR::full::PM",
+  "model": "PM",
+  "base": "00381-base.R"
+ },
+ {
+  "key": "metadat::dat.laopaiboon2015::event::RR::full::FE",
+  "model": "FE",
+  "base": "00382-base.R"
+ },
+ {
+  "key": "metadat::dat.laopaiboon2015::event::RR::full::DL",
+  "model": "DL",
+  "base": "00383-base.R"
+ },
+ {
+  "key": "metadat::dat.laopaiboon2015::event::RR::full::PM",
+  "model": "PM",
+  "base": "00384-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2005::event::OR::full::FE",
+  "model": "FE",
+  "base": "00385-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2005::event::OR::full::DL",
+  "model": "DL",
+  "base": "00386-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2005::event::OR::full::PM",
+  "model": "PM",
+  "base": "00387-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2005::event::RR::full::FE",
+  "model": "FE",
+  "base": "00388-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2005::event::RR::full::DL",
+  "model": "DL",
+  "base": "00389-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2005::event::RR::full::PM",
+  "model": "PM",
+  "base": "00390-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2015::resp::OR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00394-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2015::resp::OR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00395-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2015::resp::OR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00396-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2015::resp::RR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00400-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2015::resp::RR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00401-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2015::resp::RR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00402-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2015::remi::OR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00406-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2015::remi::OR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00407-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2015::remi::OR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00408-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2015::remi::RR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00412-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2015::remi::RR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00413-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2015::remi::RR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00414-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2015::loss::OR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00418-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2015::loss::OR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00419-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2015::loss::OR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00420-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2015::loss::RR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00424-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2015::loss::RR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00425-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2015::loss::RR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00426-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2015::loss.ae::OR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00430-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2015::loss.ae::OR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00431-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2015::loss.ae::OR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00432-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2015::loss.ae::RR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00436-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2015::loss.ae::RR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00437-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2015::loss.ae::RR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00438-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2015::ae::OR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00442-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2015::ae::OR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00443-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2015::ae::OR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00444-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2015::ae::RR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00448-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2015::ae::RR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00449-base.R"
+ },
+ {
+  "key": "metadat::dat.linde2015::ae::RR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00450-base.R"
+ },
+ {
+  "key": "metadat::dat.lopez2019::standardized-change::MD::two-arm-only::FE",
+  "model": "FE",
+  "base": "00466-base.R"
+ },
+ {
+  "key": "metadat::dat.lopez2019::standardized-change::MD::two-arm-only::DL",
+  "model": "DL",
+  "base": "00467-base.R"
+ },
+ {
+  "key": "metadat::dat.lopez2019::standardized-change::MD::two-arm-only::PM",
+  "model": "PM",
+  "base": "00468-base.R"
+ },
+ {
+  "key": "metadat::dat.pagliaro1992::xi::OR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00484-base.R"
+ },
+ {
+  "key": "metadat::dat.pagliaro1992::xi::OR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00485-base.R"
+ },
+ {
+  "key": "metadat::dat.pagliaro1992::xi::OR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00486-base.R"
+ },
+ {
+  "key": "metadat::dat.pagliaro1992::xi::RR::two-arm-only::FE",
+  "model": "FE",
+  "base": "00490-base.R"
+ },
+ {
+  "key": "metadat::dat.pagliaro1992::xi::RR::two-arm-only::DL",
+  "model": "DL",
+  "base": "00491-base.R"
+ },
+ {
+  "key": "metadat::dat.pagliaro1992::xi::RR::two-arm-only::PM",
+  "model": "PM",
+  "base": "00492-base.R"
+ },
+ {
+  "key": "metadat::dat.senn2013::change::MD::two-arm-only::FE",
+  "model": "FE",
+  "base": "00496-base.R"
+ },
+ {
+  "key": "metadat::dat.senn2013::change::MD::two-arm-only::DL",
+  "model": "DL",
+  "base": "00497-base.R"
+ },
+ {
+  "key": "metadat::dat.senn2013::change::MD::two-arm-only::PM",
+  "model": "PM",
+  "base": "00498-base.R"
+ },
+ {
+  "key": "metadat::dat.senn2013::change::SMD::two-arm-only::FE",
+  "model": "FE",
+  "base": "00502-base.R"
+ },
+ {
+  "key": "metadat::dat.senn2013::change::SMD::two-arm-only::DL",
+  "model": "DL",
+  "base": "00503-base.R"
+ },
+ {
+  "key": "metadat::dat.senn2013::change::SMD::two-arm-only::PM",
+  "model": "PM",
+  "base": "00504-base.R"
+ },
+ {
+  "key": "metadat::dat.stowe2010::change::MD::two-arm-only::FE",
+  "model": "FE",
+  "base": "00508-base.R"
+ },
+ {
+  "key": "metadat::dat.stowe2010::change::MD::two-arm-only::DL",
+  "model": "DL",
+  "base": "00509-base.R"
+ },
+ {
+  "key": "metadat::dat.stowe2010::change::MD::two-arm-only::PM",
+  "model": "PM",
+  "base": "00510-base.R"
+ },
+ {
+  "key": "metadat::dat.stowe2010::change::SMD::two-arm-only::FE",
+  "model": "FE",
+  "base": "00514-base.R"
+ },
+ {
+  "key": "metadat::dat.stowe2010::change::SMD::two-arm-only::DL",
+  "model": "DL",
+  "base": "00515-base.R"
+ },
+ {
+  "key": "metadat::dat.stowe2010::change::SMD::two-arm-only::PM",
+  "model": "PM",
+  "base": "00516-base.R"
+ }
+]

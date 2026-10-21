@@ -1,0 +1,80 @@
+_S_t_u_d_i_e_s _o_n _T_r_e_a_t_m_e_n_t_s _f_o_r _C_h_r_o_n_i_c _O_b_s_t_r_u_c_t_i_v_e _P_u_l_m_o_n_a_r_y _D_i_s_e_a_s_e
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Results from 3 trials examining the mortality risk of three
+     treatments and placebo in patients with chronic obstructive
+     pulmonary disease.
+
+_U_s_a_g_e:
+
+     dat.woods2010
+     
+_F_o_r_m_a_t:
+
+     The data frame contains the following columns:
+
+       *author*     'character'  first author / study name 
+       *treatment*  'character'  treatment                 
+       *r*          'integer'    number of deaths          
+       *N*          'integer'    number of patients        
+      
+_D_e_t_a_i_l_s:
+
+     Count mortality statistics in randomised controlled trials of
+     treatments for chronic obstructive pulmonary disease (Woods et
+     al., 2010, Table 1).
+
+_C_o_n_c_e_p_t_s:
+
+     medicine, odds ratios, network meta-analysis
+
+_A_u_t_h_o_r(_s):
+
+     Guido Schwarzer, <mailto:guido.schwarzer@uniklinik-freiburg.de>,
+     <https://github.com/guido-s/>
+
+_S_o_u_r_c_e:
+
+     Woods, B. S., Hawkins, N., & Scott, D. A. (2010). Network
+     meta-analysis on the log-hazard scale, combining count and hazard
+     ratio statistics accounting for multi-arm trials: A tutorial. _BMC
+     Medical Research Methodology_, *10*, 54.
+     https://doi.org/10.1186/1471-2288-10-54
+
+_E_x_a_m_p_l_e_s:
+
+     ### Show full dataset
+     dat.woods2010
+     
+     ## Not run:
+     
+     ### Load netmeta package
+     suppressPackageStartupMessages(library(netmeta))
+     
+     ### Print odds ratios and confidence limits with two digits
+     oldset <- settings.meta(digits = 2)
+     
+     ### Change appearance of confidence intervals
+     cilayout("(", "-")
+     
+     ### Transform data from long arm-based format to contrast-based
+     ### format. Argument 'sm' has to be used for odds ratio as summary
+     ### measure; by default the risk ratio is used in the metabin function
+     ### called internally.
+     pw <- pairwise(treatment, event = r, n = N,
+       studlab = author, data = dat.woods2010, sm = "OR")
+     pw
+     
+     ### Conduct network meta-analysis
+     net <- netmeta(pw)
+     net
+     
+     ### Show forest plot
+     forest(net, ref = "Placebo", drop = TRUE,
+       leftlabs = "Contrast to Placebo")
+     
+     ### Use previous settings
+     settings.meta(oldset)
+     ## End(Not run)
+     

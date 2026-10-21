@@ -1,0 +1,9 @@
+{"script":"00024-loo.R","exit_code":0,"check_line":"allmeta check: 989/989 quantities match","seconds":169.5}
+{"script":"00095-loo.R","exit_code":0,"check_line":"allmeta check: 6181/6181 quantities match","seconds":1034.3}
+{"script":"00185-loo.R","exit_code":0,"check_line":"allmeta check: 1217/1217 quantities match","seconds":222.6}
+{"script":"00316-loo.R","exit_code":0,"check_line":"allmeta check: 1703/1703 quantities match","seconds":358.2}
+{"script":"00323-loo.R","exit_code":0,"check_line":"allmeta check: 1703/1703 quantities match","seconds":317.3}
+{"script":"00342-loo.R","exit_code":0,"check_line":"allmeta check: 419/419 quantities match","seconds":114.9}
+{"script":"00430-loo.R","exit_code":0,"check_line":"allmeta check: 5255/5255 quantities match","seconds":976}
+{"script":"00432-loo.R","exit_code":0,"check_line":"allmeta check: 5255/5255 quantities match","seconds":1048.8}
+{"script":"00502-loo.R","exit_code":0,"check_line":"allmeta check: 2163/2163 quantities match","seconds":527.5}

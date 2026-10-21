@@ -1,0 +1,87 @@
+_S_t_u_d_i_e_s _o_n _A_n_t_i-_I_n_f_e_c_t_i_v_e-_T_r_e_a_t_e_d _C_e_n_t_r_a_l _V_e_n_o_u_s _C_a_t_h_e_t_e_r_s _f_o_r
+_P_r_e_v_e_n_t_i_o_n _o_f _C_a_t_h_e_t_e_r-_R_e_l_a_t_e_d _B_l_o_o_d_s_t_r_e_a_m _I_n_f_e_c_t_i_o_n_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Results from 18 studies comparing the risk of catheter-related
+     bloodstream infection when using anti-infective-treated versus
+     standard catheters in the acute care setting.
+
+_U_s_a_g_e:
+
+     dat.nielweise2007
+     
+_F_o_r_m_a_t:
+
+     The data frame contains the following columns:
+
+       *study*   'numeric'    study number                                                      
+       *author*  'character'  (first) author                                                    
+       *year*    'numeric'    publication year                                                  
+       *ai*      'numeric'    number of CRBSIs in patients receiving an anti-infective catheter 
+       *n1i*     'numeric'    number of patients receiving an anti-infective catheter           
+       *ci*      'numeric'    number of CRBSIs in patients receiving a standard catheter        
+       *n2i*     'numeric'    number of patients receiving a standard catheter                  
+      
+_D_e_t_a_i_l_s:
+
+     The use of a central venous catheter may lead to a
+     catheter-related bloodstream infection (CRBSI), which in turn
+     increases the risk of morbidity and mortality.
+     Anti-infective-treated catheters have been developed that are
+     meant to reduce the risk of CRBSIs. Niel-Weise et al. (2007)
+     conducted a meta-analysis of studies comparing infection risk when
+     using anti-infective-treated versus standard catheters in the
+     acute care setting. The results from 18 such studies are included
+     in this dataset.
+
+     The dataset was used in the article by Stijnen et al. (2010) to
+     illustrate various generalized linear mixed-effects models for the
+     meta-analysis of proportions and odds ratios (see 'References').
+
+_C_o_n_c_e_p_t_s:
+
+     medicine, odds ratios, generalized linear models
+
+_A_u_t_h_o_r(_s):
+
+     Wolfgang Viechtbauer, <mailto:wvb@metafor-project.org>,
+     <https://www.metafor-project.org>
+
+_S_o_u_r_c_e:
+
+     Niel-Weise, B. S., Stijnen, T., & van den Broek, P. J. (2007).
+     Anti-infective-treated central venous catheters: A systematic
+     review of randomized controlled trials. _Intensive Care Medicine_,
+     *33*(12), 2058-2068. https://doi.org/10.1007/s00134-007-0897-3
+
+_R_e_f_e_r_e_n_c_e_s:
+
+     Stijnen, T., Hamza, T. H., & Ozdemir, P. (2010). Random effects
+     meta-analysis of event outcome in the framework of the generalized
+     linear mixed model with applications in sparse data. _Statistics
+     in Medicine_, *29*(29), 3046-3067.
+     https://doi.org/10.1002/sim.4040
+
+_E_x_a_m_p_l_e_s:
+
+     ### copy data into 'dat' and examine data
+     dat <- dat.nielweise2007
+     dat
+     
+     ## Not run:
+     
+     ### load metafor package
+     library(metafor)
+     
+     ### standard (inverse-variance) random-effects model
+     res <- rma(measure="OR", ai=ai, n1i=n1i, ci=ci, n2i=n2i, data=dat, drop00=TRUE)
+     print(res, digits=3)
+     predict(res, transf=exp, digits=2)
+     
+     ### random-effects conditional logistic model
+     res <- rma.glmm(measure="OR", ai=ai, n1i=n1i, ci=ci, n2i=n2i, data=dat, model="CM.EL")
+     print(res, digits=3)
+     predict(res, transf=exp, digits=2)
+     ## End(Not run)
+     

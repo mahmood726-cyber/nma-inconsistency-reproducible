@@ -1,0 +1,80 @@
+_S_t_u_d_i_e_s _o_n _I_n_t_r_a_v_e_n_o_u_s _S_t_r_e_p_t_o_k_i_n_a_s_e _f_o_r _A_c_u_t_e _M_y_o_c_a_r_d_i_a_l _I_n_f_a_r_c_t_i_o_n
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Results from 33 trials comparing intravenous streptokinase versus
+     placebo or no therapy in patients who had been hospitalized for
+     acute myocardial infarction.
+
+_U_s_a_g_e:
+
+     dat.lau1992
+     
+_F_o_r_m_a_t:
+
+     The data frame contains the following columns:
+
+       *trial*  'character'  trial name                                    
+       *year*   'numeric'    publication year                              
+       *ai*     'numeric'    number of deaths in the streptokinase group   
+       *n1i*    'numeric'    number of patients in the streptokinase group 
+       *ci*     'numeric'    number of deaths in the control group         
+       *n2i*    'numeric'    number of patients in the control group       
+      
+_D_e_t_a_i_l_s:
+
+     In the paper by Lau et al. (1992), the data are used to illustrate
+     the idea of a cumulative meta-analysis, where the results are
+     updated as each trial is added to the dataset. See 'Examples' for
+     code that replicates the results and shows corresponding forest
+     plots.
+
+_C_o_n_c_e_p_t_s:
+
+     medicine, cardiology, odds ratios, cumulative meta-analysis
+
+_A_u_t_h_o_r(_s):
+
+     Wolfgang Viechtbauer, <mailto:wvb@metafor-project.org>,
+     <https://www.metafor-project.org>
+
+_S_o_u_r_c_e:
+
+     Lau, J., Antman, E. M., Jimenez-Silva, J., Kupelnick, B.,
+     Mosteller, F., & Chalmers, T. C. (1992). Cumulative meta-analysis
+     of therapeutic trials for myocardial infarction. _New England
+     Journal of Medicine_, *327*(4), 248-254.
+     https://doi.org/10.1056/NEJM199207233270406
+
+_E_x_a_m_p_l_e_s:
+
+     ### copy data into 'dat' and examine data
+     dat <- dat.lau1992
+     dat
+     
+     ## Not run:
+     
+     ### load metafor package
+     library(metafor)
+     
+     ### meta-analysis of log odds ratios using the MH method
+     res <- rma.mh(measure="OR", ai=ai, n1i=n1i, ci=ci, n2i=n2i, data=dat, slab=trial)
+     print(res, digits=2)
+     
+     ### forest plot
+     forest(res, xlim=c(-11,9), atransf=exp, at=log(c(0.01, 0.1, 1, 10, 100)),
+            ilab=dat$year, ilab.xpos=-7)
+     text(-7, 35, "Year", font=2)
+     
+     ### cumulative meta-analysis
+     sav <- cumul(res)
+     
+     ### forest plot of the cumulative results
+     forest(sav, xlim=c(-5,4), atransf=exp, at=log(c(0.1, 0.5, 1, 2, 10)),
+            ilab=dat$year, ilab.xpos=-3)
+     text(-3, 35, "Year", font=2)
+     id <- c(4, 8, 15, 33) # rows for which the z/p-values should be shown (as in Lau et al., 1992)
+     text(1.1, (res$k:1)[id], paste0("z = ", fmtx(sav$zval[id], digits=2),
+                                     fmtp(sav$pval[id], pname=", p", equal=TRUE, sep=TRUE, add0=TRUE)))
+     ## End(Not run)
+     

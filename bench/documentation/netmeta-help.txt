@@ -1,0 +1,830 @@
+_N_e_t_w_o_r_k _m_e_t_a-_a_n_a_l_y_s_i_s _u_s_i_n_g _g_r_a_p_h-_t_h_e_o_r_e_t_i_c_a_l _m_e_t_h_o_d
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Network meta-analysis is a generalisation of pairwise
+     meta-analysis that compares all pairs of treatments within a
+     number of treatments for the same condition. The graph-theoretical
+     approach for network meta-analysis uses methods that were
+     originally developed in electrical network theory. It has been
+     found to be equivalent to the frequentist approach to network
+     meta-analysis which is based on weighted least squares regression
+     (R<c3><bc>cker, 2012). An extension for multi-arm studies with correlated
+     treatment arms is also implemented (R<c3><bc>cker & Schwarzer, 2025,
+     unpublished).
+
+_U_s_a_g_e:
+
+     netmeta(
+       TE,
+       seTE,
+       treat1,
+       treat2,
+       studlab,
+       data = NULL,
+       subset = NULL,
+       correlated,
+       sm,
+       level = gs("level"),
+       level.ma = gs("level.ma"),
+       common = gs("common"),
+       random = gs("random") | !is.null(tau.preset),
+       prediction = gs("prediction"),
+       level.predict = gs("level.predict"),
+       reference.group,
+       baseline.reference = gs("baseline.reference"),
+       small.values = gs("small.values"),
+       all.treatments = gs("all.treatments"),
+       seq = gs("seq"),
+       method.tau = gs("method.tau.netmeta"),
+       tau.preset = NULL,
+       method.random.ci = "classic",
+       tol.multiarm = gs("tol.multiarm"),
+       tol.multiarm.se = gs("tol.multiarm.se"),
+       details.chkmultiarm = gs("details.chkmultiarm"),
+       sep.trts = gs("sep.trts"),
+       nchar.trts = gs("nchar.trts"),
+       nchar.studlab = gs("nchar.studlab"),
+       func.inverse = invmat,
+       n1 = NULL,
+       n2 = NULL,
+       event1 = NULL,
+       event2 = NULL,
+       incr = NULL,
+       mean1 = NULL,
+       mean2 = NULL,
+       sd1 = NULL,
+       sd2 = NULL,
+       time1 = NULL,
+       time2 = NULL,
+       overall.hetstat = gs("overall.hetstat"),
+       backtransf = gs("backtransf"),
+       title = gs("title"),
+       keepdata = gs("keepdata"),
+       keeprma = gs("keeprma"),
+       control = NULL,
+       warn = gs("warn"),
+       warn.deprecated = gs("warn.deprecated"),
+       nchar = nchar.trts,
+       ...
+     )
+     
+_A_r_g_u_m_e_n_t_s:
+
+      TE: Estimate of treatment effect, i.e. difference between first
+          and second treatment (e.g. log odds ratio, mean difference,
+          or log hazard ratio). Or an R object created with 'pairwise'.
+
+    seTE: Standard error of treatment estimate.
+
+  treat1: Label/Number for first treatment.
+
+  treat2: Label/Number for second treatment.
+
+ studlab: An optional - but important! - vector with study labels (see
+          Details).
+
+    data: An optional data frame containing the study information.
+
+  subset: An optional vector specifying a subset of studies to be used.
+
+correlated: An optional logical vector specifying whether treatment
+          arms of a multi-arm study are correlated (see Details).
+
+      sm: A character string indicating underlying summary measure,
+          e.g., '"RD"', '"RR"', '"OR"', '"ASD"', '"HR"', '"MD"',
+          '"SMD"', or '"ROM"'.
+
+   level: The level used to calculate confidence intervals for
+          individual comparisons.
+
+level.ma: The level used to calculate confidence intervals for network
+          estimates.
+
+  common: A logical indicating whether a common effects network
+          meta-analysis should be conducted.
+
+  random: A logical indicating whether a random effects network
+          meta-analysis should be conducted.
+
+prediction: A logical indicating whether prediction intervals should be
+          printed.
+
+level.predict: The level used to calculate prediction intervals for a
+          new study.
+
+reference.group: Reference treatment (first treatment is used if
+          argument is missing).
+
+baseline.reference: A logical indicating whether results should be
+          expressed as comparisons of other treatments versus the
+          reference treatment (default) or vice versa. This argument is
+          only considered if 'reference.group' has been specified.
+
+small.values: A character string specifying whether small treatment
+          effects indicate a beneficial ('"desirable"') or harmful
+          ('"undesirable"') effect (passed on to 'netrank', can be
+          abbreviated.
+
+all.treatments: A logical or '"NULL"'. If 'TRUE', matrices with all
+          treatment effects, and confidence limits will be printed.
+
+     seq: A character or numerical vector specifying the sequence of
+          treatments in printouts.
+
+method.tau: A character string indicating which method is used to
+          estimate the between-study variance tau^2 and its square root
+          tau. Either '"DL"', '"REML"', or '"ML"', can be abbreviated.
+
+tau.preset: An optional value for manually setting the square-root of
+          the between-study variance tau^2.
+
+method.random.ci: A character string indicating which method is used to
+          calculate confidence interval and test statistic for random
+          effects estimate; either '"classic"' for standard normal
+          quantiles or '"t-dist"' for quantiles from the
+          t-distribution, can be abbreviated.
+
+tol.multiarm: A numeric for the tolerance for consistency of treatment
+          estimates in multi-arm studies which are consistent by
+          design.
+
+tol.multiarm.se: A numeric for the tolerance for consistency of
+          standard errors in multi-arm studies which are consistent by
+          design. This check is not conducted if the argument is
+          'NULL'.
+
+details.chkmultiarm: A logical indicating whether treatment estimates
+          and / or variances of multi-arm studies with inconsistent
+          results or negative multi-arm variances should be printed.
+
+sep.trts: A character used in comparison names as separator between
+          treatment labels.
+
+nchar.trts: A numeric defining the minimum number of characters used to
+          create unique treatment names (see Details).
+
+nchar.studlab: A numeric defining the minimum number of characters used
+          to create unique study labels.
+
+func.inverse: R function used to calculate the pseudoinverse of the
+          Laplacian matrix L (see Details).
+
+      n1: Number of observations in first treatment group.
+
+      n2: Number of observations in second treatment group.
+
+  event1: Number of events in first treatment group.
+
+  event2: Number of events in second treatment group.
+
+    incr: Numerical value added to cell frequencies to construct the
+          covariance matrix used to calculate the REML or ML estimate
+          of the between-study variance tau^2 (only for binary or count
+          outcomes).
+
+   mean1: Mean in first treatment group.
+
+   mean2: Mean in second treatment group.
+
+     sd1: Standard deviation in first treatment group.
+
+     sd2: Standard deviation in second treatment group.
+
+   time1: Person time at risk in first treatment group.
+
+   time2: Person time at risk in second treatment group.
+
+overall.hetstat: A logical indicating whether to print heterogeneity
+          measures.
+
+backtransf: A logical indicating whether results should be back
+          transformed in printouts and forest plots. If 'backtransf =
+          TRUE', results for 'sm = "OR"' are presented as odds ratios
+          rather than log odds ratios, for example.
+
+   title: Title of meta-analysis / systematic review.
+
+keepdata: A logical indicating whether original data(set) should be
+          kept in netmeta object.
+
+ keeprma: A logical indicating whether 'rma.mv' object should be
+          stored.
+
+ control: An optional list to control the iterative process to estimate
+          the between-study variance tau^2. This argument is passed on
+          to 'rma.mv'.
+
+    warn: A logical indicating whether warnings should be printed
+          (e.g., if studies are excluded from meta-analysis due to zero
+          standard errors).
+
+warn.deprecated: A logical indicating whether warnings should be
+          printed if deprecated arguments are used.
+
+   nchar: Deprecated argument (replaced by 'nchar.trts').
+
+     ...: Additional arguments (to catch deprecated arguments).
+
+_D_e_t_a_i_l_s:
+
+     Network meta-analysis using R package *netmeta* is described in
+     detail in Schwarzer et al. (2015), Chapter 8.
+
+  _N_e_t_w_o_r_k _m_e_t_a-_a_n_a_l_y_s_i_s _m_o_d_e_l:
+
+       Let _n_ be the number of different treatments (nodes, vertices)
+       in a network and let _m_ be the number of existing comparisons
+       (edges) between the treatments. If there are only two-arm
+       studies, _m_ is the number of studies. Let TE and seTE be the
+       vectors of observed effects and their standard errors. Let W be
+       the _m_x_m_ diagonal matrix that contains the inverse variance 1
+       / seTE^2.
+
+       The given comparisons define the network structure. Therefrom an
+       _m_x_n_ design matrix X (edge-vertex incidence matrix) is
+       formed; for more precise information, see R<c3><bc>cker (2012).
+       Moreover, the _n_x_n_ Laplacian matrix L and its Moore-Penrose
+       pseudoinverse L+ are calculated (both matrices play an important
+       role in graph theory and electrical network theory). Using these
+       matrices, the variances based on both direct and indirect
+       comparisons can be estimated. Moreover, the hat matrix H can be
+       estimated by *H = XL+X^tW = X(X^t W X)^+X^tW* and finally
+       consistent treatment effects can be estimated by applying the
+       hat matrix to the observed (potentially inconsistent) effects. H
+       is a projection matrix which maps the observed effects onto the
+       consistent (n-1)-dimensional subspace. This is the Aitken
+       estimator (Senn et al., 2013). As in pairwise meta-analysis, the
+       Q statistic measures the deviation from consistency. Q can be
+       separated into parts for each pairwise meta-analysis and a part
+       for remaining inconsistency between comparisons.
+
+       A simple random effects model assuming that a constant
+       heterogeneity variance is added to each comparison of the
+       network can be defined via a generalised methods of moments
+       estimate of the between-studies variance tau^2 (Jackson et al.,
+       2012). This is added to the observed sampling variance 'seTE^2'
+       of each comparison in the network (before appropriate adjustment
+       for multi-arm studies). Then, as in standard pairwise
+       meta-analysis, the procedure is repeated with the resulting
+       enlarged standard errors.
+
+       For the random-effects model, the direct treatment estimates are
+       based on the common between-study variance tau^2 from the
+       network meta-analysis.
+
+
+  _M_u_l_t_i-_a_r_m _s_t_u_d_i_e_s:
+
+       Often multi-arm studies are included in a network meta-analysis.
+       In multi-arm studies, the treatment effects on different
+       comparisons are not independent, but correlated. This is
+       accounted for by reweighting all comparisons of each multi-arm
+       study. The method is described in R<c3><bc>cker (2012) and R<c3><bc>cker and
+       Schwarzer (2014).
+
+       Comparisons belonging to multi-arm studies are identified by
+       identical study labels (argument 'studlab'). It is therefore
+       important to use identical study labels for all comparisons
+       belonging to the same multi-arm study, e.g., study label
+       "Willms1999" for the three-arm study in the data example (Senn
+       et al., 2013). The function netmeta then automatically accounts
+       for within-study correlation by reweighting all comparisons of
+       each multi-arm study.
+
+       Note, all pairwise comparisons must be provided for a multi-arm
+       study. Consider a multi-arm study of _p_ treatments with known
+       variances. For this study, treatment effects and standard errors
+       must be provided for each of _p_(_p_ - 1) / 2 possible
+       comparisons. For instance, a three-arm study contributes three
+       pairwise comparisons, a four-arm study even six pairwise
+       comparisons. Function 'pairwise' automatically calculates all
+       pairwise comparisons for multi-arm studies.
+
+
+  _S_t_u_d_i_e_s _w_i_t_h _c_o_r_r_e_l_a_t_e_d _t_r_e_a_t_m_e_n_t _a_r_m_s:
+
+       The network meta-analysis method described in R<c3><bc>cker (2012)
+       assumes that the treatment arms of a study are independent. This
+       assumption is justified for parallel design trials and leads to
+       variance consistency in multi-arm trials. However, this
+       assumption is violated for trials with correlated arms, for
+       example, split-body trials. For these trials, the variance of a
+       contrast is not the sum of the arm-based variances, but comes
+       with a correlation term which may lead to the violation of
+       variance consistency. Using argument 'correlated', an
+       alternative method is used for studies with correlated treatment
+       arms (R<c3><bc>cker & Schwarzer, 2025, unpublished).
+
+       Argument 'correlated', which must be of the same length as
+       arguments 'TE', 'seTE', etc., is a logical vector which must be
+       TRUE for trials with correlated arms and FALSE otherwise. This
+       can be easily done using a variable with design information like
+       'correlated = design != "Parallel"'.
+
+
+  _D_a_t_a _f_o_r_m_a_t_s:
+
+       Data entry for this function is in _contrast-based_ format, that
+       is, data are given as contrasts (differences) between two
+       treatments (argument 'TE') with standard error (argument
+       'seTE'). In principle, meta-analysis functions from R package
+       *meta*, e.g. 'metabin' for binary outcomes or 'metacont' for
+       continuous outcomes, can be used to calculate treatment effects
+       separately for each treatment comparison which is a rather
+       tedious enterprise. If data are provided in _arm-based_ format,
+       that is, data are given for each treatment arm separately (e.g.
+       number of events and participants for binary outcomes), a much
+       more convenient way to transform data into contrast-based form
+       is available. Function 'pairwise' can automatically transform
+       data with binary outcomes (using the 'metabin' function from R
+       package *meta*), continuous outcomes ('metacont' function),
+       incidence rates ('metainc' function), and generic outcomes
+       ('metagen' function). Additional arguments of these functions
+       can be provided (see help page of function 'pairwise').
+
+
+  _A_d_d_i_t_i_o_n_a_l _c_o_m_m_e_n_t_s:
+
+       Internally, both common and random effects models are calculated
+       regardless of values chosen for arguments 'common' and 'random'.
+       Accordingly, the network estimates for the random effects model
+       can be extracted from component 'TE.random' of an object of
+       class '"netmeta"' even if argument 'random = FALSE'. However,
+       all functions in R package *netmeta* will adequately consider
+       the values for 'common' and 'random'. E.g. function
+       'print.summary.netmeta' will not print results for the random
+       effects model if 'random = FALSE'.
+
+       By default, treatment names are not abbreviated in printouts.
+       However, in order to get more concise printouts, argument
+       'nchar.trts' can be used to define the minimum number of
+       characters for abbreviated treatment names (see 'abbreviate',
+       argument 'minlength'). R function 'treats' is utilised
+       internally to create abbreviated treatment names.
+
+       Names of treatment comparisons are created by concatenating
+       treatment labels of pairwise comparisons using 'sep.trts' as
+       separator (see 'paste'). These comparison names are used in the
+       covariance matrices 'Cov.common' and 'Cov.random' and in some R
+       functions, e.g, 'decomp.design'. By default, a colon is used as
+       the separator. If any treatment label contains a colon the
+       following characters are used as separator (in consecutive
+       order): '"-"', '"_"', '"/"', '"+"', '"."', '"|"', and '"*"'. If
+       all of these characters are used in treatment labels, a
+       corresponding error message is printed asking the user to
+       specify a different separator.
+
+
+_V_a_l_u_e:
+
+     An object of class 'netmeta' with corresponding 'print',
+     'summary', 'forest', and 'netrank' functions. The object is a list
+     containing the following components:
+
+studlab, treat1, treat2, TE, seTE: As defined above.
+
+seTE.adj.common, seTE.adj.random: Standard error of treatment estimate,
+          adjusted for multi-arm studies.
+
+  design: Design of study providing pairwise comparison.
+
+n1, n2, event1, event2, incr: As defined above.
+
+mean1, mean2, sd1, sd2, time1, time2: As defined above.
+
+sd1, sd2, time1, time2: As defined above.
+
+       k: Total number of studies.
+
+       m: Total number of pairwise comparisons.
+
+       n: Total number of treatments.
+
+       d: Total number of designs (corresponding to the unique set of
+          treatments compared within studies).
+
+    trts: Treatments included in network meta-analysis.
+
+  k.trts: Number of studies evaluating a treatment.
+
+  n.trts: Number of observations receiving a treatment (if arguments
+          'n1' and 'n2' are provided).
+
+events.trts: Number of events observed for a treatment (if arguments
+          'event1' and 'event2' are provided).
+
+multiarm: Logical vector to identify pairwise comparisons from
+          multi-arm studies.
+
+  n.arms: Number of treatment arms in study providing pairwise
+          comparison.
+
+ studies: Vector with unique study labels.
+
+   narms: Number of arms for each study.
+
+ designs: Vector with unique designs present in the network. A design
+          corresponds to the set of treatments compared within a study.
+
+comparisons: Vector with unique direct comparisons present in the
+          network.
+
+TE.nma.common, TE.nma.random: A vector of length _m_ of consistent
+          treatment effects estimated by network meta-analysis (nma)
+          (common / random effects model).
+
+seTE.nma.common, seTE.nma.random: A vector of length _m_ of effective
+          standard errors estimated by network meta-analysis (common /
+          random effects model).
+
+lower.nma.common, lower.nma.random: A vector of length _m_ of lower
+          confidence interval limits for consistent treatment effects
+          estimated by network meta-analysis (common effects / random
+          effects model).
+
+upper.nma.common, upper.nma.random: A vector of length _m_ of upper
+          confidence interval limits for the consistent treatment
+          effects estimated by network meta-analysis (common effects /
+          random effects model).
+
+statistic.nma.common, statistic.nma.random: A vector of length _m_ of
+          z-values for test of treatment effect for individual
+          comparisons (common / random effects model).
+
+pval.nma.common, pval.nma.random: A vector of length _m_ of p-values
+          for test of treatment effect for individual comparisons
+          (common / random effects model).
+
+leverage.common: A vector of length _m_ of leverages, interpretable as
+          factors by which variances are reduced using information from
+          the whole network.
+
+w.common, w.random: A vector of length _m_ of weights of individual
+          studies (common / random effects model).
+
+Q.common: A vector of length _m_ of contributions to total
+          heterogeneity / inconsistency statistic.
+
+TE.common, TE.random: _n_x_n_ matrix with estimated overall treatment
+          effects (common / random effects model).
+
+seTE.common, seTE.random: _n_x_n_ matrix with standard errors (common /
+          random effects model).
+
+lower.common, upper.common, lower.random, upper.random: _n_x_n_
+          matrices with lower and upper confidence interval limits
+          (common / random effects model).
+
+statistic.common, pval.common, statistic.random, pval.random: _n_x_n_
+          matrices with z-value and p-value for test of overall
+          treatment effect (common / random effects model).
+
+seTE.predict: _n_x_n_ matrix with standard errors for prediction
+          intervals.
+
+lower.predict, upper.predict: _n_x_n_ matrices with lower and upper
+          prediction interval limits.
+
+prop.direct.common, prop.direct.random: A named vector of the direct
+          evidence proportion of each network estimate. (common effects
+          / random effects model).
+
+TE.direct.common, TE.direct.random: _n_x_n_ matrix with estimated
+          treatment effects from direct evidence (common effects /
+          random effects model).
+
+seTE.direct.common, seTE.direct.random: _n_x_n_ matrix with estimated
+          standard errors from direct evidence (common effects / random
+          effects model).
+
+lower.direct.common, upper.direct.common, lower.direct.random,
+          upper.direct.random: _n_x_n_ matrices with lower and upper
+          confidence interval limits from direct evidence (common /
+          random effects model).
+
+statistic.direct.common, pval.direct.common, statistic.direct.random,
+          pval.direct.random: _n_x_n_ matrices with z-value and p-value
+          for test of overall treatment effect from direct evidence
+          (common / random effects model).
+
+TE.indirect.common, TE.indirect.random: _n_x_n_ matrix with estimated
+          treatment effects from indirect evidence (common / random
+          effects model).
+
+seTE.indirect.common, seTE.indirect.random: _n_x_n_ matrix with
+          estimated standard errors from indirect evidence (common /
+          random effects model).
+
+lower.indirect.common, upper.indirect.common, lower.indirect.random,
+          upper.indirect.random: _n_x_n_ matrices with lower and upper
+          confidence interval limits from indirect evidence (common /
+          random effects model).
+
+statistic.indirect.common, pval.indirect.common,
+          statistic.indirect.random, pval.indirect.random: _n_x_n_
+          matrices with z-value and p-value for test of overall
+          treatment effect from indirect evidence (common / random
+          effects model).
+
+       Q: Overall heterogeneity / inconsistency statistic.
+
+    df.Q: Degrees of freedom for test of heterogeneity / inconsistency.
+
+  pval.Q: P-value for test of heterogeneity / inconsistency.
+
+I2, lower.I2, upper.I2: I-squared, lower and upper confidence limits.
+
+     tau: Square-root of between-study variance.
+
+Q.heterogeneity: Overall heterogeneity statistic.
+
+df.Q.heterogeneity: Degrees of freedom for test of overall
+          heterogeneity.
+
+pval.Q.heterogeneity: P-value for test of overall heterogeneity.
+
+Q.inconsistency: Overall inconsistency statistic.
+
+df.Q.inconsistency: Degrees of freedom for test of overall
+          inconsistency.
+
+pval.Q.inconsistency: P-value for test of overall inconsistency.
+
+Q.decomp: Data frame with columns 'treat1', 'treat2', 'Q', 'df' and
+          'pval.Q', providing heterogeneity statistics for each
+          pairwise meta-analysis of direct comparisons.
+
+A.matrix: Adjacency matrix (_n_x_n_).
+
+X.matrix: Design matrix (_m_x_n_).
+
+B.matrix: Edge-vertex incidence matrix (_m_x_n_).
+
+L.matrix.common, L.matrix.random: Laplacian matrix (_n_x_n_).
+
+Lplus.matrix.common, Lplus.matrix.random: Moore-Penrose pseudoinverse
+          of the Laplacian matrix (_n_x_n_).
+
+Q.matrix: Matrix of heterogeneity statistics for pairwise
+          meta-analyses, where direct comparisons exist (_n_x_n_).
+
+G.matrix: Matrix with variances and covariances of comparisons
+          (_m_x_m_). G is defined as *BL+B^t*.
+
+H.matrix.common, H.matrix.random: Hat matrix (_m_x_m_), defined as *H =
+          GW = BL+B^tW*.
+
+n.matrix: _n_x_n_ matrix with number of observations in direct
+          comparisons (if arguments 'n1' and 'n2' are provided).
+
+events.matrix: _n_x_n_ matrix with number of events in direct
+          comparisons (if arguments 'event1' and 'event2' are
+          provided).
+
+P.common, P.random: _n_x_n_ matrix with direct evidence proportions
+          (common / random effects model).
+
+Cov.common: Variance-covariance matrix (common effects model)
+
+Cov.random: Variance-covariance matrix (random effects model)
+
+sm, level, level.ma: As defined above.
+
+common, random: As defined above.
+
+prediction, level.predict: As defined above.
+
+reference.group, baseline.reference, small.values, all.treatments: As
+          defined above.
+
+seq, tau.preset, tol.multiarm, tol.multiarm.se: As defined above.
+
+details.chkmultiarm, sep.trts, nchar.trts: As defined above.
+
+backtransf, title, warn, warn.deprecated: As defined above.
+
+    call: Function call.
+
+ version: Version of R package netmeta used to create object.
+
+     In addition, the following component is stored if *metafor* is
+     used to calculate the between-study variance and argument 'keeprma
+     = TRUE':
+
+ rma.tau: R object created with 'rma.mv'.
+
+_N_o_t_e:
+
+     R function 'rma.mv' from R package 'metafor' (Viechtbauer 2010) is
+     called internally to estimate the between-study variance tau^2 for
+     the (restricted) maximum likelihood method. For binary outcomes,
+     incidence rates, and the mean difference, the variance-covariance
+     matrix is calculated if arguments 'event1', 'event2', 'n1', and
+     'n2' (binary outcomes); 'event1', 'event2', 'time1', and 'time2'
+     (incidence rates); 'n1', 'n2', 'sd1', and 'sd2' (mean difference)
+     are provided. For datasets preprocessed with 'pairwise' the
+     respective variables are selected automatically.
+
+_A_u_t_h_o_r(_s):
+
+     Gerta R<c3><bc>cker <mailto:gerta.ruecker@uniklinik-freiburg.de>, Guido
+     Schwarzer <mailto:guido.schwarzer@uniklinik-freiburg.de>
+
+_R_e_f_e_r_e_n_c_e_s:
+
+     Jackson D, White IR, Riley RD (2012): Quantifying the impact of
+     between-study heterogeneity in multivariate meta-analyses.
+     _Statistics in Medicine_, *31*, 3805-20
+
+     R<c3><bc>cker G (2012): Network meta-analysis, electrical networks and
+     graph theory. _Research Synthesis Methods_, *3*, 312-24
+
+     R<c3><bc>cker G, Schwarzer G (2014): Reduce dimension or reduce weights?
+     Comparing two approaches to multi-arm studies in network
+     meta-analysis. _Statistics in Medicine_, *33*, 4353-69
+
+     Schwarzer G, Carpenter JR, R<c3><bc>cker G (2015): _Meta-Analysis with R
+     (Use R!)_. Springer International Publishing, Switzerland
+
+     Senn S, Gavini F, Magrez D, Scheen A (2013): Issues in performing
+     a network meta-analysis. _Statistical Methods in Medical
+     Research_, *22*, 169-89
+
+     Viechtbauer W (2010): Conducting Meta-Analyses in R with the
+     metafor Package. _Journal of Statistical Software_, *36*, 1-48
+
+_S_e_e _A_l_s_o:
+
+     'pairwise', 'forest.netmeta', 'netrank', 'metagen',
+     'smokingcessation', 'Senn2013', 'dietaryfat'
+
+_E_x_a_m_p_l_e_s:
+
+     #
+     # 1) Smoking cessation example
+     #
+     
+     data(smokingcessation)
+     
+     # Transform data from wide arm-based to contrast-based format
+     #
+     pw1 <- pairwise(list(treat1, treat2, treat3),
+       event = list(event1, event2, event3), n = list(n1, n2, n3),
+       data = smokingcessation, sm = "OR")
+     
+     # Conduct random effects network meta-analysis
+     #
+     nma1 <- netmeta(pw1, common = FALSE)
+     nma1
+     
+     # Draw network graphs
+     #
+     netgraph(nma1, points = TRUE, cex.points = 3, cex = 1.25)
+     tname <- c("No intervention", "Self-help",
+       "Individual counselling", "Group counselling")
+     netgraph(nma1, points = TRUE, cex.points = 3, cex = 1.25, labels = tname)
+     
+     # Forest plot
+     #
+     forest(nma1)
+     
+     
+     #
+     # 2) Diabetes example
+     #
+     
+     # Transform data from long arm-based to contrast-based format
+     #
+     pw2 <- pairwise(studlab = study, treat = treatment,
+       n = n, mean = mean, sd = sd, data = Senn2013,
+       varnames = c("MD", "seMD"))
+     
+     # Conduct common effects network meta-analysis
+     #
+     nma2 <- netmeta(pw2, random = FALSE)
+     nma2
+     
+     ## Not run:
+     
+     # Senn (2013) data set in comparison-based format
+     data(Senn2013)
+     #
+     nma2.2 <- netmeta(TE, seTE, treat1, treat2, studlab,
+       data = Senn2013, sm = "MD", random = FALSE)
+     nma2.2
+     rm(Senn2013)
+     ## End(Not run)
+     
+     
+     nma2$Q.decomp
+     
+     # Comparison with reference group
+     #
+     print(nma2, reference = "plac")
+     forest(nma2, reference = "plac")
+     
+     # Print detailed results
+     #
+     snma2 <- summary(nma2)
+     print(snma2, digits = 3)
+     
+     # Only show individual study results for multi-arm studies
+     #
+     print(snma2, digits = 3, truncate = multiarm)
+     
+     # Only show first three individual study results
+     #
+     print(snma2, digits = 3, truncate = 1:3)
+     
+     # Only show individual study results for 'Kim 2007' and 'Willms 1999'
+     #
+     print(snma2, digits = 3, truncate = c("Kim 2007", "Willms 1999"))
+     
+     # Only show individual study results for studies starting with the
+     # letter "W"
+     #
+     print(snma2, ref = "plac", digits = 3,
+       truncate = substring(studlab, 1, 1) == "W")
+     
+     # Conduct random effects network meta-analysis
+     #
+     nma3 <- netmeta(pw2, common = FALSE, reference = "plac")
+     nma3
+     forest(nma3, xlim = c(-1.5, 1), xlab = "HbA1c difference")
+     
+     # Add column with P-Scores on right side of forest plot
+     #
+     forest(nma3, xlim = c(-1.5, 1),
+       xlab = "HbA1c difference",
+       rightcols = c("effect", "ci", "Pscore"),
+       just.addcols = "right")
+     
+     # Add column with P-Scores on left side of forest plot
+     #
+     forest(nma3, xlim = c(-1.5, 1),
+       xlab = "HbA1c difference",
+       leftcols = c("studlab", "Pscore"),
+       just.addcols = "right")
+     
+     # Sort forest plot by descending P-Score
+     #
+     forest(nma3, xlim = c(-1.5, 1),
+       xlab = "HbA1c difference",
+       rightcols = c("effect", "ci", "Pscore"),
+       just.addcols = "right",
+       sortvar = -Pscore)
+     
+     # Sort by and print number of studies with direct treatment comparisons
+     #
+     forest(nma3, xlim = c(-1.5, 1),
+       xlab = "HbA1c difference",
+       leftcols = c("studlab", "k"),
+       leftlabs = c("Contrast\nto Placebo", "Direct\nComparisons"),
+       sortvar = -k,
+       smlab = "Random Effects Model")
+     
+     # Change printing order of treatments with placebo last and use
+     # long treatment names
+     #
+     trts <- c("acar", "benf", "metf", "migl", "piog",
+       "rosi", "sita", "sulf", "vild", "plac")
+     #
+     nma4 <- netmeta(pw2, common = FALSE, reference = "plac", seq = trts)
+     print(nma4, digits = 2)
+     
+     #
+     # 3) Dietary fat example
+     #
+     
+     data(dietaryfat)
+     
+     # Transform data from arm-based format to contrast-based format
+     # Using incidence rate ratios (sm = "IRR") as effect measure.
+     # Note, the argument 'sm' is not necessary as this is the default
+     # in R function metainc() called internally
+     #
+     pw5 <- pairwise(list(treat1, treat2, treat3),
+       list(d1, d2, d3), time = list(years1, years2, years3),
+       studlab = ID, data = dietaryfat, sm = "IRR")
+     pw5
+     
+     # Conduct network meta-analysis
+     #
+     nma5 <- netmeta(pw5)
+     nma5
+     
+     # Conduct network meta-analysis using incidence rate differences
+     # (sm = "IRD")
+     #
+     pw6 <- pairwise(list(treat1, treat2, treat3),
+       list(d1, d2, d3), time = list(years1, years2, years3),
+       studlab = ID, data = dietaryfat, sm = "IRD")
+     nma6 <- netmeta(pw6)
+     nma6
+     
+     # Draw network graph
+     #
+     netgraph(nma5, points = TRUE, cex.points = 3, cex = 1.25,
+       labels = c("Control","Diet", "Diet 2"))
+     

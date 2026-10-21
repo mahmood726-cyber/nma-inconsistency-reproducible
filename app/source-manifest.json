@@ -1,0 +1,18 @@
+{
+  "commit": "7966530de875d22253f0557c7b447ed9d917685d",
+  "files": {
+    "LICENSE": "05ac89555dffdedd1360a1fd01a584c6f3d6a0df404a72dd2d66b1d388a65952",
+    "hub/app-style.css": "475254903d40eebe241574975f1ddff13808c8ad478c17137fda449a3952361f",
+    "hub/shared/a11y-landmarks.js": "a9b35c71c500b0fe4e5a080f23c9dbb11c5462663a0d44e4557f782149e5f8ea",
+    "hub/shared/chart-export-auto.js": "fd8f482db81863aac1e5dbbdbb48286249e04c185654117c5ac7a05c76a8fb20",
+    "hub/shared/results-export.js": "8fd30b46fc6e0d09b98326f69edf14757659dbcf2cf1434ca8c5de60c057cc71",
+    "nma-inconsistency/README.md": "e19206abfca57ad0524e08800c744f6045feb7003cbdc4c93004bdc9d7587784",
+    "nma-inconsistency/index.html": "d3b5bd7e30d3a38648eb2b7b48412b2a95919b9b44af444dcb320f9758275333",
+    "shared/app-flow.js": "2b8e366dbdbf5aebffc70f0b25b1ac7a49d65cc4ecfd7c0807113b3b5556162e",
+    "shared/autosave.js": "18bcc6c10f6177482b2f8453bede3f92887d7e6729413862cc903891405d23e8",
+    "shared/build-info.js": "a27afb23fbe1b2d41dc5658c5880c45e4061af09817fbe11eb8eaa97d96e6992",
+    "shared/forced-colors.css": "a967581cb9dfe03bcd6158264353dd8c3fff386d2919143587aa507a24e0c39c",
+    "shared/ma-comparisons-v1.js": "a41f2d377a556c3c98db4a806127de12625ee3ec49f0de41b5eb53533095ce0c",
+    "shared/ma-studies-v1.js": "0710fcb7284e1c837810e4d388d5538836d55483d6b014c6e7f864c44bf26bf6"
+  }
+}

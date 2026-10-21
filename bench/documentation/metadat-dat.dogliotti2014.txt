@@ -1,0 +1,102 @@
+_S_t_u_d_i_e_s _o_n _A_n_t_i_t_h_r_o_m_b_o_t_i_c _T_r_e_a_t_m_e_n_t_s _t_o _P_r_e_v_e_n_t _S_t_r_o_k_e_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Results from 20 trials examining the effectiveness of
+     antithrombotic treatments to prevent strokes in patients with
+     non-valvular atrial fibrillation.
+
+_U_s_a_g_e:
+
+     dat.dogliotti2014
+     
+_F_o_r_m_a_t:
+
+     The data frame contains the following columns:
+
+       *study*      'character'  study label           
+       *id*         'numeric'    study ID              
+       *treatment*  'character'  treatment             
+       *stroke*     'numeric'    number of strokes     
+       *total*      'numeric'    number of individuals 
+      
+_D_e_t_a_i_l_s:
+
+     This dataset comes from a systematic review aiming to estimate the
+     effects of eight antithrombotic treatments including placebo in
+     reducing the incidence of major thrombotic events in patients with
+     non-valvular atrial fibrillation (Dogliotti et al., 2014).
+
+     The review included 20 studies with 79,808 participants, four
+     studies are three-arm studies. The primary outcome is stroke
+     reduction (yes / no).
+
+_C_o_n_c_e_p_t_s:
+
+     medicine, odds ratios, network meta-analysis, Mantel-Haenszel
+     method
+
+_A_u_t_h_o_r(_s):
+
+     Guido Schwarzer, <mailto:guido.schwarzer@uniklinik-freiburg.de>,
+     <https://github.com/guido-s/>
+
+_S_o_u_r_c_e:
+
+     Dogliotti, A., Paolasso, E., & Giugliano, R. P. (2014). Current
+     and new oral antithrombotics in non-valvular atrial fibrillation:
+     A network meta-analysis of 79808 patients. _Heart_, *100*(5),
+     396-405. https://doi.org/10.1136/heartjnl-2013-304347
+
+_E_x_a_m_p_l_e_s:
+
+     ### Show first 7 rows / 3 studies of the dataset
+     head(dat.dogliotti2014, 7)
+     
+     ## Not run:
+     
+     ### Load netmeta package
+     suppressPackageStartupMessages(library(netmeta))
+     
+     ### Print odds ratios and confidence limits with two digits
+     oldset <- settings.meta(digits = 2)
+     
+     ### Change appearance of confidence intervals
+     cilayout("(", "-")
+     
+     ### Transform data from long arm-based format to contrast-based
+     ### format. Argument 'sm' has to be used for odds ratio as summary
+     ### measure; by default the risk ratio is used in the metabin function
+     ### called internally.
+     pw <- pairwise(treat = treatment, n = total, event = stroke,
+       studlab = study, data = dat.dogliotti2014, sm = "OR")
+     
+     ### Print log odds ratios (TE) and standard errors (seTE)
+     head(pw, 5)[, 1:5]
+     
+     ### Conduct network meta-analysis (NMA) with placebo as reference
+     net <- netmeta(pw, ref = "plac")
+     
+     ### Details on excluded study
+     selvars <- c("studlab", "event1", "n1", "event2", "n2")
+     subset(pw, studlab == "WASPO, 2007")[, selvars]
+     
+     ### Show network graph
+     netgraph(net, seq = "optimal", number = TRUE)
+     
+     ### Conduct Mantel-Haenszel NMA
+     net.mh <- netmetabin(pw, ref = "plac")
+     
+     ### Compare results of inverse variance and Mantel-Haenszel NMA
+     nb <- netbind(net, net.mh, random = FALSE,
+       name = c("Inverse variance", "Mantel-Haenszel"))
+     forest(nb, xlim = c(0.15, 2), at = c(0.2, 0.5, 1, 2))
+     
+     ### Print and plot results for inverse variance NMA
+     net
+     forest(net)
+     
+     ### Use previous settings
+     settings.meta(oldset)
+     ## End(Not run)
+     

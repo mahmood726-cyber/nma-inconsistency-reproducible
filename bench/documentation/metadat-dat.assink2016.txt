@@ -1,0 +1,128 @@
+_S_t_u_d_i_e_s _o_n _t_h_e _A_s_s_o_c_i_a_t_i_o_n _b_e_t_w_e_e_n _R_e_c_i_d_i_v_i_s_m _a_n_d _M_e_n_t_a_l _H_e_a_l_t_h
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Results from 17 studies on the association between recidivism and
+     mental health in delinquent juveniles.
+
+_U_s_a_g_e:
+
+     dat.assink2016
+     
+_F_o_r_m_a_t:
+
+     The data frame contains the following columns:
+
+       *study*      'numeric'    study id number                                                                                          
+       *esid*       'numeric'    effect size within study id number                                                                       
+       *id*         'numeric'    row id number                                                                                            
+       *yi*         'numeric'    standardized mean difference                                                                             
+       *vi*         'numeric'    corresponding sampling variance                                                                          
+       *pubstatus*  'numeric'    published study (0 = no; 1 = yes)                                                                        
+       *year*       'numeric'    publication year of the study (approximately mean centered)                                              
+       *deltype*    'character'  type of delinquent behavior in which juveniles could have recidivated (either general, overt, or covert) 
+      
+_D_e_t_a_i_l_s:
+
+     The studies included in this dataset (which is a subset of the
+     data used in Assink et al., 2015) compared the difference in
+     recidivism between delinquent juveniles with a mental health
+     disorder and a comparison group of juveniles without a mental
+     health disorder. Since studies differed in the way recidivism was
+     defined and assessed, results are given in terms of standardized
+     mean differences, with positive values indicating a higher
+     prevalence of recidivism in the group of juveniles with a mental
+     health disorder.
+
+     Multiple effect size estimates could be extracted from most
+     studies (e.g., for different delinquent behaviors in which
+     juveniles could have recidivated), necessitating the use of
+     appropriate models/methods for the analysis. Assink and Wibbelink
+     (2016) illustrate the use of multilevel meta-analysis models for
+     this purpose.
+
+_C_o_n_c_e_p_t_s:
+
+     psychology, criminology, standardized mean differences, multilevel
+     models, cluster-robust inference
+
+_N_o_t_e:
+
+     The 'year' variable is not constant within study 3, as this study
+     refers to two different publications using the same data.
+
+_A_u_t_h_o_r(_s):
+
+     Wolfgang Viechtbauer, <mailto:wvb@metafor-project.org>,
+     <https://www.metafor-project.org>
+
+_S_o_u_r_c_e:
+
+     Assink, M., & Wibbelink, C. J. M. (2016). Fitting three-level
+     meta-analytic models in R: A step-by-step tutorial. _The
+     Quantitative Methods for Psychology_, *12*(3), 154-174.
+     https://doi.org/10.20982/tqmp.12.3.p154
+
+_R_e_f_e_r_e_n_c_e_s:
+
+     Assink, M., van der Put, C. E., Hoeve, M., de Vries, S. L. A.,
+     Stams, G. J. J. M., & Oort, F. J. (2015). Risk factors for
+     persistent delinquent behavior among juveniles: A meta-analytic
+     review. _Clinical Psychology Review_, *42*, 47-61.
+     https://doi.org/10.1016/j.cpr.2015.08.002
+
+_E_x_a_m_p_l_e_s:
+
+     ### copy data into 'dat' and examine data
+     dat <- dat.assink2016
+     head(dat, 9)
+     
+     ## Not run:
+     
+     ### load metafor package
+     library(metafor)
+     
+     ### fit multilevel model
+     res <- rma.mv(yi, vi, random = ~ 1 | study/esid, data=dat)
+     res
+     
+     ### use cluster-robust inference methods
+     robust(res, cluster=study, clubSandwich=TRUE)
+     
+     ### LRTs for the variance components
+     res0 <- rma.mv(yi, vi, random = ~ 1 | study/esid, data=dat, sigma2=c(0,NA))
+     anova(res0, res)
+     res0 <- rma.mv(yi, vi, random = ~ 1 | study/esid, data=dat, sigma2=c(NA,0))
+     anova(res0, res)
+     
+     ### examine some potential moderators via meta-regression
+     rma.mv(yi, vi, mods = ~ pubstatus, random = ~ 1 | study/esid, data=dat)
+     rma.mv(yi, vi, mods = ~ year, random = ~ 1 | study/esid, data=dat)
+     dat$deltype <- relevel(factor(dat$deltype), ref="general")
+     rma.mv(yi, vi, mods = ~ deltype, random = ~ 1 | study/esid, data=dat)
+     rma.mv(yi, vi, mods = ~ year + deltype, random = ~ 1 | study/esid, data=dat)
+     
+     ### assume that the effect sizes within studies are correlated with rho=0.6
+     V <- vcalc(vi, cluster=study, obs=esid, data=dat, rho=0.6)
+     round(V[dat$study %in% c(1,2), dat$study %in% c(1,2)], 4)
+     
+     ### fit multilevel model using this approximate V matrix
+     res <- rma.mv(yi, V, random = ~ 1 | study/esid, data=dat)
+     res
+     
+     ### use cluster-robust inference methods
+     robust(res, cluster=study, clubSandwich=TRUE)
+     
+     ### use a correlation of 0.7 for effect sizes corresponding to the same type of
+     ### delinquent behavior and a correlation of 0.5 for effect sizes corresponding
+     ### to different types of delinquent behavior
+     V <- vcalc(vi, cluster=study, type=deltype, obs=esid, data=dat, rho=c(0.7, 0.5))
+     
+     ### fit multilevel model using this approximate V matrix
+     res <- rma.mv(yi, V, random = ~ 1 | study/esid, data=dat)
+     res
+     
+     ### use cluster-robust inference methods
+     robust(res, cluster=study, clubSandwich=TRUE)
+     ## End(Not run)
+     

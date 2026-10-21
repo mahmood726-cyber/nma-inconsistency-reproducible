@@ -1,0 +1,305 @@
+{
+ "release": "v1.8.0",
+ "commit": "1cb3f8409c7af75ed41f7e1811f9c502f900fc79",
+ "webr": {
+  "path": "r-shiny/shinylive/webr/",
+  "git_tree": "b62859ec7fe6415e5562ecca33387c8f018bcfc9",
+  "note": "served read-only from an allmeta checkout whose tree for this path equals 1cb3f84 (not copied)"
+ },
+ "files": [
+  {
+   "path": "LICENSE",
+   "source": "app/patched/LICENSE",
+   "sha256": "9ef93bba7449dd90d4d56d657049842fc7ff0b073fb669b79daf267d68c1c8c6",
+   "git_blob": "79542999a30ac4e2e976d671f579635aa1172bbd"
+  },
+  {
+   "path": "favicon.ico",
+   "source": "allmeta 1cb3f84 (not carried in this archive)",
+   "sha256": "0819e1a719839929514c4922af536995d0327f5f1a636e2c91106e7f728641d7",
+   "git_blob": "dfd93644febab286248bd562b5de135547ee7f98"
+  },
+  {
+   "path": "hub/app-style.css",
+   "source": "app/patched/hub/app-style.css",
+   "sha256": "905dba05ebb123f3c3baec8b5691830b48eb9c9092648f5cba71be0efc6a12a6",
+   "git_blob": "24574bf090eaa4ec0ab3c24aa965069f1ca7d4ea"
+  },
+  {
+   "path": "hub/shared/a11y-landmarks.js",
+   "source": "app/patched/hub/shared/a11y-landmarks.js",
+   "sha256": "f7a89f3c72dd80f666d16d52592a7e60f45fba62efc9dfeb4c2faf7fb0e8b5a2",
+   "git_blob": "293c9ad23a84810b4831da3cc2834899c75af9e8"
+  },
+  {
+   "path": "hub/shared/chart-export-auto.js",
+   "source": "app/patched/hub/shared/chart-export-auto.js",
+   "sha256": "a9c86241bb5b291b42d0a14ba388e952d2126ba5bd9ca747407ac2466543c00d",
+   "git_blob": "a676066ee5f77219fc09b0bfb973293307dd6840"
+  },
+  {
+   "path": "hub/shared/results-export.js",
+   "source": "app/patched/hub/shared/results-export.js",
+   "sha256": "aa484e6bd3cbe2098e677e171b07fdc82ab73027637d56e3b59635aa831b545d",
+   "git_blob": "0de1e0d5dce72e0216ab6cf865d5b04d7cc4cf44"
+  },
+  {
+   "path": "hub/shared/tests/nma-inconsistency-parity.spec.mjs",
+   "source": "allmeta 1cb3f84 (not carried in this archive)",
+   "sha256": "26fcb6f905ec2b10a1ee367106602c641285791fdf19768d7c85b5451ccdce89",
+   "git_blob": "af991bd55b5ad66ee8018831605fb1404238edcb"
+  },
+  {
+   "path": "hub/shared/tests/nma-inconsistency-plus.node.cjs",
+   "source": "plus/app/hub/shared/tests/nma-inconsistency-plus.node.cjs",
+   "sha256": "a5038a27229b56d879f1bdd34099a967dcbd7a74d0d39289abdc08e9827a8f7e",
+   "git_blob": "e2208f7a29910ec5f179d859af6e8f745b076638"
+  },
+  {
+   "path": "hub/shared/tests/nma-inconsistency-plus.spec.mjs",
+   "source": "plus/app/hub/shared/tests/nma-inconsistency-plus.spec.mjs",
+   "sha256": "00023a102430bd423982c045192ececf9b7aa132c789201f712a969e1bf95803",
+   "git_blob": "eaff3a9056bfcd94e00f4d75a681940b8b66068d"
+  },
+  {
+   "path": "hub/shared/tests/nma-inconsistency-re-parity.spec.mjs",
+   "source": "allmeta 1cb3f84 (not carried in this archive)",
+   "sha256": "5ff1f2934f460d0f8fdf5c8dc62c87d2eed2cba3b797008eec36c89341647539",
+   "git_blob": "3a714031bdfcccaf0479491d4014a0524dc0f93d"
+  },
+  {
+   "path": "hub/shared/tests/nma-inconsistency-usability.spec.mjs",
+   "source": "plus/app/hub/shared/tests/nma-inconsistency-usability.spec.mjs",
+   "sha256": "5a5785a5c09d786b02db4ac9aa61d9c75185d3c1eeaf0f9e18b0eb1728dce579",
+   "git_blob": "0204fb6234ba155fa498dc88b410c04b1d96749c"
+  },
+  {
+   "path": "hub/shared/tests/nma-inconsistency-walkthrough.spec.mjs",
+   "source": "plus/app/hub/shared/tests/nma-inconsistency-walkthrough.spec.mjs",
+   "sha256": "8a7137698b8ed72ccdedee4e329a6719c984ec89743744e3a5675a8407b4bb5b",
+   "git_blob": "c134928049d75c4e68669edd6c4aaed37af7c338"
+  },
+  {
+   "path": "hub/shared/tests/validate-nma-inconsistency.spec.mjs",
+   "source": "allmeta 1cb3f84 (not carried in this archive)",
+   "sha256": "188d31a8fd61841794d9a515d275cde853f039fa3d949f0377da86dfd12100a8",
+   "git_blob": "9379e10effdea3f813170e4933a1cd8c58acc87a"
+  },
+  {
+   "path": "hub/shared/tests/validation-fixture.mjs",
+   "source": "plus/app/hub/shared/tests/validation-fixture.mjs",
+   "sha256": "efecc838eda9aab417978256d5757d33e4b068fbb3c17ae0061aa91e81a35a9b",
+   "git_blob": "b53a93a68a755b7c8d900f2736b5909011d9caac"
+  },
+  {
+   "path": "nma-inconsistency/README.md",
+   "source": "plus/app/nma-inconsistency/README.md",
+   "sha256": "139a6e0c1cc91d1f5cd988bb94c154b759c471e3e9a28fe718139adb34167843",
+   "git_blob": "a6207988a9d4a0bb3488fdba8a33848531ba464b"
+  },
+  {
+   "path": "nma-inconsistency/index.html",
+   "source": "plus/app/nma-inconsistency/index.html",
+   "sha256": "23d2ad71d0cef30842323c6bd24ca4a4eb4cdcdd0e2321620021572701e88d24",
+   "git_blob": "aba39271b49c08096f557968d685a42d3af58458"
+  },
+  {
+   "path": "nma-inconsistency/plus-core.js",
+   "source": "plus/app/nma-inconsistency/plus-core.js",
+   "sha256": "912cc1314f291eb47774ecd85727617cacd14a7fa7004045c94184e553c48073",
+   "git_blob": "0e3132af1349bb9fd3137dc4a6c1922187cd8975"
+  },
+  {
+   "path": "nma-inconsistency/plus-examples.js",
+   "source": "plus/app/nma-inconsistency/plus-examples.js",
+   "sha256": "ee8e30949a6246165518f3a936fb814cf6cadef3bf3987f151be6201961de41e",
+   "git_blob": "4892fe0def46c662ccec1545d940ea76230ee9e3"
+  },
+  {
+   "path": "nma-inconsistency/plus-ui.js",
+   "source": "plus/app/nma-inconsistency/plus-ui.js",
+   "sha256": "54d166b4232ab919b75a397a3e9b19fd029dd7c55db4a44a96a57376fb119b5f",
+   "git_blob": "1b615cab26254f70eea751cb339bc4b038d33b4d"
+  },
+  {
+   "path": "nma-inconsistency/tests/fixtures/inco-oracle.json",
+   "source": "allmeta 1cb3f84 (not carried in this archive)",
+   "sha256": "c0b99decf209433ed126030503d3cbc452e4dbf66d55a71420b347064064088c",
+   "git_blob": "127412d8d0505eb6142613a907f34f5524affc73"
+  },
+  {
+   "path": "nma-inconsistency/tests/fixtures/inco-re-oracle.json",
+   "source": "allmeta 1cb3f84 (not carried in this archive)",
+   "sha256": "b980d9a0d2e74770035b646eb98c27d71985c978bda70e4afb3cb03cc11a835f",
+   "git_blob": "7abc0f4d3197d562dd6b97f18df47598699d750c"
+  },
+  {
+   "path": "nma-inconsistency/validate/MANIFEST-plus.json",
+   "source": "plus/app/nma-inconsistency/validate/MANIFEST-plus.json",
+   "sha256": "86959abc86f773b9b681e4cbde72c0bc42c7cff722c46009d171fc83327370dc",
+   "git_blob": "d7af7d4fcba41b386fecc81d24dec3f200fd336f"
+  },
+  {
+   "path": "nma-inconsistency/validate/MANIFEST.json",
+   "source": "plus/app/nma-inconsistency/validate/MANIFEST.json",
+   "sha256": "760355ad648f8ff9a76308e9bcbc5bcff4560a25aa47865ddc119f3177f37f6a",
+   "git_blob": "e729123132e3a8ebab36cb3d94cb75d82607b192"
+  },
+  {
+   "path": "nma-inconsistency/validate/README-plus.md",
+   "source": "plus/app/nma-inconsistency/validate/README-plus.md",
+   "sha256": "04fd282c74af6f7af5566ec9d470386968789e14037026f4f75b6446e4b68a8a",
+   "git_blob": "88645211528b3acfdd106eacd3246a3d39d70192"
+  },
+  {
+   "path": "nma-inconsistency/validate/README.md",
+   "source": "plus/app/nma-inconsistency/validate/README.md",
+   "sha256": "cbac5a0eb7a17ae22c0c22c3578b2ec25b821818d4cc6dbf3a3a047f12103b67",
+   "git_blob": "ad32191c584c47248dffb9ca03895a7b4d082227"
+  },
+  {
+   "path": "nma-inconsistency/validate/adapter.js",
+   "source": "plus/app/nma-inconsistency/validate/adapter.js",
+   "sha256": "2ddfde0e1ab83594bd72afec4bb85ca62ade715fe48c625e4e9bfe36811a58af",
+   "git_blob": "14cb3f88aa6c80c59e857e19ea0c35f7cebe2236"
+  },
+  {
+   "path": "nma-inconsistency/validate/build-fixtures.cjs",
+   "source": "plus/app/nma-inconsistency/validate/build-fixtures.cjs",
+   "sha256": "92a29b0fa5fdfcba407e90b39bca5909211daf2d7141f1a0cdbde13f23e2c6f2",
+   "git_blob": "3ff88113de98d77bf104832f95010e6e892a6239"
+  },
+  {
+   "path": "nma-inconsistency/validate/build-scripts.cjs",
+   "source": "plus/app/nma-inconsistency/validate/build-scripts.cjs",
+   "sha256": "89d46f9dd2b170cb7f76224781c209d422749434cbf4bf967b51ff31c549b83a",
+   "git_blob": "b2788e2e170b4293de234914c6a361035aee9d21"
+  },
+  {
+   "path": "nma-inconsistency/validate/corpus/corpus.json",
+   "source": "plus/app/nma-inconsistency/validate/corpus/corpus.json",
+   "sha256": "631f9ab81b3598e1b6105dfd7655ffd59399c25d755668b6682ecd796745b598",
+   "git_blob": "676bcf65c35116f2e0ca14f2e0d0e0b7c60fb950"
+  },
+  {
+   "path": "nma-inconsistency/validate/corpus/reference.json",
+   "source": "plus/app/nma-inconsistency/validate/corpus/reference.json",
+   "sha256": "aa0e07ae7f6885dcd0f6c5eeff93b4d01658ad82858ed7dcf4184723c16f8787",
+   "git_blob": "28ba49a364482f34bbd6b2d8103ab9412c978eb1"
+  },
+  {
+   "path": "nma-inconsistency/validate/derive-plus-checks.cjs",
+   "source": "plus/app/nma-inconsistency/validate/derive-plus-checks.cjs",
+   "sha256": "0617b33a0392edfb85710581b18b0a87ea4bd5d6411d80ff40eaa892f7cb72ce",
+   "git_blob": "a6e1b7e8621bfc187a29b410050655f8f116d59f"
+  },
+  {
+   "path": "nma-inconsistency/validate/generate-plus.R",
+   "source": "plus/app/nma-inconsistency/validate/generate-plus.R",
+   "sha256": "208b108269e2a69348146e3105e75733295e7d89555a349540ea55b70f0d0d42",
+   "git_blob": "2b75c6d631d579491cc9203615adcdf4b103035a"
+  },
+  {
+   "path": "nma-inconsistency/validate/live.js",
+   "source": "plus/app/nma-inconsistency/validate/live.js",
+   "sha256": "f56695a0363d29f9b1e7f0d2d7b0fb5ce0fc86c916bf0f4420957946cf0db6d4",
+   "git_blob": "0e0797fdf942f856f0b85037ed69f082ac513ab8"
+  },
+  {
+   "path": "nma-inconsistency/validate/manifest-plus.js",
+   "source": "plus/app/nma-inconsistency/validate/manifest-plus.js",
+   "sha256": "bbde25dbc280ec59b9182941024a2ab866fad8d418dd3b9e36834f8b61149bc2",
+   "git_blob": "0a8e19aba1e77c72aa0df07a568eccd5b99d8d7c"
+  },
+  {
+   "path": "nma-inconsistency/validate/pin-plus.py",
+   "source": "plus/app/nma-inconsistency/validate/pin-plus.py",
+   "sha256": "602ea53526eea309f2e00e5cc72ced18dca568761dde7bc22617c3fda03c52b4",
+   "git_blob": "eeb7a4e62caa32d8910c585ecb784e0455f9265f"
+  },
+  {
+   "path": "nma-inconsistency/validate/plus-adapter.js",
+   "source": "plus/app/nma-inconsistency/validate/plus-adapter.js",
+   "sha256": "b2117cf28565360fe08e72edd54497e0c86d4c2760f39274e5a36823fea25a4c",
+   "git_blob": "736a725146bd36f3fb09b874daf2490fcb246703"
+  },
+  {
+   "path": "nma-inconsistency/validate/plus/corpus.json",
+   "source": "plus/app/nma-inconsistency/validate/plus/corpus.json",
+   "sha256": "9e09023a64b46005d53527118801df3b046218e932773017b51aba5ae31b63e1",
+   "git_blob": "dea4979cba7d3f4dd427778f0b49e124d7d341d5"
+  },
+  {
+   "path": "nma-inconsistency/validate/plus/estimators-reference.json",
+   "source": "plus/app/nma-inconsistency/validate/plus/estimators-reference.json",
+   "sha256": "f31b49e26615e16f41658411a7c9f01db8e61e19a5ae7d52119538b1c4f3c158",
+   "git_blob": "19a9b2257f010ad47a69618df55fdccf691c3d8f"
+  },
+  {
+   "path": "nma-inconsistency/validate/plus/reference.json",
+   "source": "plus/app/nma-inconsistency/validate/plus/reference.json",
+   "sha256": "a84d1b8136cd211b80e1fa447c012ec879d7322dcf9c7eb438abc90c3241fb45",
+   "git_blob": "5cd8433962696cc88d09c4afd2cec90f986ec630"
+  },
+  {
+   "path": "nma-inconsistency/validate/repin-pagetext.mjs",
+   "source": "plus/app/nma-inconsistency/validate/repin-pagetext.mjs",
+   "sha256": "4ffb4f9765babb5a19af6712a3603d5a3fbb9efb7a60ecaf055142ba14998cac",
+   "git_blob": "95d6d5be4e89a6a81841d1ac306ded5053d92417"
+  },
+  {
+   "path": "nma-inconsistency/validate/run-scripts.ps1",
+   "source": "plus/app/nma-inconsistency/validate/run-scripts.ps1",
+   "sha256": "fbc6308a7932687d0ecc6c2df85edca24e5d5d647db111aeffde2aa32ea9160d",
+   "git_blob": "4e098fb41a953ccd0ad18ecaa0bc14c8fb6e1c25"
+  },
+  {
+   "path": "shared/alm-validate.js",
+   "source": "allmeta 1cb3f84 (not carried in this archive)",
+   "sha256": "3edd60412195ed34a0890ffc68fa32401d2f375f8a1055cba68ed069afd61e85",
+   "git_blob": "3e2493058a93ae72749d50677bd513b21d5ad9c6"
+  },
+  {
+   "path": "shared/app-flow.js",
+   "source": "app/patched/shared/app-flow.js",
+   "sha256": "733458866c716ed4f3ecefea64e9374c49b12eb33cd56b9ab5ec0e0cf5eb8c77",
+   "git_blob": "41bbae7ec6a862373fe56c7803fcf5444fc0de51"
+  },
+  {
+   "path": "shared/autosave.js",
+   "source": "app/patched/shared/autosave.js",
+   "sha256": "919165910d2b46a674b5ec1c81c01bce4d3c0779a86232ec032c994274980f1c",
+   "git_blob": "5bfa20ac20b95d986277de1eb5a67cf19829d569"
+  },
+  {
+   "path": "shared/build-info.js",
+   "source": "app/patched/shared/build-info.js",
+   "sha256": "232a5a903b1fcc451fede886d11688a80c0dce736d60a3613cc8ef5d41c94668",
+   "git_blob": "ba55c2cace553c364f22ceb13b30c41fbda826e5"
+  },
+  {
+   "path": "shared/forced-colors.css",
+   "source": "app/patched/shared/forced-colors.css",
+   "sha256": "a26b396b0b5b683ea06fca129855e3aba34805348e2d8d4e811ef74b44f5e96e",
+   "git_blob": "abbfcf01b6b7c4fd2e2f550d8b034a0b97c71466"
+  },
+  {
+   "path": "shared/ma-comparisons-v1.js",
+   "source": "app/patched/shared/ma-comparisons-v1.js",
+   "sha256": "52c278b571c2fdb9a3fc386baf7b8a23cf2191b32550e044d75024cd9222781b",
+   "git_blob": "05b0cbb3fc7d3243e6c6b5bb7d445b3a344f3e88"
+  },
+  {
+   "path": "shared/ma-studies-v1.js",
+   "source": "app/patched/shared/ma-studies-v1.js",
+   "sha256": "416fce0f8ec6432e432c050f9bfc9005d74ac5ad389744198d8530ea6096cb11",
+   "git_blob": "1f570a3fc26ce767984e03a6387d54e02fae1580"
+  },
+  {
+   "path": "shared/webr-runner.js",
+   "source": "allmeta 1cb3f84 (not carried in this archive)",
+   "sha256": "ff7fb19de7d5c7678c809cb0bb6366763e861276b8b9fd848373aa028f978f32",
+   "git_blob": "ca8dae0a5c422e23c84161896b8803b4bd76d2fb"
+  }
+ ]
+}

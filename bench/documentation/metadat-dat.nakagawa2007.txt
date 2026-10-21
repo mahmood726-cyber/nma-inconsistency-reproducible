@@ -1,0 +1,62 @@
+_A_s_s_e_s_s_i_n_g _t_h_e _F_u_n_c_t_i_o_n _o_f _H_o_u_s_e _S_p_a_r_r_o_w_s' _B_i_b _S_i_z_e _U_s_i_n_g _a _F_l_e_x_i_b_l_e
+_M_e_t_a-_A_n_a_l_y_s_i_s _M_e_t_h_o_d
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     A meta-analysis on the association between the size of a male's
+     bib and their social status in house sparrows (_Passer
+     domesticus_).
+
+_U_s_a_g_e:
+
+     dat.nakagawa2007
+     
+_F_o_r_m_a_t:
+
+     The data frame contains the following columns:
+
+       *StudyID*      'character'  identity of primary study    
+       *Place*        'character'  location of study population 
+       *Correlation*  'numeric'    correlation coefficient      
+       *SampleSize*   'integer'    sample size of population    
+      
+_D_e_t_a_i_l_s:
+
+     Each study measures the association between a sparrows bib size
+     and its social status. Effects are quantified as correlation
+     coefficients.
+
+_C_o_n_c_e_p_t_s:
+
+     ecology, correlation coefficients
+
+_A_u_t_h_o_r(_s):
+
+     Daniel Noble, <mailto:daniel.noble@anu.edu.au>
+
+_S_o_u_r_c_e:
+
+     Nakagawa, S., Ockendon, N., Gillespie, D. O. S, Hatchwell, B. J.,
+     & Burke, T. (2007). Assessing the function of house sparrows' bib
+     size using a flexible meta-analysis method. _Behavioral Ecology_,
+     *18*(5), 831-840. https://doi.org/10.1093/beheco/arm050
+
+_E_x_a_m_p_l_e_s:
+
+     ### copy data into 'dat' and examine data
+     dat <- dat.nakagawa2007
+     dat
+     
+     ## Not run:
+     
+     ### load metafor package
+     library(metafor)
+     
+     ### calculate Zr
+     dat <- escalc(measure="ZCOR", ri=Correlation, ni=SampleSize, data=dat)
+     
+     ### fit meta-analytic model
+     res <- rma.mv(yi, vi, random = ~ 1 | StudyID, data=dat)
+     res
+     ## End(Not run)
+     

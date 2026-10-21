@@ -1,0 +1,34 @@
+--- bench/compare.py
++++ analysis/compare_archive.py
+@@ -1,10 +1,19 @@
++# Generated from bench/compare.py; only input/output paths differ (see analysis/compare_archive.diff).
+ import json,sys,math,re,csv,io,html
+ from pathlib import Path
+ from collections import Counter
+ from decimal import Decimal,ROUND_HALF_UP
+-variant=sys.argv[1] if len(sys.argv)>1 else 'original'
+-corpus=json.loads(Path('corpus.json').read_text(encoding='utf-8'));apps=json.loads(Path(f'app-{variant}.json').read_text(encoding='utf-8'))
+-refs=[json.loads(p.read_text(encoding='utf-8')) for p in sorted(Path('reference').glob('*.json'))]
++import lzma
++ROOT=Path(__file__).resolve().parents[1]
++variant,REFDIR,OUTDIR=sys.argv[1],Path(sys.argv[2]),Path(sys.argv[3])
++assert variant in ('original','patched')
++corpus=json.loads((ROOT/'data/corpus.json').read_text(encoding='utf-8'))
++if variant == 'patched':
++    # Never fall back to historical outputs when the fresh capture is absent.
++    apps=json.loads((OUTDIR/'capture/app-patched.json').read_text(encoding='utf-8'))
++else:
++    apps=json.loads(lzma.decompress((ROOT/f'results/app-{variant}.json.xz').read_bytes()).decode('utf-8'))
++refs=[json.loads(p.read_text(encoding='utf-8')) for p in sorted(REFDIR.glob('*.json'))]
+ stats={};failures=[]; checks=[]
+ def check(q,key,ok,diff=0,tol=0,got=None,expected=None,category='numerical'):
+     st=stats.setdefault(q,dict(checks=0,passed=0,max_difference=0,tolerance=tol,category=category))
+@@ -153,6 +162,6 @@
+                 check('plot_CI_in_view',k+'::'+n['comparison']+'::'+p+'::'+attr,got is not None and 0<=got<=600,0 if got is not None and 0<=got<=600 else 1,got=got,expected='0..600',category='plot')
+ total=sum(v['checks'] for v in stats.values());passed=sum(v['passed'] for v in stats.values())
+ result=dict(variant=variant,checks=total,passed=passed,failed=total-passed,quantities=stats,failures=failures,reference_statuses=dict(Counter(x['status'] for x in refs)),configuration_count=len(corpus))
+-Path(f'results-{variant}.json').write_text(json.dumps(result,indent=2)+'\n')
++(OUTDIR/f'results-{variant}.json').write_text(json.dumps(result,indent=2)+'\n')
+ lines=['quantity | pass/checks | max difference | tolerance']+[f"{q} | {s['passed']}/{s['checks']} | {s['max_difference']:.17g} | {s['tolerances']}" for q,s in sorted(stats.items())]+[f'{passed}/{total} checks pass']
+-text='\n'.join(lines)+'\n';Path(f'comparison-{variant}.txt').write_text(text);print(text)
++text='\n'.join(lines)+'\n';(OUTDIR/f'comparison-{variant}.txt').write_text(text,encoding='utf-8');print(text)

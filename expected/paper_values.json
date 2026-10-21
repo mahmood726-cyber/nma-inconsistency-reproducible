@@ -1,0 +1,564 @@
+{
+  "paper": 16,
+  "original": {
+    "checks": 83592,
+    "passed": 79869,
+    "quantities": {
+      "Q": {
+        "checks": 291,
+        "passed": 291
+      },
+      "Qrandom": {
+        "checks": 291,
+        "passed": 291
+      },
+      "app_coverage": {
+        "checks": 1,
+        "passed": 1
+      },
+      "app_evidence": {
+        "checks": 540,
+        "passed": 540
+      },
+      "app_unique": {
+        "checks": 1,
+        "passed": 1
+      },
+      "corpus_unique": {
+        "checks": 1,
+        "passed": 1
+      },
+      "csv_array": {
+        "checks": 582,
+        "passed": 582
+      },
+      "csv_keys": {
+        "checks": 291,
+        "passed": 291
+      },
+      "csv_number": {
+        "checks": 8526,
+        "passed": 8526
+      },
+      "csv_scalar": {
+        "checks": 438,
+        "passed": 291
+      },
+      "dbt_Q": {
+        "checks": 291,
+        "passed": 144
+      },
+      "dbt_df": {
+        "checks": 291,
+        "passed": 144
+      },
+      "dbt_p": {
+        "checks": 144,
+        "passed": 144
+      },
+      "dbt_p_undefined": {
+        "checks": 147,
+        "passed": 147
+      },
+      "df": {
+        "checks": 291,
+        "passed": 291
+      },
+      "direct_k": {
+        "checks": 1245,
+        "passed": 1245
+      },
+      "direct_mean": {
+        "checks": 1245,
+        "passed": 1245
+      },
+      "direct_se": {
+        "checks": 1245,
+        "passed": 1245
+      },
+      "display_global": {
+        "checks": 291,
+        "passed": 291
+      },
+      "display_model_tau": {
+        "checks": 291,
+        "passed": 291
+      },
+      "display_split": {
+        "checks": 1628,
+        "passed": 1628
+      },
+      "estimatesRandom_est": {
+        "checks": 1665,
+        "passed": 1659
+      },
+      "estimatesRandom_se": {
+        "checks": 1665,
+        "passed": 1659
+      },
+      "estimates_est": {
+        "checks": 1665,
+        "passed": 1659
+      },
+      "estimates_se": {
+        "checks": 1665,
+        "passed": 1659
+      },
+      "execution_error": {
+        "checks": 540,
+        "passed": 521
+      },
+      "indirect_mean": {
+        "checks": 1245,
+        "passed": 1245
+      },
+      "indirect_se": {
+        "checks": 1245,
+        "passed": 1245
+      },
+      "input_k": {
+        "checks": 291,
+        "passed": 285
+      },
+      "input_status": {
+        "checks": 540,
+        "passed": 291
+      },
+      "json_export": {
+        "checks": 540,
+        "passed": 540
+      },
+      "markdown_array": {
+        "checks": 582,
+        "passed": 582
+      },
+      "markdown_keys": {
+        "checks": 291,
+        "passed": 291
+      },
+      "markdown_number": {
+        "checks": 8526,
+        "passed": 8526
+      },
+      "markdown_scalar": {
+        "checks": 438,
+        "passed": 291
+      },
+      "model": {
+        "checks": 291,
+        "passed": 291
+      },
+      "parsed_rows": {
+        "checks": 291,
+        "passed": 285
+      },
+      "plot_CI_coordinate": {
+        "checks": 6332,
+        "passed": 6332
+      },
+      "plot_CI_in_view": {
+        "checks": 6332,
+        "passed": 5844
+      },
+      "plot_CI_y": {
+        "checks": 6332,
+        "passed": 6332
+      },
+      "plot_finite_evidence": {
+        "checks": 291,
+        "passed": 278
+      },
+      "plot_labels": {
+        "checks": 278,
+        "passed": 278
+      },
+      "plot_line_count": {
+        "checks": 278,
+        "passed": 278
+      },
+      "plot_marker": {
+        "checks": 12664,
+        "passed": 12664
+      },
+      "plot_marker_count": {
+        "checks": 278,
+        "passed": 278
+      },
+      "plot_viewbox": {
+        "checks": 278,
+        "passed": 278
+      },
+      "plot_zero_line": {
+        "checks": 1112,
+        "passed": 1112
+      },
+      "reference_coverage": {
+        "checks": 1,
+        "passed": 1
+      },
+      "reference_evidence": {
+        "checks": 540,
+        "passed": 540
+      },
+      "reference_unique": {
+        "checks": 1,
+        "passed": 1
+      },
+      "reference_valid": {
+        "checks": 540,
+        "passed": 540
+      },
+      "refusal_plot_clear": {
+        "checks": 249,
+        "passed": 0
+      },
+      "refusal_reason": {
+        "checks": 249,
+        "passed": 0
+      },
+      "refusal_table_clear": {
+        "checks": 249,
+        "passed": 14
+      },
+      "report_markdown_data": {
+        "checks": 291,
+        "passed": 291
+      },
+      "report_text_data": {
+        "checks": 291,
+        "passed": 291
+      },
+      "split_diff": {
+        "checks": 1245,
+        "passed": 1245
+      },
+      "split_membership": {
+        "checks": 291,
+        "passed": 81
+      },
+      "split_p": {
+        "checks": 1245,
+        "passed": 11
+      },
+      "split_seDiff": {
+        "checks": 1245,
+        "passed": 1245
+      },
+      "split_unique": {
+        "checks": 291,
+        "passed": 291
+      },
+      "split_z": {
+        "checks": 1245,
+        "passed": 1245
+      },
+      "table_row_count": {
+        "checks": 291,
+        "passed": 291
+      },
+      "tau2": {
+        "checks": 291,
+        "passed": 291
+      },
+      "text_export_present": {
+        "checks": 873,
+        "passed": 873
+      },
+      "treatment_membership": {
+        "checks": 291,
+        "passed": 285
+      },
+      "untestable_label": {
+        "checks": 147,
+        "passed": 0
+      }
+    }
+  },
+  "focused_original": {
+    "checks": 319,
+    "passed": 194
+  },
+  "patched": {
+    "checks": 76601,
+    "passed": 76601,
+    "quantities": {
+      "Q": {
+        "checks": 291,
+        "passed": 291
+      },
+      "Qrandom": {
+        "checks": 291,
+        "passed": 291
+      },
+      "app_coverage": {
+        "checks": 1,
+        "passed": 1
+      },
+      "app_evidence": {
+        "checks": 540,
+        "passed": 540
+      },
+      "app_unique": {
+        "checks": 1,
+        "passed": 1
+      },
+      "corpus_unique": {
+        "checks": 1,
+        "passed": 1
+      },
+      "csv_array": {
+        "checks": 582,
+        "passed": 582
+      },
+      "csv_keys": {
+        "checks": 291,
+        "passed": 291
+      },
+      "csv_number": {
+        "checks": 8550,
+        "passed": 8550
+      },
+      "csv_scalar": {
+        "checks": 438,
+        "passed": 438
+      },
+      "dbt_Q": {
+        "checks": 291,
+        "passed": 291
+      },
+      "dbt_df": {
+        "checks": 291,
+        "passed": 291
+      },
+      "dbt_p": {
+        "checks": 144,
+        "passed": 144
+      },
+      "dbt_p_undefined": {
+        "checks": 147,
+        "passed": 147
+      },
+      "df": {
+        "checks": 291,
+        "passed": 291
+      },
+      "direct_k": {
+        "checks": 1245,
+        "passed": 1245
+      },
+      "direct_mean": {
+        "checks": 1245,
+        "passed": 1245
+      },
+      "direct_se": {
+        "checks": 1245,
+        "passed": 1245
+      },
+      "display_global": {
+        "checks": 291,
+        "passed": 291
+      },
+      "display_model_tau": {
+        "checks": 291,
+        "passed": 291
+      },
+      "display_split": {
+        "checks": 1245,
+        "passed": 1245
+      },
+      "estimatesRandom_est": {
+        "checks": 1665,
+        "passed": 1665
+      },
+      "estimatesRandom_se": {
+        "checks": 1665,
+        "passed": 1665
+      },
+      "estimates_est": {
+        "checks": 1665,
+        "passed": 1665
+      },
+      "estimates_se": {
+        "checks": 1665,
+        "passed": 1665
+      },
+      "execution_error": {
+        "checks": 540,
+        "passed": 540
+      },
+      "indirect_mean": {
+        "checks": 1245,
+        "passed": 1245
+      },
+      "indirect_se": {
+        "checks": 1245,
+        "passed": 1245
+      },
+      "input_k": {
+        "checks": 291,
+        "passed": 291
+      },
+      "input_status": {
+        "checks": 540,
+        "passed": 540
+      },
+      "json_export": {
+        "checks": 540,
+        "passed": 540
+      },
+      "markdown_array": {
+        "checks": 582,
+        "passed": 582
+      },
+      "markdown_keys": {
+        "checks": 291,
+        "passed": 291
+      },
+      "markdown_number": {
+        "checks": 8550,
+        "passed": 8550
+      },
+      "markdown_scalar": {
+        "checks": 438,
+        "passed": 438
+      },
+      "model": {
+        "checks": 291,
+        "passed": 291
+      },
+      "parsed_rows": {
+        "checks": 291,
+        "passed": 291
+      },
+      "plot_CI_coordinate": {
+        "checks": 4980,
+        "passed": 4980
+      },
+      "plot_CI_in_view": {
+        "checks": 4980,
+        "passed": 4980
+      },
+      "plot_CI_y": {
+        "checks": 4980,
+        "passed": 4980
+      },
+      "plot_finite_evidence": {
+        "checks": 291,
+        "passed": 291
+      },
+      "plot_labels": {
+        "checks": 291,
+        "passed": 291
+      },
+      "plot_line_count": {
+        "checks": 291,
+        "passed": 291
+      },
+      "plot_marker": {
+        "checks": 9960,
+        "passed": 9960
+      },
+      "plot_marker_count": {
+        "checks": 291,
+        "passed": 291
+      },
+      "plot_viewbox": {
+        "checks": 291,
+        "passed": 291
+      },
+      "plot_zero_line": {
+        "checks": 1164,
+        "passed": 1164
+      },
+      "reference_coverage": {
+        "checks": 1,
+        "passed": 1
+      },
+      "reference_evidence": {
+        "checks": 540,
+        "passed": 540
+      },
+      "reference_unique": {
+        "checks": 1,
+        "passed": 1
+      },
+      "reference_valid": {
+        "checks": 540,
+        "passed": 540
+      },
+      "refusal_plot_clear": {
+        "checks": 249,
+        "passed": 249
+      },
+      "refusal_reason": {
+        "checks": 249,
+        "passed": 249
+      },
+      "refusal_table_clear": {
+        "checks": 249,
+        "passed": 249
+      },
+      "report_markdown_data": {
+        "checks": 291,
+        "passed": 291
+      },
+      "report_text_data": {
+        "checks": 291,
+        "passed": 291
+      },
+      "split_diff": {
+        "checks": 1245,
+        "passed": 1245
+      },
+      "split_membership": {
+        "checks": 291,
+        "passed": 291
+      },
+      "split_p": {
+        "checks": 1245,
+        "passed": 1245
+      },
+      "split_seDiff": {
+        "checks": 1245,
+        "passed": 1245
+      },
+      "split_unique": {
+        "checks": 291,
+        "passed": 291
+      },
+      "split_z": {
+        "checks": 1245,
+        "passed": 1245
+      },
+      "table_row_count": {
+        "checks": 291,
+        "passed": 291
+      },
+      "tau2": {
+        "checks": 291,
+        "passed": 291
+      },
+      "text_export_present": {
+        "checks": 873,
+        "passed": 873
+      },
+      "treatment_membership": {
+        "checks": 291,
+        "passed": 291
+      },
+      "untestable_label": {
+        "checks": 147,
+        "passed": 147
+      }
+    }
+  },
+  "focused_patched": {
+    "checks": 319,
+    "passed": 319
+  },
+  "reference_statuses": {
+    "refused": 249,
+    "ok": 291
+  },
+  "configurations": 540
+}

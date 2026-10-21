@@ -1,0 +1,96 @@
+_T_r_i_a_l_s _o_n _M_u_c_o_l_y_t_i_c _A_g_e_n_t_s _i_n _C_h_r_o_n_i_c _B_r_o_n_c_h_i_t_i_s _o_r _C_h_r_o_n_i_c _O_b_s_t_r_u_c_t_i_v_e
+_P_u_l_m_o_n_a_r_y _D_i_s_e_a_s_e
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Results from 19 trials evaluating mucolytic agents in patients
+     with chronic bronchitis or chronic obstructive pulmonary disease.
+
+_U_s_a_g_e:
+
+     dat.poole2003
+     
+_F_o_r_m_a_t:
+
+     The data frame contains the following columns:
+
+       *author*    'character'  first author                                     
+       *year*      'integer'    publication year                                 
+       *Ne*        'integer'    sample size (mucolytic agents)                   
+       *Me*        'numeric'    mean exacerbations per months (mucolytic agents) 
+       *Se*        'numeric'    standard deviation (mucolytic agents)            
+       *Nc*        'integer'    sample size (placebo)                            
+       *Mc*        'numeric'    mean exacerbations per months (placebo)          
+       *Sc*        'numeric'    standard deviation (placebo)                     
+       *duration*  'character'  study duration                                   
+      
+_D_e_t_a_i_l_s:
+
+     Poole and Black (2003) conducted a Cochrane review to evaluate
+     mucolytic agents versus placebo for patients with chronic
+     bronchitis or chronic obstructive pulmonary disease. The outcome
+     used here is the mean number of acute exacerbations per month.
+     Acute exacerbation is defined as an increase in cough and in the
+     volume or purulence of sputum. All 17 studies included in the
+     meta-analysis report a mean number of exacerbations and we can
+     work with mean differences, rather than standardised mean
+     differences. Note, later versions of this Cochrane review no
+     longer evaluate the mean number of exacerbations per month.
+
+     This data set is used as an example in Schwarzer et al. (2015).
+
+_C_o_n_c_e_p_t_s:
+
+     medicine, pulmonology, raw mean differences, subgroup analysis
+
+_A_u_t_h_o_r(_s):
+
+     Guido Schwarzer, <mailto:guido.schwarzer@uniklinik-freiburg.de>,
+     <https://github.com/guido-s/>
+
+_S_o_u_r_c_e:
+
+     Poole, P. J., & Black, P. N. (2003). Mucolytic agents for chronic
+     bronchitis or chronic obstructive pulmonary disease. _Cochrane
+     Database of Systematic Reviews_, *1*, CD001287.
+     https://doi.org/10.1002/14651858.cd001287
+
+_R_e_f_e_r_e_n_c_e_s:
+
+     Schwarzer, G., Carpenter, J. R., & Ruecker, G. (2015).
+     _Meta-analysis with R_. Cham, Switzerland: Springer.
+
+_E_x_a_m_p_l_e_s:
+
+     ### Show first five studies
+     head(dat.poole2003, 5)
+     
+     ## Not run:
+     
+     ### Load meta package
+     suppressPackageStartupMessages(library(meta))
+     
+     ### Use RevMan 5 settings
+     oldset <- settings.meta("RevMan5",
+       digits.I2 = 2, digits.tau = 3, digits.sd = 2)
+     
+     ### Conduct random effects meta-analysis
+     m <- metacont(Ne, Me, Se, Nc, Mc, Sc, data = dat.poole2003,
+       studlab = paste(author, year), common = FALSE,
+       subgroup = duration,
+       subgroup.name = "Duration", sep.subgroup = ": ",
+       label.e = "Mucolytic agent",
+       label.c = "Placebo",
+       label.left = "Favours mucolytic agent",
+       label.right = "Favours placebo",
+       col.label.left = "green", col.label.right = "red")
+     
+     ### Forest plot
+     forest(m, xlim = c(-0.5, 0.2),
+       xlab = paste0("Difference in mean number of\n",
+         "acute exacerbations per month"))
+     
+     ### Use previous settings
+     settings.meta(oldset)
+     ## End(Not run)
+     

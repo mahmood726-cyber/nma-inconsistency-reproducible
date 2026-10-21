@@ -1,0 +1,1 @@
+{"key":"metadat::dat.axfors2021::event::RR::full::PM","status":"refused","reason":"Multi-arm studies are unsupported: correlated contrasts require study covariance.","scope":"input-support gate; not a numerical netmeta success","warnings":[],"seconds":0.030000000000001137,"pm_reference":"uncentered package QE"}

@@ -1,0 +1,89 @@
+_T_r_i_a_l_s _o_n _S_i_n_g_l_e-_A_g_e_n_t _P_u_r_i_n_e _A_n_a_l_o_g_u_e_s _f_o_r _t_h_e _T_r_e_a_t_m_e_n_t _o_f _C_h_r_o_n_i_c
+_L_y_m_p_h_o_c_y_t_i_c _L_e_u_k_a_e_m_i_a
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Results from 4 trials evaluating single-agent purine analogues in
+     patients with chronic lymphocytic leukaemia.
+
+_U_s_a_g_e:
+
+     dat.steurer2006
+     
+_F_o_r_m_a_t:
+
+     The data frame contains the following columns:
+
+       *author*  'character'  first author                            
+       *year*    'integer'    publication year                        
+       *Ne*      'integer'    number of patients (purine antagonists) 
+       *Nc*      'integer'    number of patients (alkylator-based)    
+       *HR*      'numeric'    hazard ratio                            
+       *lowHR*   'numeric'    lower limit                             
+       *uppHR*   'numeric'    upper limit                             
+       *lnHR*    'numeric'    log hazard ratio                        
+       *selnHR*  'numeric'    standard error                          
+      
+_D_e_t_a_i_l_s:
+
+     Steurer et al. (2006) conducted a Cochrane review to evaluate the
+     effect of single-agent purine analogues for the treatment of
+     chronic lymphocytic leukaemia. This dataset contains data from the
+     main outcome, overall survival. Note, the hazard ratios and
+     confidence limits have been reported in the Cochrane review with
+     only two significant figures and were recalculated using the
+     reported log hazard ratios and standard errors.
+
+     This data set is used as an example in Schwarzer et al. (2015).
+
+_C_o_n_c_e_p_t_s:
+
+     medicine, oncology, hazard ratios
+
+_A_u_t_h_o_r(_s):
+
+     Guido Schwarzer, <mailto:guido.schwarzer@uniklinik-freiburg.de>,
+     <https://github.com/guido-s/>
+
+_S_o_u_r_c_e:
+
+     Steurer, M., Pall, G., Richards, S., Schwarzer, G., Bohlius, J., &
+     Greil, R. (2006). Purine antagonists for chronic lymphocytic
+     leukaemia. _Cochrane Database of Systematic Reviews_, *3*,
+     CD004270. https://doi.org/10.1002/14651858.cd004270.pub2
+
+_R_e_f_e_r_e_n_c_e_s:
+
+     Schwarzer, G., Carpenter, J. R., & Ruecker, G. (2015).
+     _Meta-analysis with R_. Cham, Switzerland: Springer.
+
+_E_x_a_m_p_l_e_s:
+
+     ### Show dataset
+     dat.steurer2006
+     
+     ## Not run:
+     
+     ### Load meta package
+     suppressPackageStartupMessages(library(meta))
+     
+     ### Use RevMan 5 settings
+     oldset <- settings.meta("RevMan5")
+     
+     ### Conduct common effect meta-analysis
+     m1 <- metagen(lnHR, selnHR, data = dat.steurer2006,
+       studlab = paste(author, year),
+       sm = "HR", random = FALSE, n.e = Ne, n.c = Nc)
+     m1
+     
+     ### Same analysis using lower and upper confidence limits
+     m2 <- metagen(HR, lower = lowHR, upper = uppHR,
+       data = dat.steurer2006, transf = FALSE,
+       studlab = paste(author, year),
+       sm = "HR", random = FALSE, n.e = Ne, n.c = Nc)
+     m2
+     
+     ### Use previous settings
+     settings.meta(oldset)
+     ## End(Not run)
+     

@@ -1,0 +1,144 @@
+_S_t_u_d_i_e_s _o_n _C_l_a_s_s_e_s _o_f _A_n_t_i_d_e_p_r_e_s_s_a_n_t_s _f_o_r _t_h_e _P_r_i_m_a_r_y _C_a_r_e _S_e_t_t_i_n_g
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Results from 66 trials examining eight classes of antidepressants
+     and placebo for the primary care setting.
+
+_U_s_a_g_e:
+
+     dat.linde2015
+     
+_F_o_r_m_a_t:
+
+     The data frame contains the following columns:
+
+       *id*          'integer'    study ID                                                           
+       *author*      'character'  first author                                                       
+       *year*        'integer'    year of publication                                                
+       *treatment1*  'character'  treatment 1                                                        
+       *treatment2*  'character'  treatment 2                                                        
+       *treatment3*  'character'  treatment 3                                                        
+       *n1*          'integer'    number of patients (arm 1)                                         
+       *resp1*       'integer'    number of early responder (arm 1)                                  
+       *remi1*       'integer'    number of early remissions (arm 1)                                 
+       *loss1*       'integer'    number of patients loss to follow-up (arm 1)                       
+       *loss.ae1*    'integer'    number of patients loss to follow-up due to adverse events (arm 1) 
+       *ae1*         'integer'    number of patients with adverse events (arm 1)                     
+       *n2*          'integer'    number of patients (arm 2)                                         
+       *resp2*       'integer'    number of early responder (arm 2)                                  
+       *remi2*       'integer'    number of early remissions (arm 2)                                 
+       *loss2*       'integer'    number of patients loss to follow-up (arm 2)                       
+       *loss.ae2*    'integer'    number of patients loss to follow-up due to adverse events (arm 2) 
+       *ae2*         'integer'    number of patients with adverse events (arm 2)                     
+       *n3*          'integer'    number of patients (arm 3)                                         
+       *resp3*       'integer'    number of early responder (arm 3)                                  
+       *remi3*       'integer'    number of early remissions (arm 3)                                 
+       *loss3*       'integer'    number of patients loss to follow-up (arm 3)                       
+       *loss.ae3*    'integer'    number of patients loss to follow-up due to adverse events (arm 3) 
+       *ae3*         'integer'    number of patients with adverse events (arm 3)                     
+      
+_D_e_t_a_i_l_s:
+
+     This dataset comes from a systematic review of 8 pharmacological
+     treatments of depression and placebo in primary care with 66
+     studies (8 of which were 3-arm studies) including 14,785 patients.
+
+     The primary outcome is early response, defined as at least a 50%
+     score reduction on a depression scale after completion of
+     treatment. Secondary outcomes (also measured as dichotomous) were
+     early remission (defined as having a symptom score below a fixed
+     threshold after completion of treatment), lost to follow-up, lost
+     to follow-up due to adverse events, and any adverse event. The
+     odds ratio was used as effect measure.
+
+     This dataset was used as an example in R<c3><bc>cker and Schwarzer (2017)
+     who introduced methods to resolve conflicting rankings of outcomes
+     in network meta-analysis.
+
+_C_o_n_c_e_p_t_s:
+
+     medicine, psychiatry, odds ratios, network meta-analysis
+
+_A_u_t_h_o_r(_s):
+
+     Guido Schwarzer, <mailto:guido.schwarzer@uniklinik-freiburg.de>,
+     <https://github.com/guido-s/>
+
+_S_o_u_r_c_e:
+
+     Linde, K., Kriston, L., R<c3><bc>cker, G., Jamil, S., Schumann, I.,
+     Meissner, K., Sigterman, K., & Schneider, A. (2015). Efficacy and
+     acceptability of pharmacological treatments for depressive
+     disorders in primary care: Systematic review and network
+     meta-analysis. _Annals of Family Medicine_, *13*(1), 69-79.
+     https://doi.org/10.1370/afm.1687
+
+_R_e_f_e_r_e_n_c_e_s:
+
+     R<c3><bc>cker, G., & Schwarzer, G. (2017). Resolve conflicting rankings
+     of outcomes in network meta-analysis: Partial ordering of
+     treatments. _Research Synthesis Methods_, *8*(4), 526-536.
+     https://doi.org/10.1002/jrsm.1270
+
+_E_x_a_m_p_l_e_s:
+
+     ### Show results from first three studies (including three-arm study
+     ### Lecrubier 1997)
+     head(dat.linde2015, 3)
+     
+     ## Not run:
+     
+     ### Load netmeta package
+     suppressPackageStartupMessages(library(netmeta))
+     
+     ### Print odds ratios and confidence limits with two digits
+     oldset <- settings.meta(digits = 2)
+     
+     ### Change appearance of confidence intervals
+     cilayout("(", "-")
+     
+     ### Define order of treatments in printouts
+     trts <- c("TCA", "SSRI", "SNRI", "NRI", "Low-dose SARI",
+      "NaSSa", "rMAO-A", "Hypericum", "Placebo")
+     
+     ### Transform data from wide arm-based format to contrast-based format
+     ### (outcome: early response). Argument 'sm' has to be used for odds
+     ### ratio as summary measure; by default the risk ratio is used in the
+     ### metabin function called internally.
+     pw1 <- pairwise(list(treatment1, treatment2, treatment3),
+       event = list(resp1, resp2, resp3),
+       n = list(n1, n2, n3),
+       studlab = id, data = dat.linde2015, sm = "OR")
+     
+     ### Conduct random effects network meta-analysis for primary outcome
+     ### (early response); small number of early responses is bad (argument
+     ### small.values)
+     net1 <- netmeta(pw1, common = FALSE, reference = "Placebo", seq = trts,
+       small.values = "undesirable")
+     net1
+     
+     ### Random effects NMA for early remission
+     pw2 <- pairwise(treat = list(treatment1, treatment2, treatment3),
+       event = list(remi1, remi2, remi3),
+       n = list(n1, n2, n3),
+       studlab = id, data = dat.linde2015, sm = "OR")
+     net2 <- netmeta(pw2, common = FALSE,
+        seq = trts, ref = "Placebo", small.values = "undesirable")
+     net2
+     
+     ### Ranking of treatments
+     nr1 <- netrank(net1)
+     nr2 <- netrank(net2)
+     nr1
+     nr2
+     
+     ### Partial order of treatment rankings (two outcomes)
+     outcomes <- c("Early response", "Early remission")
+     po12 <- netposet(nr1, nr2, outcomes = outcomes)
+     plot(po12)
+     
+     ### Use previous settings
+     settings.meta(oldset)
+     ## End(Not run)
+     

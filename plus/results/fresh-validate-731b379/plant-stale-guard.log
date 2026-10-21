@@ -1,0 +1,10 @@
+       R  netmeta     meta  metadat  metafor jsonlite 
+ "4.6.0"  "3.7.0"  "8.5.0"  "1.6.0"  "5.2.1"  "2.0.0" 
+Plus version check PASS
+Plus SHA-256 checks PASS: 30 app files, 5 manifest files
+Plus subset (corpus positions): 7 19 20 21 22 23 24 29 60 113 150 151 
+Error in eval(quote({ : 
+  Existing .validate-work/plus refused (stale-result guard)
+Calls: local -> eval.parent -> eval -> eval -> eval -> eval
+Execution halted
+exit=1 

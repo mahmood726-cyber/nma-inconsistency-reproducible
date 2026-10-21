@@ -1,0 +1,96 @@
+_S_t_u_d_i_e_s _o_n _t_h_e _E_f_f_e_c_t_i_v_e_n_e_s_s _o_f _L_o_c_o_r_e_g_i_o_n_a_l _T_r_e_a_t_m_e_n_t _p_l_u_s
+_C_h_e_m_o_t_h_e_r_a_p_y _f_o_r _H_e_a_d _a_n_d _N_e_c_k _S_q_u_a_m_o_u_s-_C_e_l_l _C_a_r_c_i_n_o_m_a
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Results from studies examining mortality risk in patients with
+     nonmetastatic head and neck squamous-cell carcinoma receiving
+     either locoregional treatment plus chemotherapy versus
+     locoregional treatment alone.
+
+_U_s_a_g_e:
+
+     dat.pignon2000
+     
+_F_o_r_m_a_t:
+
+     The data frame contains the following columns:
+
+       *id*     'numeric'    study id number                                                                                
+       *trial*  'character'  trial abbreviation                                                                             
+       *OmE*    'numeric'    observed minus expected number of deaths in the locoregional treatment plus chemotherapy group 
+       *V*      'numeric'    corresponding variance                                                                         
+       *grp*    'numeric'    timing of chemotherapy: 1 = adjuvant, 2 = neoadjuvant, 3 = concomitant                         
+      
+_D_e_t_a_i_l_s:
+
+     The purpose of this meta-analysis was to examine the mortality
+     risk in patients with nonmetastatic head and neck squamous-cell
+     carcinoma receiving either locoregional treatment plus
+     chemotherapy versus locoregional treatment alone. For 65 trials,
+     the dataset provides the observed minus expected number of deaths
+     and corresponding variances in the locoregional treatment plus
+     chemotherapy group. Based on these values, we can estimate the log
+     hazard ratios with 'OmE/V' and the corresponding sampling variance
+     with '1/V'.
+
+     The trials were also divided according to the timing of the
+     chomotherapy: (1) adjuvant, after the locoregional treatment, (2)
+     neoadjuvant, before the locoregional treatment, and (3)
+     concomitant, chemotherapy given concomitantly or alternating with
+     radiotherapy.
+
+_C_o_n_c_e_p_t_s:
+
+     medicine, oncology, hazard ratios
+
+_A_u_t_h_o_r(_s):
+
+     Wolfgang Viechtbauer, <mailto:wvb@metafor-project.org>,
+     <https://www.metafor-project.org>
+
+_S_o_u_r_c_e:
+
+     Pignon, J. P., Bourhis, J., Domenge, C., & Designe, L. (2000).
+     Chemotherapy added to locoregional treatment for head and neck
+     squamous-cell carcinoma: Three meta-analyses of updated individual
+     data. _Lancet_, *355*(9208), 949-955.
+     https://doi.org/10.1016/S0140-6736(00)90011-4
+
+_E_x_a_m_p_l_e_s:
+
+     ### copy data into 'dat' and examine data
+     dat <- dat.pignon2000
+     head(dat)
+     
+     ## Not run:
+     
+     ### load metafor package
+     library(metafor)
+     
+     ### calculate log hazard ratios and sampling variances
+     dat$yi <- with(dat, OmE/V)
+     dat$vi <- with(dat, 1/V)
+     head(dat)
+     
+     ### meta-analysis based on all 65 trials
+     res <- rma(yi, vi, data=dat, method="EE", digits=2)
+     res
+     predict(res, transf=exp)
+     
+     ### only adjuvant trials
+     res <- rma(yi, vi, data=dat, method="EE", subset=grp==1, digits=2)
+     res
+     predict(res, transf=exp)
+     
+     ### only neoadjuvant trials
+     res <- rma(yi, vi, data=dat, method="EE", subset=grp==2, digits=2)
+     res
+     predict(res, transf=exp)
+     
+     ### only concomitant trials
+     res <- rma(yi, vi, data=dat, method="EE", subset=grp==3, digits=2)
+     res
+     predict(res, transf=exp)
+     ## End(Not run)
+     

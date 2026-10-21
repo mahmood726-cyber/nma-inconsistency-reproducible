@@ -1,0 +1,21 @@
+{
+  "paper": 16,
+  "source_commit": "7966530de875d22253f0557c7b447ed9d917685d",
+  "bundle_tar": {
+    "file": "P16-out.tar",
+    "bytes": 14851584,
+    "sha256": "5e5e7814696b78684b4a3b69cfce5a69ad04274f92936df4899edaad03e362f1"
+  },
+  "bundle_run": {
+    "host": "BASEIMAGE",
+    "started": "2026-10-17T23:00:46.0994859+01:00",
+    "finished": "2026-10-17T23:30:26.1967484+01:00",
+    "exit_code": 0,
+    "lane": "P16"
+  },
+  "upstream_merge": {
+    "pull_request": 143,
+    "merge_commit": "acdb28371560a797eb256c591edb5969d4675f62",
+    "note": "Fix commits a39ced77a74ecb3c82a90b9e7d0855440cc7f0fe and ff06a7daf795c2e96092e4f3b4a1e8e0d6ac4b1d; the merged page also adds a Validate-in-R panel and later bus changes, so it is not byte-identical to app/patched."
+  }
+}

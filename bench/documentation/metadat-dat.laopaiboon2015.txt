@@ -1,0 +1,81 @@
+_S_t_u_d_i_e_s _o_n _t_h_e _E_f_f_e_c_t_i_v_e_n_e_s_s _o_f _A_z_i_t_h_r_o_m_y_c_i_n _f_o_r _T_r_e_a_t_i_n_g _L_o_w_e_r
+_R_e_s_p_i_r_a_t_o_r_y _T_r_a_c_t _I_n_f_e_c_t_i_o_n_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Results from 15 studies on the effectiveness of azithromycin
+     versus amoxycillin or amoxycillin/clavulanic acid (amoxyclav) in
+     the treatment of acute lower respiratory tract infections.
+
+_U_s_a_g_e:
+
+     dat.laopaiboon2015
+     
+_F_o_r_m_a_t:
+
+     The data frame contains the following columns:
+
+       *author*   'character'  author(s)                                                                              
+       *year*     'numeric'    publication year                                                                       
+       *ai*       'numeric'    number of clinical failures in the group treated with azithromycin                     
+       *n1i*      'numeric'    number of patients in the group treated with azithromycin                              
+       *ci*       'numeric'    number of clinical failures in the group treated with amoxycillin or amoxyclav         
+       *n2i*      'numeric'    number of patients in the group treated with amoxycillin or amoxyclav                  
+       *age*      'character'  whether the trial included adults or children                                          
+       *diag.ab*  'numeric'    trial included patients with a diagnosis of acute bacterial bronchitis                 
+       *diag.cb*  'numeric'    trial included patients with a diagnosis of chronic bronchitis with acute exacerbation 
+       *diag.pn*  'numeric'    trial included patients with a diagnosis of pneumonia                                  
+       *ctrl*     'character'  antibiotic in control group (amoxycillin or amoxyclav)                                 
+      
+_D_e_t_a_i_l_s:
+
+     Azithromycin is an antibiotic useful for the treatment of a number
+     of bacterial infections. Laopaiboon et al. (2015) conducted a
+     meta-analysis of trials comparing the effectiveness of
+     azithromycin versus amoxycillin or amoxycillin/clavulanic acid
+     (amoxyclav) in the treatment of acute lower respiratory tract
+     infections, including acute bacterial bronchitis, acute
+     exacerbations of chronic bronchitis, and pneumonia. The results
+     from 15 trials are included in this dataset.
+
+_C_o_n_c_e_p_t_s:
+
+     medicine, pulmonology, risk ratios
+
+_A_u_t_h_o_r(_s):
+
+     Wolfgang Viechtbauer, <mailto:wvb@metafor-project.org>,
+     <https://www.metafor-project.org>
+
+_S_o_u_r_c_e:
+
+     Laopaiboon, M., Panpanich, R., & Swa Mya, K. (2015). Azithromycin
+     for acute lower respiratory tract infections. _Cochrane Database
+     of Systematic Reviews_, *3*, CD001954.
+     https://doi.org/10.1002/14651858.CD001954.pub4
+
+_E_x_a_m_p_l_e_s:
+
+     ### copy data into 'dat' and examine data
+     dat <- dat.laopaiboon2015
+     dat
+     
+     ## Not run:
+     
+     ### load metafor package
+     library(metafor)
+     
+     ### analysis using the Mantel-Haenszel method
+     rma.mh(measure="RR", ai=ai, n1i=n1i, ci=ci, n2i=n2i, data=dat, digits=3)
+     
+     ### calculate log risk ratios and corresponding sampling variances
+     dat <- escalc(measure="RR", ai=ai, n1i=n1i, ci=ci, n2i=n2i, data=dat)
+     
+     ### random-effects model
+     res <- rma(yi, vi, data=dat)
+     res
+     
+     ### average risk ratio with 95% CI
+     predict(res, transf=exp)
+     ## End(Not run)
+     

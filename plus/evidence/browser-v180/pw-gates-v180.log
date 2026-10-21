@@ -1,0 +1,61 @@
+start 2026-10-21T08:41:38Z
+
+Running 42 tests using 1 worker
+
+[1/42] [chromium] › nma-inconsistency-parity.spec.mjs:29:3 › nma-inconsistency › loads, renders SVG, no console errors
+[2/42] [chromium] › nma-inconsistency-parity.spec.mjs:44:3 › nma-inconsistency › netmeta FE R-parity (inco-tiny: network + node-split + decomp.design)
+[3/42] [chromium] › nma-inconsistency-plus.spec.mjs:16:1 › offline plus replay: every LOO refit, FE/DL/PM triple and sentence matches pinned R; page state untouched
+[chromium] › nma-inconsistency-plus.spec.mjs:16:1 › offline plus replay: every LOO refit, FE/DL/PM triple and sentence matches pinned R; page state untouched
+plus replay 643413/643413 groups {"loo":619763,"estimators":20072,"text":935,"graph":2643} boundary []
+
+[4/42] [chromium] › nma-inconsistency-plus.spec.mjs:24:1 › pinned 4627-check replay still passes with the plus panel mounted and computed
+[5/42] [chromium] › nma-inconsistency-plus.spec.mjs:30:28 › tampered plus pin 0 refuses before execution
+[6/42] [chromium] › nma-inconsistency-plus.spec.mjs:30:28 › tampered plus pin 1 refuses before execution
+[7/42] [chromium] › nma-inconsistency-plus.spec.mjs:30:28 › tampered plus pin 2 refuses before execution
+[8/42] [chromium] › nma-inconsistency-plus.spec.mjs:36:1 › tampered plus reference value (re-pinned) fails the replay
+[chromium] › nma-inconsistency-plus.spec.mjs:36:1 › tampered plus reference value (re-pinned) fails the replay
+tampered plus replay 643412/643413 first failure {"id":"netmeta::Baker2009::exac::OR::two-arm-only::DL","quantity":"drops.0.tau2","app":0.012752351561574346,"ref":0.012752364313925915,"diff":1.2752351568820486e-8,"tol":1e-9}
+
+[9/42] [chromium] › nma-inconsistency-plus.spec.mjs:45:37 › Baker example FE: displayed LOO table equals R-formatted values
+[10/42] [chromium] › nma-inconsistency-plus.spec.mjs:45:37 › Baker example DL: displayed LOO table equals R-formatted values
+[11/42] [chromium] › nma-inconsistency-plus.spec.mjs:45:37 › Baker example PM: displayed LOO table equals R-formatted values
+[12/42] [chromium] › nma-inconsistency-plus.spec.mjs:60:1 › methods export contains the generated Methods and Results paragraph
+[13/42] [chromium] › nma-inconsistency-plus.spec.mjs:68:1 › interpretation text has no forbidden claims
+[14/42] [chromium] › nma-inconsistency-plus.spec.mjs:77:1 › R script download is self-describing
+[15/42] [chromium] › nma-inconsistency-re-parity.spec.mjs:45:1 › netmeta RE R-parity (DL): τ² + network + node-split
+[16/42] [chromium] › nma-inconsistency-re-parity.spec.mjs:84:1 › generalized Paule-Mandel (PM): moment condition Q(τ²)=df + RE inflation
+[17/42] [chromium] › nma-inconsistency-re-parity.spec.mjs:99:1 › RE collapses to FE when τ²=0 (under-dispersed fixture)
+[18/42] [chromium] › nma-inconsistency-usability.spec.mjs:11:1 › fresh load shows results with 0 clicks
+[19/42] [chromium] › nma-inconsistency-usability.spec.mjs:18:37 › one-click Baker example matches the archived R reference (FE)
+[20/42] [chromium] › nma-inconsistency-usability.spec.mjs:18:37 › one-click Baker example matches the archived R reference (DL)
+[21/42] [chromium] › nma-inconsistency-usability.spec.mjs:18:37 › one-click Baker example matches the archived R reference (PM)
+[22/42] [chromium] › nma-inconsistency-usability.spec.mjs:31:1 › changing the model re-runs without a click
+[23/42] [chromium] › nma-inconsistency-usability.spec.mjs:37:1 › edited valid input re-runs after a pause; invalid input explains and clears results
+[24/42] [chromium] › nma-inconsistency-usability.spec.mjs:50:1 › Ctrl+Enter runs the analysis from the input box
+[25/42] [chromium] › nma-inconsistency-usability.spec.mjs:55:1 › restored draft is analysed, not shown under the example results
+[26/42] [chromium] › nma-inconsistency-usability.spec.mjs:62:1 › keyboard-only path: example, sort, select a study
+[27/42] [chromium] › nma-inconsistency-usability.spec.mjs:72:1 › axe: plus panel and input helpers have no WCAG 2.1 AA violations
+[28/42] [chromium] › nma-inconsistency-walkthrough.spec.mjs:20:1 › task walkthrough: example, own data, model change, core output, export (clicks counted)
+[chromium] › nma-inconsistency-walkthrough.spec.mjs:20:1 › task walkthrough: example, own data, model change, core output, export (clicks counted)
+WALKTHROUGH {"walkthrough":[{"step":"fresh-load","clicks":0,"typed":0,"selects":0,"splits":6},{"step":"real-example","clicks":1,"typed":0,"selects":0,"looRows":29},{"step":"own-data-pasted","clicks":1,"typed":1,"selects":0,"rows":22},{"step":"model-changed-core-output","clicks":1,"typed":1,"selects":1,"dbt":"Design-by-treatment Q = 2.36, df = 3, p = 0.500. no evidence of inconsistency\n\nModel: PM τ² = 0.5609.","splits":6,"loo":"Among removals with a testable global p-value, the global test stays on the same side of 0.05 (global p ranged from 0.320 to 0.766 across single-study removals); this concerns the stability of the test result, not evidence of consistency. No node-split p-value crosses 0.05 when any single study is removed."},{"step":"exported","clicks":3,"typed":1,"selects":1,"files":["nma-inconsistency-report.md","nma-inconsistency-PM.R"]}],"clicksToCoreOutput":{"freshLoad":0,"realExample":1,"ownData":"paste only (0 clicks; re-runs after 500 ms)","modelChange":"1 selection"},"totalClicks":3,"typed":1,"selects":1,"axeFullPage":{"rules":"wcag2a,wcag2aa,wcag21a,wcag21aa","violations":[],"passes":29}}
+
+[29/42] [chromium] › nma-inconsistency-walkthrough.spec.mjs:52:1 › figure 2 capture: plus panel on the Baker 2009 two-arm example (fixed effect)
+[chromium] › nma-inconsistency-walkthrough.spec.mjs:52:1 › figure 2 capture: plus panel on the Baker 2009 two-arm example (fixed effect)
+FIG2 captured 7 panels in 155.0.4283.62
+
+[30/42] [chromium] › validate-nma-inconsistency.spec.mjs:9:1 › offline pinned replay: 4627 checks, 122 configurations, 54 matched refusals and exact restoration
+[31/42] [chromium] › validate-nma-inconsistency.spec.mjs:19:1 › offline file picker verifies both pins and runs panel
+[32/42] [chromium] › validate-nma-inconsistency.spec.mjs:27:72 › tampered number fails replay
+[33/42] [chromium] › validate-nma-inconsistency.spec.mjs:27:72 › tampered label fails replay
+[34/42] [chromium] › validate-nma-inconsistency.spec.mjs:27:72 › tampered refusal fails replay
+[35/42] [chromium] › validate-nma-inconsistency.spec.mjs:27:72 › tampered static text fails replay
+[36/42] [chromium] › validate-nma-inconsistency.spec.mjs:27:72 › tampered control fails replay
+[37/42] [chromium] › validate-nma-inconsistency.spec.mjs:40:26 › tampered pin 0 refuses before page execution
+[38/42] [chromium] › validate-nma-inconsistency.spec.mjs:40:26 › tampered pin 1 refuses before page execution
+[39/42] [chromium] › validate-nma-inconsistency.spec.mjs:47:1 › live refuses pending input and a refused input
+[40/42] [chromium] › validate-nma-inconsistency.spec.mjs:53:37 › current FE self-hosted live R @slow
+[41/42] [chromium] › validate-nma-inconsistency.spec.mjs:53:37 › current DL self-hosted live R @slow
+[42/42] [chromium] › validate-nma-inconsistency.spec.mjs:53:37 › current PM self-hosted live R @slow
+  42 passed (5.1m)
+exit=0
+done 2026-10-21T08:46:42Z

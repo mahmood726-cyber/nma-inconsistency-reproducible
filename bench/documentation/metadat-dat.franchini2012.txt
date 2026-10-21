@@ -1,0 +1,105 @@
+_S_t_u_d_i_e_s _o_n _D_o_p_a_m_i_n_e _A_g_o_n_i_s_t_s _t_o _R_e_d_u_c_e "_O_f_f-_T_i_m_e" _i_n _P_a_t_i_e_n_t_s _w_i_t_h
+_A_d_v_a_n_c_e_d _P_a_r_k_i_n_s_o_n _D_i_s_e_a_s_e
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Results from 7 trials examining the effectiveness of four dopamine
+     agonists and placebo to reduce "off-time" in patients with
+     advanced Parkinson disease.
+
+_U_s_a_g_e:
+
+     dat.franchini2012
+     
+_F_o_r_m_a_t:
+
+     The data frame contains the following columns:
+
+       *Study*       'character'  study label              
+       *Treatment1*  'character'  treatment 1              
+       *y1*          'numeric'    treatment effect arm 1   
+       *sd1*         'numeric'    standard deviation arm 2 
+       *n1*          'integer'    sample size arm 1        
+       *Treatment2*  'character'  treatment 2              
+       *y2*          'numeric'    treatment effect arm 2   
+       *sd2*         'numeric'    standard deviation arm 2 
+       *n2*          'integer'    sample size arm 1        
+       *Treatment3*  'character'  treatment 3              
+       *y3*          'numeric'    treatment effect arm 3   
+       *sd3*         'numeric'    standard deviation arm 2 
+       *n3*          'integer'    sample size arm 1        
+      
+_D_e_t_a_i_l_s:
+
+     This network meta-analysis compared the effectiveness of four
+     active treatments and placebo in patients with advanced Parkinson
+     disease (Franchini et al., 2012). The outcome is mean lost
+     work-time reduction in patients given dopamine agonists as adjunct
+     therapy. The data are given as sample size, mean, and standard
+     deviation in each trial arm.
+
+     This dataset was used as an example in the supplemental material
+     of Dias et al. (2013) where placebo is coded as 1 and the four
+     active drugs as 2 to 5.
+
+_C_o_n_c_e_p_t_s:
+
+     medicine, raw mean differences, network meta-analysis
+
+_A_u_t_h_o_r(_s):
+
+     Guido Schwarzer, <mailto:guido.schwarzer@uniklinik-freiburg.de>,
+     <https://github.com/guido-s/>
+
+_S_o_u_r_c_e:
+
+     Dias, S., Sutton, A. J., Ades, A. E., & Welton, N. J. (2013).
+     Evidence synthesis for decision making 2: A generalized linear
+     modeling framework for pairwise and network meta-analysis of
+     randomized controlled trials. _Medical Decision Making_, *33*(5),
+     607-617. https://doi.org/10.1177/0272989X12458724
+
+     Franchini, A. J., Dias, S., Ades, A. E., Jansen, J. P., & Welton,
+     N. J. (2012). Accounting for correlation in network meta-analysis
+     with multi-arm trials. _Research Synthesis Methods_, *3*(2),
+     142-160. https://doi.org/10.1002/jrsm.1049
+
+_E_x_a_m_p_l_e_s:
+
+     ### Show results from first three studies; third study is a three-arm
+     ### study
+     head(dat.franchini2012, 3)
+     
+     ## Not run:
+     
+     ### Load netmeta package
+     suppressPackageStartupMessages(library(netmeta))
+     
+     ### Print mean differences with two digits
+     oldset <- settings.meta(digits = 2)
+     
+     ### Transform data from wide arm-based format to contrast-based
+     ### format. Argument 'sm' must not be provided as the mean difference
+     ### is the default in R function metacont() called internally.
+     pw <- pairwise(list(Treatment1, Treatment2, Treatment3),
+       n = list(n1, n2, n3),
+       mean = list(y1, y2, y3),
+       sd = list(sd1, sd2, sd3),
+       data = dat.franchini2012, studlab = Study, sm = "MD")
+     
+     ### Show calculated mean differences (TE) for first three studies
+     pw[1:5, c(3:7, 10, 1)]
+     
+     ### Conduct network meta-analysis
+     net <- netmeta(pw)
+     net
+     
+     ### Draw network graph
+     netgraph(net, points = TRUE, cex.points = 3, cex = 1.5,
+       plastic = TRUE, thickness = "se.fixed",
+       iterate = TRUE, start = "eigen")
+     
+     ### Use previous settings
+     settings.meta(oldset)
+     ## End(Not run)
+     

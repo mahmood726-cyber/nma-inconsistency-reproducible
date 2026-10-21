@@ -1,0 +1,107 @@
+function (x, method, upper = TRUE, reference.group = x$reference.group, 
+    baseline.reference = x$baseline.reference, show = gs("show"), 
+    overall = TRUE, direct = TRUE, indirect = TRUE, only.reference = FALSE, 
+    ci = FALSE, test = show %in% c("all", "with.direct", "both"), 
+    order = NULL, nchar.trts = x$nchar.trts, sep.trts = x$sep.trts, 
+    quote.trts = "", tol.direct = 5e-04, common = x$common, random = x$random, 
+    backtransf = x$backtransf, warn = FALSE, warn.deprecated = gs("warn.deprecated"), 
+    verbose = FALSE, ...) 
+{
+    chkclass(x, "netmeta")
+    chksuitable(x, "Methods to split network estimates", classes = gs(".other_nma"))
+    x <- updateversion(x)
+    is.mh.nch <- inherits(x, "netmetabin") && x$method %in% c("MH", 
+        "NCH")
+    is.tictoc <- is_installed_package("tictoc", stop = FALSE)
+    if (!missing(method)) 
+        method <- setchar(method, c("Back-calculation", "SIDDE"))
+    else {
+        if (is.mh.nch) 
+            method <- "SIDDE"
+        else method <- "Back-calculation"
+    }
+    chklogical(upper)
+    chklogical(baseline.reference)
+    if (!is.null(order)) {
+        order <- setseq(order, x$trts)
+        baseline.reference <- FALSE
+        reference.group <- ""
+    }
+    show <- setchar(show, c("all", "both", "with.direct", "direct.only", 
+        "indirect.only", "reference.only"))
+    chklogical(overall)
+    chklogical(direct)
+    chklogical(indirect)
+    chklogical(ci)
+    chklogical(test)
+    chklogical(only.reference)
+    nchar.trts <- replaceNULL(nchar.trts, 666)
+    chknumeric(nchar.trts, length = 1)
+    chkchar(sep.trts)
+    chkchar(quote.trts)
+    chknumeric(tol.direct, min = 0, length = 1)
+    if (!is.null(backtransf)) 
+        chklogical(backtransf)
+    chklogical(warn)
+    chklogical(verbose)
+    args <- list(...)
+    chklogical(warn.deprecated)
+    missing.common <- missing(common)
+    common <- deprecated(common, missing.common, args, "comb.fixed", 
+        warn.deprecated)
+    common <- deprecated(common, missing.common, args, "fixed", 
+        warn.deprecated)
+    chklogical(common)
+    random <- deprecated(random, missing(random), args, "comb.random", 
+        warn.deprecated)
+    chklogical(random)
+    x$common <- common
+    x$random <- random
+    dat.trts <- comptrts(x, upper, reference.group, baseline.reference, 
+        order, sep.trts, quote.trts)
+    if (!(is.mh.nch & method == "SIDDE")) {
+        prop.common <- sortprop(x$prop.direct.common, dat.trts, 
+            x$sep.trts)
+        prop.random <- sortprop(x$prop.direct.random, dat.trts, 
+            x$sep.trts)
+    }
+    else prop.common <- prop.random <- NULL
+    x.direct.indirect <- x
+    if (method == "SIDDE") {
+        ind <- sidde(x.direct.indirect, sep.trts, verbose, warn, 
+            is.tictoc)
+        x.direct.indirect$TE.indirect.common <- ind$TE.indirect.common
+        x.direct.indirect$seTE.indirect.common <- ind$seTE.indirect.common
+        if (!is.mh.nch) {
+            x.direct.indirect$TE.indirect.random <- ind$TE.indirect.random
+            x.direct.indirect$seTE.indirect.random <- ind$seTE.indirect.random
+        }
+    }
+    direct.indirect <- direct.indirect(x.direct.indirect, tol.direct)
+    m2d.f <- mat2dat.split(direct.indirect, "common", dat.trts)
+    m2d.r <- mat2dat.split(direct.indirect, "random", dat.trts)
+    res <- list(comparison = dat.trts$comparison, k = m2d.f$k, 
+        show = show, overall = overall, direct = direct, indirect = indirect, 
+        ci = ci, test = test, only.reference = only.reference, 
+        prop.common = prop.common, common = m2d.f$nma, direct.common = m2d.f$direct, 
+        indirect.common = m2d.f$indirect, compare.common = m2d.f$compare, 
+        prop.random = prop.random, random = m2d.r$nma, direct.random = m2d.r$direct, 
+        indirect.random = m2d.r$indirect, compare.random = m2d.r$compare, 
+        predict = m2d.r$predict, method = method, sm = x$sm, 
+        level.ma = x$level.ma, prediction = x$prediction, level.predict = x$level.predict, 
+        tau = x$tau, reference.group = reference.group, baseline.reference = baseline.reference, 
+        order = order, sep.trts = sep.trts, quote.trts = quote.trts, 
+        nchar.trts = nchar.trts, tol.direct = tol.direct, backtransf = backtransf, 
+        x = x, version = packageDescription("netmeta")$Version)
+    if (method == "SIDDE" & is.tictoc) 
+        res$tictoc <- ind$tictoc
+    res$prop.fixed <- res$prop.common
+    res$fixed <- res$common
+    res$direct.fixed <- res$direct.common
+    res$indirect.fixed <- res$indirect.common
+    res$compare.fixed <- res$compare.common
+    class(res) <- c("netsplit", if (is.mh.nch & method == "SIDDE") "netsplit.netmetabin")
+    res
+}
+<bytecode: 0x0000024ecb5a0340>
+<environment: namespace:netmeta>

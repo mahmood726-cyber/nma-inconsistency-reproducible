@@ -1,0 +1,22 @@
+test_bundle_mapping (__main__.Safeguards.test_bundle_mapping) ... ok
+test_compression (__main__.Safeguards.test_compression) ... ok
+test_eol_record (__main__.Safeguards.test_eol_record) ... ok
+test_expected_count_gate (__main__.Safeguards.test_expected_count_gate) ... ok
+test_inventory (__main__.Safeguards.test_inventory) ... ok
+test_patch_replay_detects_drift (__main__.Safeguards.test_patch_replay_detects_drift) ... ok
+test_pinned_inventory_is_complete (__main__.Safeguards.test_pinned_inventory_is_complete) ... ok
+test_pm_tag_alignment (__main__.Safeguards.test_pm_tag_alignment) ... ok
+test_provenance_placeholders (__main__.Safeguards.test_provenance_placeholders) ... ok
+test_reference_comparator (__main__.Safeguards.test_reference_comparator) ... ok
+test_sizes (__main__.Safeguards.test_sizes) ... ok
+test_split_order_alignment (__main__.Safeguards.test_split_order_alignment) ... ok
+test_text_hygiene (__main__.Safeguards.test_text_hygiene) ... ok
+test_versions_refused (__main__.Safeguards.test_versions_refused) ... skipped 'Rscript not available'
+test_zenodo_metadata (__main__.Safeguards.test_zenodo_metadata) ... ok
+
+----------------------------------------------------------------------
+Ran 15 tests in 4.257s
+
+OK (skipped=1)
+SAFEGUARDS PASS: 15 test groups; planted defects rejected (1 skipped)
+exit=0 

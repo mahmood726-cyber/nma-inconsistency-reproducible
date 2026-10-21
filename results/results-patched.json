@@ -1,0 +1,696 @@
+{
+  "variant": "patched",
+  "checks": 76601,
+  "passed": 76601,
+  "failed": 0,
+  "quantities": {
+    "app_unique": {
+      "checks": 1,
+      "passed": 1,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "coverage",
+      "tolerances": [
+        0
+      ]
+    },
+    "app_coverage": {
+      "checks": 1,
+      "passed": 1,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "coverage",
+      "tolerances": [
+        0
+      ]
+    },
+    "reference_unique": {
+      "checks": 1,
+      "passed": 1,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "coverage",
+      "tolerances": [
+        0
+      ]
+    },
+    "reference_coverage": {
+      "checks": 1,
+      "passed": 1,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "coverage",
+      "tolerances": [
+        0
+      ]
+    },
+    "corpus_unique": {
+      "checks": 1,
+      "passed": 1,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "coverage",
+      "tolerances": [
+        0
+      ]
+    },
+    "app_evidence": {
+      "checks": 540,
+      "passed": 540,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "coverage",
+      "tolerances": [
+        0
+      ]
+    },
+    "reference_evidence": {
+      "checks": 540,
+      "passed": 540,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "coverage",
+      "tolerances": [
+        0
+      ]
+    },
+    "reference_valid": {
+      "checks": 540,
+      "passed": 540,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "coverage",
+      "tolerances": [
+        0
+      ]
+    },
+    "input_status": {
+      "checks": 540,
+      "passed": 540,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "refusal",
+      "tolerances": [
+        0
+      ]
+    },
+    "execution_error": {
+      "checks": 540,
+      "passed": 540,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "contract",
+      "tolerances": [
+        0
+      ]
+    },
+    "json_export": {
+      "checks": 540,
+      "passed": 540,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "export",
+      "tolerances": [
+        0
+      ]
+    },
+    "refusal_reason": {
+      "checks": 249,
+      "passed": 249,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "refusal",
+      "tolerances": [
+        0
+      ]
+    },
+    "refusal_table_clear": {
+      "checks": 249,
+      "passed": 249,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "refusal",
+      "tolerances": [
+        0
+      ]
+    },
+    "refusal_plot_clear": {
+      "checks": 249,
+      "passed": 249,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "refusal",
+      "tolerances": [
+        0
+      ]
+    },
+    "parsed_rows": {
+      "checks": 291,
+      "passed": 291,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "contract",
+      "tolerances": [
+        0
+      ]
+    },
+    "input_k": {
+      "checks": 291,
+      "passed": 291,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "contract",
+      "tolerances": [
+        0
+      ]
+    },
+    "model": {
+      "checks": 291,
+      "passed": 291,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "contract",
+      "tolerances": [
+        0
+      ]
+    },
+    "treatment_membership": {
+      "checks": 291,
+      "passed": 291,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "contract",
+      "tolerances": [
+        0
+      ]
+    },
+    "tau2": {
+      "checks": 291,
+      "passed": 291,
+      "max_difference": 4.569539191479066e-13,
+      "tolerance": 1e-09,
+      "category": "numerical",
+      "tolerances": [
+        1e-09,
+        1e-06
+      ]
+    },
+    "Qrandom": {
+      "checks": 291,
+      "passed": 291,
+      "max_difference": 3.4638958368419134e-12,
+      "tolerance": 1e-09,
+      "category": "numerical",
+      "tolerances": [
+        1e-09,
+        1e-06
+      ]
+    },
+    "Q": {
+      "checks": 291,
+      "passed": 291,
+      "max_difference": 5.662591727319737e-16,
+      "tolerance": 1e-09,
+      "category": "numerical",
+      "tolerances": [
+        1e-09
+      ]
+    },
+    "df": {
+      "checks": 291,
+      "passed": 291,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "contract",
+      "tolerances": [
+        0
+      ]
+    },
+    "estimates_est": {
+      "checks": 1665,
+      "passed": 1665,
+      "max_difference": 1.4469536679939665e-12,
+      "tolerance": 1e-09,
+      "category": "numerical",
+      "tolerances": [
+        1e-09
+      ]
+    },
+    "estimates_se": {
+      "checks": 1665,
+      "passed": 1665,
+      "max_difference": 1.2184697695261093e-14,
+      "tolerance": 1e-09,
+      "category": "numerical",
+      "tolerances": [
+        1e-09
+      ]
+    },
+    "estimatesRandom_est": {
+      "checks": 1665,
+      "passed": 1665,
+      "max_difference": 1.4469536679939665e-12,
+      "tolerance": 1e-09,
+      "category": "numerical",
+      "tolerances": [
+        1e-09,
+        1e-06
+      ]
+    },
+    "estimatesRandom_se": {
+      "checks": 1665,
+      "passed": 1665,
+      "max_difference": 9.375833442959447e-13,
+      "tolerance": 1e-09,
+      "category": "numerical",
+      "tolerances": [
+        1e-09,
+        1e-06
+      ]
+    },
+    "dbt_Q": {
+      "checks": 291,
+      "passed": 291,
+      "max_difference": 1.0238070550500933e-12,
+      "tolerance": 1e-09,
+      "category": "numerical",
+      "tolerances": [
+        1e-09,
+        1e-06
+      ]
+    },
+    "dbt_df": {
+      "checks": 291,
+      "passed": 291,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "contract",
+      "tolerances": [
+        0
+      ]
+    },
+    "dbt_p": {
+      "checks": 144,
+      "passed": 144,
+      "max_difference": 6.109557304512236e-13,
+      "tolerance": 1e-09,
+      "category": "numerical",
+      "tolerances": [
+        1e-09
+      ]
+    },
+    "split_unique": {
+      "checks": 291,
+      "passed": 291,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "contract",
+      "tolerances": [
+        0
+      ]
+    },
+    "split_membership": {
+      "checks": 291,
+      "passed": 291,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "contract",
+      "tolerances": [
+        0
+      ]
+    },
+    "direct_mean": {
+      "checks": 1245,
+      "passed": 1245,
+      "max_difference": 7.46902539816574e-14,
+      "tolerance": 1e-09,
+      "category": "numerical",
+      "tolerances": [
+        1e-09,
+        1e-06
+      ]
+    },
+    "direct_se": {
+      "checks": 1245,
+      "passed": 1245,
+      "max_difference": 1.7774670624248756e-13,
+      "tolerance": 1e-09,
+      "category": "numerical",
+      "tolerances": [
+        1e-09,
+        1e-06
+      ]
+    },
+    "indirect_mean": {
+      "checks": 1245,
+      "passed": 1245,
+      "max_difference": 7.0047301292675e-12,
+      "tolerance": 1e-09,
+      "category": "numerical",
+      "tolerances": [
+        1e-09,
+        1e-06
+      ]
+    },
+    "indirect_se": {
+      "checks": 1245,
+      "passed": 1245,
+      "max_difference": 2.2599228932690955e-13,
+      "tolerance": 1e-09,
+      "category": "numerical",
+      "tolerances": [
+        1e-09,
+        1e-06
+      ]
+    },
+    "split_diff": {
+      "checks": 1245,
+      "passed": 1245,
+      "max_difference": 7.0047301292675e-12,
+      "tolerance": 1e-09,
+      "category": "numerical",
+      "tolerances": [
+        1e-09,
+        1e-06
+      ]
+    },
+    "split_seDiff": {
+      "checks": 1245,
+      "passed": 1245,
+      "max_difference": 2.2292586052956223e-13,
+      "tolerance": 1e-09,
+      "category": "numerical",
+      "tolerances": [
+        1e-09,
+        1e-06
+      ]
+    },
+    "split_z": {
+      "checks": 1245,
+      "passed": 1245,
+      "max_difference": 1.9125702289404556e-11,
+      "tolerance": 1e-09,
+      "category": "numerical",
+      "tolerances": [
+        1e-09,
+        1e-06
+      ]
+    },
+    "split_p": {
+      "checks": 1245,
+      "passed": 1245,
+      "max_difference": 1.0431100427865658e-12,
+      "tolerance": 1e-09,
+      "category": "numerical",
+      "tolerances": [
+        1e-09
+      ]
+    },
+    "direct_k": {
+      "checks": 1245,
+      "passed": 1245,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "contract",
+      "tolerances": [
+        0
+      ]
+    },
+    "table_row_count": {
+      "checks": 291,
+      "passed": 291,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "display",
+      "tolerances": [
+        0
+      ]
+    },
+    "display_split": {
+      "checks": 1245,
+      "passed": 1245,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "display",
+      "tolerances": [
+        0
+      ]
+    },
+    "display_global": {
+      "checks": 291,
+      "passed": 291,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "display",
+      "tolerances": [
+        0
+      ]
+    },
+    "display_model_tau": {
+      "checks": 291,
+      "passed": 291,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "display",
+      "tolerances": [
+        0
+      ]
+    },
+    "csv_keys": {
+      "checks": 291,
+      "passed": 291,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "export",
+      "tolerances": [
+        0
+      ]
+    },
+    "csv_array": {
+      "checks": 582,
+      "passed": 582,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "export",
+      "tolerances": [
+        0
+      ]
+    },
+    "csv_number": {
+      "checks": 8550,
+      "passed": 8550,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "export",
+      "tolerances": [
+        0
+      ]
+    },
+    "csv_scalar": {
+      "checks": 438,
+      "passed": 438,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "export",
+      "tolerances": [
+        0
+      ]
+    },
+    "text_export_present": {
+      "checks": 873,
+      "passed": 873,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "export",
+      "tolerances": [
+        0
+      ]
+    },
+    "markdown_keys": {
+      "checks": 291,
+      "passed": 291,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "export",
+      "tolerances": [
+        0
+      ]
+    },
+    "markdown_array": {
+      "checks": 582,
+      "passed": 582,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "export",
+      "tolerances": [
+        0
+      ]
+    },
+    "markdown_number": {
+      "checks": 8550,
+      "passed": 8550,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "export",
+      "tolerances": [
+        0
+      ]
+    },
+    "markdown_scalar": {
+      "checks": 438,
+      "passed": 438,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "export",
+      "tolerances": [
+        0
+      ]
+    },
+    "report_markdown_data": {
+      "checks": 291,
+      "passed": 291,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "export",
+      "tolerances": [
+        0
+      ]
+    },
+    "report_text_data": {
+      "checks": 291,
+      "passed": 291,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "export",
+      "tolerances": [
+        0
+      ]
+    },
+    "plot_finite_evidence": {
+      "checks": 291,
+      "passed": 291,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "plot",
+      "tolerances": [
+        0
+      ]
+    },
+    "plot_line_count": {
+      "checks": 291,
+      "passed": 291,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "plot",
+      "tolerances": [
+        0
+      ]
+    },
+    "plot_viewbox": {
+      "checks": 291,
+      "passed": 291,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "plot",
+      "tolerances": [
+        0
+      ]
+    },
+    "plot_zero_line": {
+      "checks": 1164,
+      "passed": 1164,
+      "max_difference": 0,
+      "tolerance": 1e-09,
+      "category": "plot",
+      "tolerances": [
+        1e-09
+      ]
+    },
+    "plot_marker_count": {
+      "checks": 291,
+      "passed": 291,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "plot",
+      "tolerances": [
+        0
+      ]
+    },
+    "plot_labels": {
+      "checks": 291,
+      "passed": 291,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "plot",
+      "tolerances": [
+        0
+      ]
+    },
+    "plot_marker": {
+      "checks": 9960,
+      "passed": 9960,
+      "max_difference": 0,
+      "tolerance": 1e-09,
+      "category": "plot",
+      "tolerances": [
+        1e-09
+      ]
+    },
+    "plot_CI_y": {
+      "checks": 4980,
+      "passed": 4980,
+      "max_difference": 0,
+      "tolerance": 1e-09,
+      "category": "plot",
+      "tolerances": [
+        1e-09
+      ]
+    },
+    "plot_CI_coordinate": {
+      "checks": 4980,
+      "passed": 4980,
+      "max_difference": 0,
+      "tolerance": 1e-09,
+      "category": "plot",
+      "tolerances": [
+        1e-09
+      ]
+    },
+    "plot_CI_in_view": {
+      "checks": 4980,
+      "passed": 4980,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "plot",
+      "tolerances": [
+        0
+      ]
+    },
+    "dbt_p_undefined": {
+      "checks": 147,
+      "passed": 147,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "contract",
+      "tolerances": [
+        0
+      ]
+    },
+    "untestable_label": {
+      "checks": 147,
+      "passed": 147,
+      "max_difference": 0,
+      "tolerance": 0,
+      "category": "display",
+      "tolerances": [
+        0
+      ]
+    }
+  },
+  "failures": [],
+  "reference_statuses": {
+    "refused": 249,
+    "ok": 291
+  },
+  "configuration_count": 540
+}

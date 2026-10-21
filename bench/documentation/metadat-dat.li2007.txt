@@ -1,0 +1,78 @@
+_S_t_u_d_i_e_s _o_n _t_h_e _E_f_f_e_c_t_i_v_e_n_e_s_s _o_f _I_n_t_r_a_v_e_n_o_u_s _M_a_g_n_e_s_i_u_m _i_n _A_c_u_t_e
+_M_y_o_c_a_r_d_i_a_l _I_n_f_a_r_c_t_i_o_n
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Results from 22 trials examining the effectiveness of intravenous
+     magnesium in the prevention of death following acute myocardial
+     infarction.
+
+_U_s_a_g_e:
+
+     dat.li2007
+     
+_F_o_r_m_a_t:
+
+     The data frame contains the following columns:
+
+       *id*     'numeric'    trial id number                           
+       *study*  'character'  first author or trial name                
+       *year*   'numeric'    publication year                          
+       *ai*     'numeric'    number of deaths in the magnesium group   
+       *n1i*    'numeric'    number of patients in the magnesium group 
+       *ci*     'numeric'    number of deaths in the control group     
+       *n2i*    'numeric'    number of patients in the control group   
+      
+_D_e_t_a_i_l_s:
+
+     The dataset includes the results from 22 randomized clinical
+     trials that examined the effectiveness of intravenous magnesium in
+     the prevention of death following acute myocardial infarction. It
+     is similar to the dataset 'dat.egger2001', with some slight
+     differences in the included trials and data used.
+
+_C_o_n_c_e_p_t_s:
+
+     medicine, cardiology, odds ratios, publication bias
+
+_A_u_t_h_o_r(_s):
+
+     Wolfgang Viechtbauer, <mailto:wvb@metafor-project.org>,
+     <https://www.metafor-project.org>
+
+_S_o_u_r_c_e:
+
+     Li, J., Zhang, Q., Zhang, M., & Egger, M. (2007). Intravenous
+     magnesium for acute myocardial infarction. _Cochrane Database of
+     Systematic Reviews_, *2*, CD002755.
+     https://doi.org/10.1002/14651858.CD002755.pub2
+
+_S_e_e _A_l_s_o:
+
+     'dat.egger2001'
+
+_E_x_a_m_p_l_e_s:
+
+     ### copy data into 'dat' and examine data
+     dat <- dat.li2007
+     dat
+     
+     ## Not run:
+     
+     ### load metafor package
+     library(metafor)
+     
+     ### meta-analysis of all trials except ISIS-4
+     res <- rma(measure="OR", ai=ai, n1i=n1i, ci=ci, n2i=n2i, data=dat, method="EE", subset=-14)
+     print(res, digits=2)
+     predict(res, transf=exp, digits=2)
+     
+     ### meta-analysis of all trials including ISIS-4
+     res <- rma(measure="OR", ai=ai, n1i=n1i, ci=ci, n2i=n2i, data=dat, method="EE")
+     print(res, digits=2)
+     predict(res, transf=exp, digits=2)
+     
+     ### contour-enhanced funnel plot centered at 0
+     funnel(res, refline=0, level=c(90, 95, 99), shade=c("white", "gray", "darkgray"))
+     ## End(Not run)
+     

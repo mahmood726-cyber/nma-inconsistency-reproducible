@@ -1,0 +1,39 @@
+--- bench/reference.R
++++ analysis/refit_reference.R
+@@ -1,20 +1,16 @@
+-source("r_session.R")
++# Generated from bench/reference.R: single process, no cache reuse, explicit CORPUS/OUT.
++# Statistical code is unchanged; see analysis/refit_reference.diff.
+ G<-function(x,n)x[[n,exact=TRUE]]
+ indirect_path<-function(A,B,pair) {
+  keep<-!((A==pair[1]&B==pair[2])|(A==pair[2]&B==pair[1]));a<-A[keep];b<-B[keep];seen<-pair[1]
+  repeat{new<-unique(c(seen,b[a%in%seen],a[b%in%seen]));if(length(new)==length(seen))break;seen<-new}
+  pair[2]%in%seen
+ }
+-cs<-jsonlite::fromJSON("corpus.json",simplifyVector=FALSE)
+-dir.create("reference",showWarnings=FALSE)
+-args<-commandArgs(TRUE); start<-if(length(args))as.integer(args[1]) else 1L; step<-if(length(args)>1)as.integer(args[2]) else 1L
+-for(i in which((seq_along(cs)-1L)%/%3L%%step==start-1L)) {
++cs<-jsonlite::fromJSON(CORPUS,simplifyVector=FALSE)
++if(dir.exists(OUT))stop("Fresh reference directory already exists")
++dir.create(OUT)
++for(i in seq_along(cs)) {
+  c<-cs[[i]]; key<-G(c,"key"); warnings<-character(); began<-proc.time()[["elapsed"]]
+- existing<-sprintf("reference/%05d.json",i)
+- if(file.exists(existing)) {
+-  prev<-jsonlite::fromJSON(existing,simplifyVector=FALSE)
+-  if(identical(G(prev,"key"),key) && (G(c,"model")!="PM" || identical(G(prev,"status"),"refused") || identical(G(prev,"pm_reference"),"uncentered package QE"))) {cat(i,"cached",key,"\n");next}
+- }
+  result<-tryCatch(withCallingHandlers({
+   d<-do.call(rbind,lapply(G(c,"rows"),as.data.frame,stringsAsFactors=FALSE))
+   A<-G(d,"A");B<-G(d,"B");te<-G(d,"te");se<-G(d,"se");study<-G(d,"study");model<-G(c,"model")
+@@ -59,7 +55,7 @@
+  },warning=function(w){warnings<<-c(warnings,conditionMessage(w));invokeRestart("muffleWarning")}),error=function(e)list(key=key,status="error",reason=conditionMessage(e)))
+  result[["warnings"]]<-as.list(warnings);result[["seconds"]]<-proc.time()[["elapsed"]]-began
+  result[["pm_reference"]]<-"uncentered package QE"
+- write_json17(result,sprintf("reference/%05d.json",i))
++ write_json17(result,sprintf(file.path(OUT,"%05d.json"),i))
+  cat(i,key,G(result,"status"),if(!is.null(G(result,"reason")))G(result,"reason") else "","\n");flush.console()
+ }
+-cat("Reference shard complete",start,step,"\n")
++cat("Fresh reference complete:",length(cs),"configurations\n")

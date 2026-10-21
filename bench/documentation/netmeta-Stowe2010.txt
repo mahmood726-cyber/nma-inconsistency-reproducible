@@ -1,0 +1,62 @@
+_N_e_t_w_o_r_k _m_e_t_a-_a_n_a_l_y_s_i_s _o_f _a_d_j_u_v_a_n_t _t_r_e_a_t_m_e_n_t_s _t_o _l_e_v_o_d_o_p_a _t_h_e_r_a_p_y _f_o_r
+_P_a_r_k_i_n_s_o_n'_s _d_i_s_e_a_s_e
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     This dataset contains data from a Cochrane review assessing
+     efficacy and safety of three drug classes as adjuvant treatment to
+     levodopa therapy in patients with Parkinson<e2><80><99>s disease and motor
+     complications (Stowe et al., 2010). The authors conducted three
+     pairwise meta-analyses comparing dopamine agonists,
+     catechol-O-methyl transferase inhibitors (COMTIs), and monoamine
+     oxidase type B inhibitors (MAOBIs), respectively, with placebo.
+
+     The primary outcome was the mean reduction of the time spent in a
+     relatively immobile <e2><80><99>off<e2><80><99> phase (mean off-time), calculated in
+     hours per day. Relative treatment effects were expressed as mean
+     difference. Data on this outcome were available for 5,331 patients
+     from 28 studies comparing an active treatment with placebo and one
+     three-arm study comparing two active treatments with placebo.
+
+_F_o_r_m_a_t:
+
+     A data frame with the following columns:
+
+       *_study_*  study label              
+          *_id_*  study id                 
+          *_t1_*  treatment 1              
+          *_y1_*  treatment effect arm 1   
+         *_sd1_*  Standard deviation arm 1 
+          *_n1_*  Sample size arm 1        
+          *_t2_*  treatment 2              
+          *_y2_*  treatment effect arm 2   
+         *_sd2_*  Standard deviation arm 2 
+          *_n2_*  Sample size arm 2        
+          *_t3_*  treatment 3              
+          *_y3_*  treatment effect arm 3   
+         *_sd3_*  Standard deviation arm 3 
+          *_n3_*  Sample size arm 3        
+      
+_N_o_t_e:
+
+     The dataset Stowe2010 is identical to dataset 'Stowe2010' in R
+     package *metabook*.
+
+_S_o_u_r_c_e:
+
+     Stowe R, Ives N, Clarke CE, Deane K, Hilten V, Wheatley K, et al.
+     (2010): Evaluation of the efficacy and safety of adjuvant
+     treatment to levodopa therapy in Parkinson's disease patients with
+     motor complications. _Cochrane Database of Systematic Reviews_
+
+_S_e_e _A_l_s_o:
+
+     'pairwise', 'metacont', 'netmeta', 'netgraph.netmeta'
+
+_E_x_a_m_p_l_e_s:
+
+     head(Stowe2010)
+     
+     # Example using pairwise(), netmeta() and netrank():
+     # example(Stowe2010, package = "metabook")
+     

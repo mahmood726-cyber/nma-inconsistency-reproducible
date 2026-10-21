@@ -1,0 +1,56 @@
+{
+ "key": "netmeta::Baker2009::exac::OR::two-arm-only::FE",
+ "texts": {
+  "A_interpret": "The global design-by-treatment test rejected the hypothesis of no inconsistency (p = 0.041). Under a fixed-effect model this can reflect unmodelled between-study heterogeneity as well as disagreement between direct and indirect evidence, so read it alongside the random-effects results. Examine the node-split results, the designs involved and study characteristics before relying on network estimates.\n4 of 8 node-split comparisons had p < 0.05. These p-values are unadjusted: if there were no inconsistency, about 0.4 of 8 would be expected to reach p < 0.05 by chance, and the splits are correlated (several re-test the same loops). Treat isolated flags as hypothesis-generating, and look at the size of each direct–indirect difference, not only its p-value.\nFixed-effect weights ignore between-study heterogeneity; when heterogeneity is present this inflates Q and makes node-split p-values too small. Compare with the random-effects results.\nThe comparison of fixed-effect and random-effects results below is a sensitivity analysis: prespecify the primary model rather than choosing it from these results.\nInconsistency tests do not check transitivity (whether effect modifiers are balanced across comparisons). Only independent two-arm studies are supported; multi-arm studies would need their within-study correlation, and excluding them changes the network.",
+  "B_graph": "Network of treatments and direct comparisons6 treatments and 9 directly compared pairs. Line width is proportional to the number of studies; red dashed lines are node-splits with p < 0.05, blue solid lines node-splits with p ≥ 0.05 and grey dotted lines comparisons that cannot be split.FluticasoneFluticasone+SalmeterolFormoterolPlaceboSalmeterolTiotropium",
+  "C_loo_summary": "The global test result is fragile: p crosses 0.05 (full data p = 0.041) after removing Mahler 1999, Casaburi 2002, Rossi 2002, Niewoehner 2005, vanNoord 2005, Kardos 2007, Wedzicha 2008 (global p ranged from 0.019 to 0.159 across single-study removals). At least one node-split p-value crosses 0.05 after removing 5 of the 29 studies: Rossi 2002, Niewoehner 2005, Barnes 2006, Kardos 2007, Wedzicha 2008. With full-data p close to 0.05 (Formoterol vs Placebo, p = 0.043; Formoterol vs Tiotropium, p = 0.043), such crossings are expected and do not by themselves identify influential studies.",
+  "C_dq": "Change in global design-by-treatment Q when each study is removed29 studies. ΔQ ranges from -4.81 to 0.64. Removing Mahler 1999, Casaburi 2002, Rossi 2002, Niewoehner 2005, vanNoord 2005, Kardos 2007, Wedzicha 2008 changes the global conclusion.Llewellyn-Jones 1996Boyd 1997Paggiaro 1998Mahler 1999Casaburi 2000Burge 2000Littner 2000vanNoord 2000Rennard 2001Casaburi 2002Chapman 2002Hattotuwa 2002Rossi 2002Celli 2003Odonnel 2004Briggs 2005Campbell 2005Niewoehner 2005vanNoord 2005Barnes 2006Beeh 2006Dusser 2006Stokley 2006Verkindre 2006Baumgartner 2007Freeman 2007Kardos 2007Powrie 2007Wedzicha 2008ΔQ (global Q without the study minus Q with all studies)",
+  "D_loo_table": "Refit without each study. Select a column heading to sort, or a study to see its node-splits. Highlighted rows change a conclusion at the 0.05 level.\nSTUDY REMOVED\tΤ²\tGLOBAL Q\tΔQ\tGLOBAL P\tNODE-SPLITS\tSPLITS P < 0.05\tWHAT CHANGES\nWEDZICHA 2008\t0.0000\t5.18\t-4.81\t0.159\t7\t2\tglobal conclusion changes; split conclusion changes: Placebo vs Tiotropium; no longer estimable: Fluticasone+Salmeterol vs Tiotropium\nVANNOORD 2005\t0.0000\t5.88\t-4.10\t0.117\t6\t2\tglobal conclusion changes; no longer estimable: Formoterol vs Placebo, Formoterol vs Tiotropium\nKARDOS 2007\t0.0000\t7.19\t-2.79\t0.066\t7\t3\tglobal conclusion changes; split conclusion changes: Fluticasone+Salmeterol vs Tiotropium; no longer estimable: Fluticasone+Salmeterol vs Salmeterol\nNIEWOEHNER 2005\t0.0000\t7.92\t-2.07\t0.095\t8\t1\tglobal conclusion changes; split conclusion changes: Fluticasone+Salmeterol vs Tiotropium, Formoterol vs Placebo, Formoterol vs Tiotropium\nROSSI 2002\t0.0000\t8.26\t-1.73\t0.083\t8\t2\tglobal conclusion changes; split conclusion changes: Formoterol vs Placebo, Formoterol vs Tiotropium\nBARNES 2006\t0.0000\t8.44\t-1.54\t0.038\t7\t3\tsplit conclusion changes: Fluticasone+Salmeterol vs Tiotropium; no longer estimable: Fluticasone+Salmeterol vs Placebo\nCASABURI 2002\t0.0000\t9.25\t-0.73\t0.055\t8\t4\tglobal conclusion changes\nMAHLER 1999\t0.0000\t9.38\t-0.61\t0.052\t8\t4\tglobal conclusion changes\nCHAPMAN 2002\t0.0000\t9.76\t-0.22\t0.045\t8\t4\tNo change\nVANNOORD 2000\t0.0000\t9.77\t-0.22\t0.044\t8\t4\tNo change\nCELLI 2003\t0.0000\t9.82\t-0.17\t0.044\t8\t4\tNo change\nBOYD 1997\t0.0000\t9.86\t-0.13\t0.043\t8\t4\tNo change\nBRIGGS 2005\t0.0000\t9.94\t-0.04\t0.019\t7\t4\tno longer estimable: Salmeterol vs Tiotropium\nCASABURI 2000\t0.0000\t9.96\t-0.03\t0.041\t8\t4\tNo change\nLLEWELLYN-JONES 1996\t0.0000\t9.99\t0.00\t0.041\t8\t4\tNo change\nHATTOTUWA 2002\t0.0000\t9.99\t0.00\t0.041\t8\t4\tNo change\nPAGGIARO 1998\t0.0000\t9.99\t0.00\t0.041\t8\t4\tNo change\nBURGE 2000\t0.0000\t9.99\t0.00\t0.041\t8\t4\tNo change\nLITTNER 2000\t0.0000\t10.01\t+0.03\t0.040\t8\t4\tNo change\nBEEH 2006\t0.0000\t10.02\t+0.04\t0.040\t8\t4\tNo change\nBAUMGARTNER 2007\t0.0000\t10.03\t+0.05\t0.040\t8\t4\tNo change\nVERKINDRE 2006\t0.0000\t10.04\t+0.05\t0.040\t8\t4\tNo change\nODONNEL 2004\t0.0000\t10.07\t+0.08\t0.039\t8\t4\tNo change\nRENNARD 2001\t0.0000\t10.35\t+0.37\t0.035\t8\t4\tNo change\nSTOKLEY 2006\t0.0000\t10.39\t+0.41\t0.034\t8\t4\tNo change\nFREEMAN 2007\t0.0000\t10.43\t+0.44\t0.034\t8\t4\tNo change\nDUSSER 2006\t0.0000\t10.44\t+0.45\t0.034\t8\t4\tNo change\nPOWRIE 2007\t0.0000\t10.44\t+0.45\t0.034\t8\t4\tNo change\nCAMPBELL 2005\t0.0000\t10.63\t+0.64\t0.031\t8\t4\tNo change",
+  "E_compare": "The same tests under the three models (p-values; a dash means not estimable).\nQUANTITY\tFIXED-EFFECT\tDERSIMONIAN-LAIRD\tPAULE-MANDEL\tCONCLUSION AT 0.05\nΤ²\t0.0000\t0.0147\t0.0182\t—\nGLOBAL DESIGN-BY-TREATMENT\tp 0.041 (Q 9.99, df 4)\tp 0.146 (Q 6.82, df 4)\tp 0.169 (Q 6.44, df 4)\tDiffers\nFLUTICASONE+SALMETEROL VS PLACEBO\tp 0.214\tp 0.282\tp 0.294\tSame\nFLUTICASONE+SALMETEROL VS SALMETEROL\tp 0.095\tp 0.332\tp 0.378\tSame\nFLUTICASONE+SALMETEROL VS TIOTROPIUM\tp 0.028\tp 0.118\tp 0.138\tDiffers\nFORMOTEROL VS PLACEBO\tp 0.043\tp 0.059\tp 0.062\tDiffers\nFORMOTEROL VS TIOTROPIUM\tp 0.043\tp 0.059\tp 0.062\tDiffers\nPLACEBO VS SALMETEROL\tp 0.103\tp 0.350\tp 0.398\tSame\nPLACEBO VS TIOTROPIUM\tp 0.010\tp 0.047\tp 0.056\tDiffers\nSALMETEROL VS TIOTROPIUM\tp 0.840\tp 0.868\tp 0.875\tSame",
+  "F_methods": "Methods. Inconsistency in the network of 29 independent two-arm studies and 6 treatments was assessed with node-splitting (Dias et al. 2010), computed by back-calculation (König et al. 2013), for every comparison with both direct evidence and an indirect path, and with the global design-by-treatment interaction test (Higgins et al. 2012), using a fixed-effect (common τ² = 0) model. Node-split p-values were not adjusted for multiplicity. Sensitivity of the inconsistency conclusions was assessed by removing each study in turn, and all analyses were repeated under fixed-effect, DerSimonian-Laird and Paule-Mandel models. Analyses used the allmeta nma-inconsistency browser tool, whose node-split, design-by-treatment and leave-one-out results are validated against R netmeta 3.7-0 netsplit() and decomp.design() (relative tolerance 1e-9, 1e-6 for Paule-Mandel; p-values 1e-9 absolute).\n\nResults. The global design-by-treatment test gave Q = 9.99 on 4 df (p = 0.041); 4 of 8 node-split comparisons had p < 0.05 (Fluticasone+Salmeterol vs Tiotropium, p = 0.028; Formoterol vs Placebo, p = 0.043; Formoterol vs Tiotropium, p = 0.043; Placebo vs Tiotropium, p = 0.010). The global test result is fragile: p crosses 0.05 (full data p = 0.041) after removing Mahler 1999, Casaburi 2002, Rossi 2002, Niewoehner 2005, vanNoord 2005, Kardos 2007, Wedzicha 2008 (global p ranged from 0.019 to 0.159 across single-study removals). At least one node-split p-value crosses 0.05 after removing 5 of the 29 studies: Rossi 2002, Niewoehner 2005, Barnes 2006, Kardos 2007, Wedzicha 2008. With full-data p close to 0.05 (Formoterol vs Placebo, p = 0.043; Formoterol vs Tiotropium, p = 0.043), such crossings are expected and do not by themselves identify influential studies. Global design-by-treatment p was 0.041 with fixed-effect, 0.146 with DerSimonian-Laird (τ² = 0.0147) and 0.169 with Paule-Mandel (τ² = 0.0182) weights. The models fall on different sides of 0.05; with τ² > 0 the fixed-effect result is sensitive to unmodelled heterogeneity. 4 of 8 node-split p-values fall on different sides of 0.05 depending on the model."
+ },
+ "cmpSummary": "Global design-by-treatment p was 0.041 with fixed-effect, 0.146 with DerSimonian-Laird (τ² = 0.0147) and 0.169 with Paule-Mandel (τ² = 0.0182) weights. The models fall on different sides of 0.05; with τ² > 0 the fixed-effect result is sensitive to unmodelled heterogeneity. 4 of 8 node-split p-values fall on different sides of 0.05 depending on the model.",
+ "engine": {
+  "model": "FE",
+  "dbt": {
+   "Q": 9.985565299481477,
+   "df": 4,
+   "p": 0.04067153584148542
+  },
+  "splits": [
+   [
+    "Placebo vs Salmeterol",
+    0.10278472497894597
+   ],
+   [
+    "Placebo vs Tiotropium",
+    0.009776908214878866
+   ],
+   [
+    "Formoterol vs Placebo",
+    0.042857332999611475
+   ],
+   [
+    "Salmeterol vs Tiotropium",
+    0.8395241288094264
+   ],
+   [
+    "Formoterol vs Tiotropium",
+    0.042857332999612474
+   ],
+   [
+    "Fluticasone+Salmeterol vs Placebo",
+    0.21390369875334259
+   ],
+   [
+    "Fluticasone+Salmeterol vs Salmeterol",
+    0.09457215376595929
+   ],
+   [
+    "Fluticasone+Salmeterol vs Tiotropium",
+    0.02836698629066514
+   ]
+  ]
+ },
+ "browser": "155.0.4283.62"
+}

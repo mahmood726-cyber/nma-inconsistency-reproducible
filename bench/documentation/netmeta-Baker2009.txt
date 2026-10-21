@@ -1,0 +1,51 @@
+_N_e_t_w_o_r_k _m_e_t_a-_a_n_a_l_y_s_i_s _o_f _p_h_a_r_m_a_c_o_l_o_g_i_c _t_r_e_a_t_m_e_n_t_s _f_o_r _c_h_r_o_n_i_c
+_o_b_s_t_r_u_c_t_i_v_e _p_u_l_m_o_n_a_r_y _d_i_s_e_a_s_e
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     This dataset comes from a systematic review of randomized
+     controlled trials on pharmacologic treatments for chronic
+     obstructive pulmonary disease (COPD) (Baker et al., 2009).
+
+     The primary outcome, occurrence of one or more episodes of COPD
+     exacerbation, is binary (yes / no). For this outcome, five drug
+     treatments (fluticasone, budesonide, salmeterol, formoterol,
+     tiotropium) and two combinations (fluticasone + salmeterol,
+     budesonide + formoterol) were compared to placebo. The authors
+     considered the two combinations as separate treatments instead of
+     evaluating the individual components.
+
+_F_o_r_m_a_t:
+
+     A data frame with the following columns:
+
+           *_study_*  study label                               
+            *_year_*  year of publication                       
+              *_id_*  study ID                                  
+       *_treatment_*  treatment                                 
+            *_exac_*  one or more episodes of COPD exacerbation 
+           *_total_*  number of individuals in treatment arm    
+      
+_N_o_t_e:
+
+     The dataset Baker2009 is identical to dataset 'Baker2009' in R
+     package *metabook*.
+
+_S_o_u_r_c_e:
+
+     Baker WL, Baker EL, Coleman CI (2009): Pharmacologic Treatments
+     for Chronic Obstructive Pulmonary Disease: A Mixed-Treatment
+     Comparison Meta-analysis. _Pharmacotherapy: The Journal of Human
+     Pharmacology and Drug Therapy_, *29*, 891-905
+
+_S_e_e _A_l_s_o:
+
+     'Baker2009', 'pairwise', 'metabin', 'netmeta', 'netcomb'
+
+_E_x_a_m_p_l_e_s:
+
+     head(Baker2009)
+     
+     # Example using pairwise(), netmeta() and netcomb():
+     # example(Baker2009, package = "metabook")
+     

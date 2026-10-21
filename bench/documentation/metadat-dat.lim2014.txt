@@ -1,0 +1,115 @@
+_S_t_u_d_i_e_s _o_n _t_h_e _A_s_s_o_c_i_a_t_i_o_n _B_e_t_w_e_e_n _M_a_t_e_r_n_a_l _S_i_z_e, _O_f_f_s_p_r_i_n_g _S_i_z_e, _a_n_d
+_N_u_m_b_e_r _o_f _O_f_f_s_p_r_i_n_g_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Results from studies examining the association between maternal
+     size, offspring size, and number of offsprings.
+
+_U_s_a_g_e:
+
+     dat.lim2014
+     
+_F_o_r_m_a_t:
+
+     The object is a list containing data frames 'm_o_size',
+     'm_o_fecundity', 'o_o_unadj', and 'o_o_adj' that contain the
+     following columns and the corresponding phylogenetic trees called
+     'm_o_size_tree', 'm_o_fecundity_tree', 'o_o_unadj_tree', and
+     'o_o_adj_tree':
+
+       *article*      'numeric'    article id                                                                                                                          
+       *author*       'character'  study author(s)                                                                                                                     
+       *year*         'numeric'    publication year                                                                                                                    
+       *species*      'character'  species                                                                                                                             
+       *amniotes*     'character'  whether the species was amniotic                                                                                                    
+       *environment*  'character'  whether the species were wild or captive                                                                                            
+       *reprounit*    'character'  whether the data were based on lifetime reproductive output or a single reproductive event (only in 'm_o_size' and 'm_o_fecundity') 
+       *ri*           'numeric'    correlation coefficient                                                                                                             
+       *ni*           'numeric'    sample size                                                                                                                         
+      
+_D_e_t_a_i_l_s:
+
+     The object 'dat.lim2014' includes 4 datasets:
+
+       'm_o_size'       on the correlation between maternal size and offspring size                                   
+       'm_o_fecundity'  on the correlation between maternal size and number of offsprings                             
+       'o_o_unadj'      on the correlation between offspring size and number of offsprings                            
+       'o_o_adj'        on the correlation between offspring size and number of offsprings adjusted for maternal size 
+      
+     Objects 'm_o_size_tree', 'm_o_fecundity_tree', 'o_o_unadj_tree',
+     and 'o_o_adj_tree' are the corresponding phylogenetic trees for
+     the species included in each of these datasets.
+
+_C_o_n_c_e_p_t_s:
+
+     ecology, evolution, correlation coefficients, multilevel models,
+     phylogeny
+
+_A_u_t_h_o_r(_s):
+
+     Wolfgang Viechtbauer, <mailto:wvb@metafor-project.org>,
+     <https://www.metafor-project.org>
+
+_S_o_u_r_c_e:
+
+     Lim, J. N., Senior, A. M., & Nakagawa, S. (2014). Heterogeneity in
+     individual quality and reproductive trade-offs within species.
+     _Evolution_, *68*(8), 2306-2318. https://doi.org/10.1111/evo.12446
+
+_R_e_f_e_r_e_n_c_e_s:
+
+     Cinar, O., Nakagawa, S., & Viechtbauer, W. (in press).
+     Phylogenetic multilevel meta-analysis: A simulation study on the
+     importance of modelling the phylogeny. _Methods in Ecology and
+     Evolution_. https://doi.org/10.1111/2041-210X.13760
+
+     Hadfield, J. D., & Nakagawa, S. (2010). General quantitative
+     genetic methods for comparative biology: Phylogenies, taxonomies
+     and multi-trait models for continuous and categorical characters.
+     _Journal of Evolutionary Biology_, *23*(3), 494-508.
+     https://doi.org/10.1111/j.1420-9101.2009.01915.x
+
+     Nakagawa, S., & Santos, E. S. A. (2012). Methodological issues and
+     advances in biological meta-analysis. _Evolutionary Ecology_,
+     *26*(5), 1253-1274. https://doi.org/10.1007/s10682-012-9555-5
+
+_E_x_a_m_p_l_e_s:
+
+     ### copy data into 'dat' and examine data
+     dat <- dat.lim2014$o_o_unadj
+     dat[1:14, -c(2:3)]
+     
+     ## Not run:
+     
+     ### load metafor package
+     library(metafor)
+     
+     ### load ape package
+     library(ape, warn.conflicts=FALSE)
+     
+     ### calculate r-to-z transformed correlations and corresponding sampling variances
+     dat <- escalc(measure="ZCOR", ri=ri, ni=ni, data=dat)
+     
+     ### copy tree to 'tree'
+     tree <- dat.lim2014$o_o_unadj_tree
+     
+     ### compute branch lengths
+     tree <- compute.brlen(tree)
+     
+     ### compute phylogenetic correlation matrix
+     A <- vcv(tree, corr=TRUE)
+     
+     ### make copy of the species variable
+     dat$species.phy <- dat$species
+     
+     ### create effect size id variable
+     dat$esid <- 1:nrow(dat)
+     
+     ### fit multilevel phylogenetic meta-analytic model
+     res <- rma.mv(yi, vi,
+        random = list(~ 1 | article, ~ 1 | esid, ~ 1 | species, ~ 1 | species.phy),
+        R=list(species.phy=A), data=dat)
+     res
+     ## End(Not run)
+     

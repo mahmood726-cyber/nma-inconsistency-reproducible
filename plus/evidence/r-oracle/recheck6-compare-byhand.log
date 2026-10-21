@@ -1,0 +1,7 @@
+00137 metadat::dat.linde2015::loss.ae::RR::two-arm-only::DL leaves 9096 identical 9096 max_rel 0 structural [] OK
+00140 metadat::dat.linde2015::ae::OR::two-arm-only::DL leaves 4106 identical 4106 max_rel 0 structural [] OK
+00143 metadat::dat.linde2015::ae::RR::two-arm-only::DL leaves 4106 identical 4106 max_rel 0 structural [] OK
+00146 metadat::dat.lopez2019::standardized-change::MD::two-arm-only::DL leaves 7857 identical 7857 max_rel 0 structural [] OK
+00149 metadat::dat.senn2013::change::MD::two-arm-only::DL leaves 4095 identical 4095 max_rel 0 structural [] OK
+00152 metadat::dat.senn2013::change::SMD::two-arm-only::DL leaves 4095 identical 4095 max_rel 0 structural [] OK
+RECHECK6 6/6 byte-identical values (excluding seconds); 6/6 within 1e-12; max rel 0

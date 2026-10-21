@@ -1,0 +1,9 @@
+00003.json netmeta::Baker2009::exac::OR::two-arm-only::PM numdiffs 495 max (6.624572145865435e-14, '.drops[20].fit.nodeSplit[3].indirect.mean') struct []
+00006.json netmeta::Baker2009::exac::RR::two-arm-only::PM numdiffs 691 max (2.083739204832558e-13, '.drops[24].fit.nodeSplit[6].z') struct []
+00015.json netmeta::Dong2013::death::OR::two-arm-only::PM numdiffs 14 max (3.552713678800501e-15, '.drops[12].fit.dbt.Q') struct []
+00018.json netmeta::Dong2013::death::RR::two-arm-only::PM numdiffs 28 max (2.5227829452417084e-15, '.drops[2].fit.nodeSplit[2].z') struct []
+00027.json netmeta::Gurusamy2011::death::OR::two-arm-only::PM numdiffs 423 max (3.1895085793690504e-14, '.drops[1].fit.nodeSplit[0].diff') struct []
+00030.json netmeta::Gurusamy2011::death::RR::two-arm-only::PM numdiffs 370 max (9.783117910542985e-14, '.drops[11].fit.nodeSplit[0].diff') struct []
+WORST (2.083739204832558e-13, '.drops[24].fit.nodeSplit[6].z', -1.8083342372402873, -1.8083342372399105)
+versions base {'R': '4.6.0', 'netmeta': '3.7.0', 'metafor': '5.2.1', 'jsonlite': '2.0.0', 'meta': '8.5.0', 'gs_memo': True}
+versions lap  {'R': '4.6.0', 'netmeta': '3.7.0', 'metafor': '5.2.1', 'jsonlite': '2.0.0', 'meta': '8.5.0', 'gs_memo': True}

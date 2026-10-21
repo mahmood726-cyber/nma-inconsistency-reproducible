@@ -1,0 +1,1 @@
+{"key":"metadat::dat.baker2009::exac::RR::full::DL","status":"refused","reason":"Multi-arm studies are unsupported: correlated contrasts require study covariance.","scope":"input-support gate; not a numerical netmeta success","warnings":[],"seconds":0.030000000000001137}

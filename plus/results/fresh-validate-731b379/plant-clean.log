@@ -1,0 +1,27 @@
+       R  netmeta     meta  metadat  metafor jsonlite 
+ "4.6.0"  "3.7.0"  "8.5.0"  "1.6.0"  "5.2.1"  "2.0.0" 
+Plus version check PASS
+Plus SHA-256 checks PASS: 30 app files, 5 manifest files
+Plus subset (corpus positions): 7 19 20 21 22 23 24 29 60 113 150 151 
+versions 4.6.0 3.7.0 5.2.1 2.0.0 8.5.0 TRUE 
+1 netmeta::Dogliotti2014::stroke::OR::two-arm-only::FE k= 16 ok=16 70.4s 
+2 netmeta::Franchini2012::change::MD::two-arm-only::FE k= 6 ok=5 refused=1 14.1s 
+3 netmeta::Franchini2012::change::MD::two-arm-only::DL k= 6 ok=5 refused=1 13.7s 
+4 netmeta::Franchini2012::change::MD::two-arm-only::PM k= 6 ok=5 refused=1 9.8s 
+5 netmeta::Franchini2012::change::SMD::two-arm-only::FE k= 6 ok=5 refused=1 10.8s 
+6 netmeta::Franchini2012::change::SMD::two-arm-only::DL k= 6 ok=5 refused=1 11.0s 
+7 netmeta::Franchini2012::change::SMD::two-arm-only::PM k= 6 ok=5 refused=1 12.2s 
+8 netmeta::Gurusamy2011::death::RR::two-arm-only::DL k= 13 ok=13 45.2s 
+9 netmeta::Linde2015::ae::RR::two-arm-only::PM k= 36 ok=36 215.9s 
+10 metadat::dat.hasselblad1998::xi::RR::two-arm-only::DL k= 22 ok=22 61.4s 
+11 metadat::dat.senn2013::change::MD::two-arm-only::PM k= 25 ok=25 149.8s 
+12 metadat::dat.senn2013::change::SMD::two-arm-only::FE k= 25 ok=25 144.0s 
+Plus shard complete 1 1 
+PLANTED: archived full Q of netmeta::Dogliotti2014::stroke::OR::two-arm-only::FE scaled by 1 + 1e-6
+Plus R refit (seeded subset): 12 configurations / 173 drop-fits; max relative difference 1e-06
+18413/18414 plus reference quantities reproduced
+netmeta::Dogliotti2014::stroke::OR::two-arm-only::FE/full/Q 14.124054732882968 vs 14.124068856937699
+Error in eval(quote({ : Plus reference not reproduced
+Calls: local -> eval.parent -> eval -> eval -> eval -> eval
+Execution halted
+exit=1 

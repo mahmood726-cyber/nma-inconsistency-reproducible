@@ -1,0 +1,213 @@
+{
+  "repository": "https://github.com/mahmood726-cyber/allmeta",
+  "release": "v1.8.0",
+  "commit": "1cb3f8409c7af75ed41f7e1811f9c502f900fc79",
+  "historical_capture_branch": "feat/nma-inconsistency-plus",
+  "pull_request": 160,
+  "historical_capture_commit": "5373102e219ea1154b845496a68d2150703b91af",
+  "note": "Byte-exact git blobs of these paths at allmeta v1.8.0 (1cb3f84, LF). The recorded evidence in plus/evidence was captured at the historical commit; see RELEASE_EQUIVALENCE.md for what was re-run on these bytes.",
+  "release_repin": [
+    {
+      "path": "hub/shared/tests/nma-inconsistency-plus.node.cjs",
+      "previous_sha256": "9b96f5f1f9440d36664f2d1b3dd8d4aee1146de6e9f35a883e630a1a91408bab",
+      "new_sha256": "a5038a27229b56d879f1bdd34099a967dcbd7a74d0d39289abdc08e9827a8f7e"
+    },
+    {
+      "path": "hub/shared/tests/nma-inconsistency-usability.spec.mjs",
+      "previous_sha256": "c6824f0ba872326b400027e7c5f0c88c837ea1b475e93975491be3b0b1857e27",
+      "new_sha256": "5a5785a5c09d786b02db4ac9aa61d9c75185d3c1eeaf0f9e18b0eb1728dce579"
+    },
+    {
+      "path": "nma-inconsistency/plus-core.js",
+      "previous_sha256": "0318711d8da7c821675395821b9e3299554c7612bb153db44f5f47bc79b1f4ed",
+      "new_sha256": "912cc1314f291eb47774ecd85727617cacd14a7fa7004045c94184e553c48073"
+    },
+    {
+      "path": "nma-inconsistency/plus-ui.js",
+      "previous_sha256": "a0bab907ca744ce6cd2130a7901a45164d08febca4ae7c255cd88406f29a86a4",
+      "new_sha256": "54d166b4232ab919b75a397a3e9b19fd029dd7c55db4a44a96a57376fb119b5f"
+    }
+  ],
+  "files": [
+    {
+      "path": "hub/shared/tests/nma-inconsistency-plus.node.cjs",
+      "sha256": "a5038a27229b56d879f1bdd34099a967dcbd7a74d0d39289abdc08e9827a8f7e",
+      "bytes": 5888,
+      "git_blob": "e2208f7a29910ec5f179d859af6e8f745b076638"
+    },
+    {
+      "path": "hub/shared/tests/nma-inconsistency-plus.spec.mjs",
+      "sha256": "00023a102430bd423982c045192ececf9b7aa132c789201f712a969e1bf95803",
+      "bytes": 7253,
+      "git_blob": "eaff3a9056bfcd94e00f4d75a681940b8b66068d"
+    },
+    {
+      "path": "hub/shared/tests/nma-inconsistency-usability.spec.mjs",
+      "sha256": "5a5785a5c09d786b02db4ac9aa61d9c75185d3c1eeaf0f9e18b0eb1728dce579",
+      "bytes": 5711,
+      "git_blob": "0204fb6234ba155fa498dc88b410c04b1d96749c"
+    },
+    {
+      "path": "hub/shared/tests/nma-inconsistency-walkthrough.spec.mjs",
+      "sha256": "8a7137698b8ed72ccdedee4e329a6719c984ec89743744e3a5675a8407b4bb5b",
+      "bytes": 6117,
+      "git_blob": "c134928049d75c4e68669edd6c4aaed37af7c338"
+    },
+    {
+      "path": "hub/shared/tests/validation-fixture.mjs",
+      "sha256": "efecc838eda9aab417978256d5757d33e4b068fbb3c17ae0061aa91e81a35a9b",
+      "bytes": 1413,
+      "git_blob": "b53a93a68a755b7c8d900f2736b5909011d9caac"
+    },
+    {
+      "path": "nma-inconsistency/README.md",
+      "sha256": "139a6e0c1cc91d1f5cd988bb94c154b759c471e3e9a28fe718139adb34167843",
+      "bytes": 1360,
+      "git_blob": "a6207988a9d4a0bb3488fdba8a33848531ba464b"
+    },
+    {
+      "path": "nma-inconsistency/index.html",
+      "sha256": "23d2ad71d0cef30842323c6bd24ca4a4eb4cdcdd0e2321620021572701e88d24",
+      "bytes": 42931,
+      "git_blob": "aba39271b49c08096f557968d685a42d3af58458"
+    },
+    {
+      "path": "nma-inconsistency/plus-core.js",
+      "sha256": "912cc1314f291eb47774ecd85727617cacd14a7fa7004045c94184e553c48073",
+      "bytes": 24030,
+      "git_blob": "0e3132af1349bb9fd3137dc4a6c1922187cd8975"
+    },
+    {
+      "path": "nma-inconsistency/plus-examples.js",
+      "sha256": "ee8e30949a6246165518f3a936fb814cf6cadef3bf3987f151be6201961de41e",
+      "bytes": 7741,
+      "git_blob": "4892fe0def46c662ccec1545d940ea76230ee9e3"
+    },
+    {
+      "path": "nma-inconsistency/plus-ui.js",
+      "sha256": "54d166b4232ab919b75a397a3e9b19fd029dd7c55db4a44a96a57376fb119b5f",
+      "bytes": 20722,
+      "git_blob": "1b615cab26254f70eea751cb339bc4b038d33b4d"
+    },
+    {
+      "path": "nma-inconsistency/validate/MANIFEST-plus.json",
+      "sha256": "86959abc86f773b9b681e4cbde72c0bc42c7cff722c46009d171fc83327370dc",
+      "bytes": 1629,
+      "git_blob": "d7af7d4fcba41b386fecc81d24dec3f200fd336f"
+    },
+    {
+      "path": "nma-inconsistency/validate/MANIFEST.json",
+      "sha256": "760355ad648f8ff9a76308e9bcbc5bcff4560a25aa47865ddc119f3177f37f6a",
+      "bytes": 5652,
+      "git_blob": "e729123132e3a8ebab36cb3d94cb75d82607b192"
+    },
+    {
+      "path": "nma-inconsistency/validate/README-plus.md",
+      "sha256": "04fd282c74af6f7af5566ec9d470386968789e14037026f4f75b6446e4b68a8a",
+      "bytes": 4137,
+      "git_blob": "88645211528b3acfdd106eacd3246a3d39d70192"
+    },
+    {
+      "path": "nma-inconsistency/validate/README.md",
+      "sha256": "cbac5a0eb7a17ae22c0c22c3578b2ec25b821818d4cc6dbf3a3a047f12103b67",
+      "bytes": 11376,
+      "git_blob": "ad32191c584c47248dffb9ca03895a7b4d082227"
+    },
+    {
+      "path": "nma-inconsistency/validate/adapter.js",
+      "sha256": "2ddfde0e1ab83594bd72afec4bb85ca62ade715fe48c625e4e9bfe36811a58af",
+      "bytes": 15363,
+      "git_blob": "14cb3f88aa6c80c59e857e19ea0c35f7cebe2236"
+    },
+    {
+      "path": "nma-inconsistency/validate/build-fixtures.cjs",
+      "sha256": "92a29b0fa5fdfcba407e90b39bca5909211daf2d7141f1a0cdbde13f23e2c6f2",
+      "bytes": 6547,
+      "git_blob": "3ff88113de98d77bf104832f95010e6e892a6239"
+    },
+    {
+      "path": "nma-inconsistency/validate/build-scripts.cjs",
+      "sha256": "89d46f9dd2b170cb7f76224781c209d422749434cbf4bf967b51ff31c549b83a",
+      "bytes": 2593,
+      "git_blob": "b2788e2e170b4293de234914c6a361035aee9d21"
+    },
+    {
+      "path": "nma-inconsistency/validate/corpus/corpus.json",
+      "sha256": "631f9ab81b3598e1b6105dfd7655ffd59399c25d755668b6682ecd796745b598",
+      "bytes": 206134,
+      "git_blob": "676bcf65c35116f2e0ca14f2e0d0e0b7c60fb950"
+    },
+    {
+      "path": "nma-inconsistency/validate/corpus/reference.json",
+      "sha256": "aa0e07ae7f6885dcd0f6c5eeff93b4d01658ad82858ed7dcf4184723c16f8787",
+      "bytes": 852554,
+      "git_blob": "28ba49a364482f34bbd6b2d8103ab9412c978eb1"
+    },
+    {
+      "path": "nma-inconsistency/validate/derive-plus-checks.cjs",
+      "sha256": "0617b33a0392edfb85710581b18b0a87ea4bd5d6411d80ff40eaa892f7cb72ce",
+      "bytes": 2319,
+      "git_blob": "a6e1b7e8621bfc187a29b410050655f8f116d59f"
+    },
+    {
+      "path": "nma-inconsistency/validate/generate-plus.R",
+      "sha256": "208b108269e2a69348146e3105e75733295e7d89555a349540ea55b70f0d0d42",
+      "bytes": 9824,
+      "git_blob": "2b75c6d631d579491cc9203615adcdf4b103035a"
+    },
+    {
+      "path": "nma-inconsistency/validate/live.js",
+      "sha256": "f56695a0363d29f9b1e7f0d2d7b0fb5ce0fc86c916bf0f4420957946cf0db6d4",
+      "bytes": 7655,
+      "git_blob": "0e0797fdf942f856f0b85037ed69f082ac513ab8"
+    },
+    {
+      "path": "nma-inconsistency/validate/manifest-plus.js",
+      "sha256": "bbde25dbc280ec59b9182941024a2ab866fad8d418dd3b9e36834f8b61149bc2",
+      "bytes": 1659,
+      "git_blob": "0a8e19aba1e77c72aa0df07a568eccd5b99d8d7c"
+    },
+    {
+      "path": "nma-inconsistency/validate/pin-plus.py",
+      "sha256": "602ea53526eea309f2e00e5cc72ced18dca568761dde7bc22617c3fda03c52b4",
+      "bytes": 7497,
+      "git_blob": "eeb7a4e62caa32d8910c585ecb784e0455f9265f"
+    },
+    {
+      "path": "nma-inconsistency/validate/plus-adapter.js",
+      "sha256": "b2117cf28565360fe08e72edd54497e0c86d4c2760f39274e5a36823fea25a4c",
+      "bytes": 9243,
+      "git_blob": "736a725146bd36f3fb09b874daf2490fcb246703"
+    },
+    {
+      "path": "nma-inconsistency/validate/plus/corpus.json",
+      "sha256": "9e09023a64b46005d53527118801df3b046218e932773017b51aba5ae31b63e1",
+      "bytes": 487475,
+      "git_blob": "dea4979cba7d3f4dd427778f0b49e124d7d341d5"
+    },
+    {
+      "path": "nma-inconsistency/validate/plus/estimators-reference.json",
+      "sha256": "f31b49e26615e16f41658411a7c9f01db8e61e19a5ae7d52119538b1c4f3c158",
+      "bytes": 850142,
+      "git_blob": "19a9b2257f010ad47a69618df55fdccf691c3d8f"
+    },
+    {
+      "path": "nma-inconsistency/validate/plus/reference.json",
+      "sha256": "a84d1b8136cd211b80e1fa447c012ec879d7322dcf9c7eb438abc90c3241fb45",
+      "bytes": 19934097,
+      "git_blob": "5cd8433962696cc88d09c4afd2cec90f986ec630"
+    },
+    {
+      "path": "nma-inconsistency/validate/repin-pagetext.mjs",
+      "sha256": "4ffb4f9765babb5a19af6712a3603d5a3fbb9efb7a60ecaf055142ba14998cac",
+      "bytes": 3573,
+      "git_blob": "95d6d5be4e89a6a81841d1ac306ded5053d92417"
+    },
+    {
+      "path": "nma-inconsistency/validate/run-scripts.ps1",
+      "sha256": "fbc6308a7932687d0ecc6c2df85edca24e5d5d647db111aeffde2aa32ea9160d",
+      "bytes": 1464,
+      "git_blob": "4e098fb41a953ccd0ad18ecaa0bc14c8fb6e1c25"
+    }
+  ]
+}

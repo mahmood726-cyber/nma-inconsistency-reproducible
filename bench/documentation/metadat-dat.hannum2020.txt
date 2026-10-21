@@ -1,0 +1,99 @@
+_S_t_u_d_i_e_s _C_o_m_p_a_r_i_n_g _O_b_j_e_c_t_i_v_e _a_n_d _S_u_b_j_e_c_t_i_v_e _O_l_f_a_c_t_o_r_y _L_o_s_s _i_n _C_O_V_I_D-_1_9
+_P_a_t_i_e_n_t_s
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Results from 35 studies measuring olfactory loss in COVID-19
+     patients using either objective or subjective measures.
+
+_U_s_a_g_e:
+
+     dat.hannum2020
+     
+_F_o_r_m_a_t:
+
+     The data frame contains the following columns:
+
+       *authorName*            'character'  (first) author of study                                               
+       *DOI*                   'character'  article DOI number                                                    
+       *ni*                    'numeric'    number of Covid-19 positive patients in the study                     
+       *xi*                    'numeric'    number of Covid-19 positive patients in the study with olfactory loss 
+       *percentOlfactoryLoss*  'numeric'    percent of the sample with olfactory loss                             
+       *objectivity*           'character'  objective or subjective measure used                                  
+       *measured*              'character'  outcome measure                                                       
+       *testType*              'character'  type of test used                                                     
+       *country*               'character'  country where patients were treated                                   
+       *patientType*           'character'  type of patient information and location where being treated          
+      
+_D_e_t_a_i_l_s:
+
+     One of the symptoms of COVID-19 infection is olfactory loss (loss
+     of smell) either recently acquired anosmia (complete loss of
+     smell) or hyposmia (partial loss of smell). One challenge to
+     reaching this symptom is the wide range of reported prevalence for
+     this symptom ranging from 5 percent to 98 percent. In this dataset
+     studies were grouped into one of two groups based on the type of
+     method used to measure smell loss (either subjective measures,
+     such as self-reported smell loss, or objective measures using
+     rated stimuli).
+
+_C_o_n_c_e_p_t_s:
+
+     medicine, covid-19, proportions
+
+_A_u_t_h_o_r(_s):
+
+     W. Kyle Hamilton <mailto:whamilton@ucmerced.edu>
+     <https://kylehamilton.com>
+
+_S_o_u_r_c_e:
+
+     Ramirez VA , Hannum ME, Lipson SJ, Herriman RD, Toskala AK, Lin C,
+     Joseph PV, Reed DR. 2020. COVID-19 Smell Loss Prevalence Tracker.
+     Available from:
+     https://vicente-ramirez.shinyapps.io/COVID19_Olfactory_Dashboard/
+     and https://github.com/vramirez4/OlfactoryLoss (accessed August
+     11, 2021)
+
+_R_e_f_e_r_e_n_c_e_s:
+
+     Hannum, M. E., Ramirez, V. A., Lipson, S. J., Herriman, R. D.,
+     Toskala, A. K., Lin, C., Joseph, P. V., & Reed, D. R. (2020).
+     Objective sensory testing methods reveal a higher prevalence of
+     olfactory loss in COVID-19 positive patients compared to
+     subjective methods: A systematic review and meta-analysis.
+     _Chemical Senses_, *45*(9), 865-874.
+     https://doi.org/10.1093/chemse/bjaa064
+
+_E_x_a_m_p_l_e_s:
+
+     # copy data into 'dat' and examine data
+     dat <- dat.hannum2020
+     dat
+     
+     ## Not run:
+     
+     # load metafor package
+     library(metafor)
+     
+     # compute effect size
+     dat <- escalc(measure="PR", xi=xi, ni=ni, data=dat)
+     
+     # split data into objective and subjective datasets
+     dat_split <- split(dat, dat$objectivity)
+     dat_objective <- dat_split[["Objective"]]
+     dat_subjective <- dat_split[["Subjective"]]
+     
+     # random-effects model all studies
+     res_all <- rma(yi, vi, data=dat)
+     print(res_all, digits=2)
+     
+     # random-effects model objective
+     res_objective <- rma(yi, vi, data=dat_objective)
+     print(res_objective, digits=2)
+     
+     # random-effects model subjective
+     res_subjective <- rma(yi, vi, data=dat_subjective)
+     print(res_subjective, digits=2)
+     ## End(Not run)
+     

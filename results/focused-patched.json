@@ -1,0 +1,2593 @@
+{
+  "passed": 319,
+  "checks": 319,
+  "results": [
+    {
+      "name": "normal_p::-10",
+      "pass": true,
+      "got": 0,
+      "expected": 1.5239706048321054e-23
+    },
+    {
+      "name": "normal_p::-9.875",
+      "pass": true,
+      "got": 0,
+      "expected": 5.34329605750645e-23
+    },
+    {
+      "name": "normal_p::-9.75",
+      "pass": true,
+      "got": 0,
+      "expected": 1.844682704987884e-22
+    },
+    {
+      "name": "normal_p::-9.625",
+      "pass": true,
+      "got": 0,
+      "expected": 6.270692463774953e-22
+    },
+    {
+      "name": "normal_p::-9.5",
+      "pass": true,
+      "got": 0,
+      "expected": 2.0989030150725216e-21
+    },
+    {
+      "name": "normal_p::-9.375",
+      "pass": true,
+      "got": 0,
+      "expected": 6.91757697446716e-21
+    },
+    {
+      "name": "normal_p::-9.25",
+      "pass": true,
+      "got": 0,
+      "expected": 2.2449267182655967e-20
+    },
+    {
+      "name": "normal_p::-9.125",
+      "pass": true,
+      "got": 0,
+      "expected": 7.173625873299457e-20
+    },
+    {
+      "name": "normal_p::-9",
+      "pass": true,
+      "got": 0,
+      "expected": 2.2571768119076816e-19
+    },
+    {
+      "name": "normal_p::-8.875",
+      "pass": true,
+      "got": 0,
+      "expected": 6.993341396427802e-19
+    },
+    {
+      "name": "normal_p::-8.75",
+      "pass": true,
+      "got": 0,
+      "expected": 2.1335274750949717e-18
+    },
+    {
+      "name": "normal_p::-8.625",
+      "pass": true,
+      "got": 0,
+      "expected": 6.40926545404152e-18
+    },
+    {
+      "name": "normal_p::-8.5",
+      "pass": true,
+      "got": 0,
+      "expected": 1.8959069644406638e-17
+    },
+    {
+      "name": "normal_p::-8.375",
+      "pass": true,
+      "got": 0,
+      "expected": 5.522387181450524e-17
+    },
+    {
+      "name": "normal_p::-8.25",
+      "pass": true,
+      "got": 1.1102230246251565e-16,
+      "expected": 1.5839452629284956e-16
+    },
+    {
+      "name": "normal_p::-8.125",
+      "pass": true,
+      "got": 4.440892098500626e-16,
+      "expected": 4.473624128888211e-16
+    },
+    {
+      "name": "normal_p::-8",
+      "pass": true,
+      "got": 1.2212453270876722e-15,
+      "expected": 1.244192114854357e-15
+    },
+    {
+      "name": "normal_p::-7.875",
+      "pass": true,
+      "got": 3.4416913763379853e-15,
+      "expected": 3.4074285832657466e-15
+    },
+    {
+      "name": "normal_p::-7.75",
+      "pass": true,
+      "got": 9.2148511043888e-15,
+      "expected": 9.189254871557191e-15
+    },
+    {
+      "name": "normal_p::-7.625",
+      "pass": true,
+      "got": 2.4424906541753444e-14,
+      "expected": 2.4403438635798475e-14
+    },
+    {
+      "name": "normal_p::-7.5",
+      "pass": true,
+      "got": 6.38378239159465e-14,
+      "expected": 6.381783345821793e-14
+    },
+    {
+      "name": "normal_p::-7.375",
+      "pass": true,
+      "got": 1.6431300764452317e-13,
+      "expected": 1.6434505215168678e-13
+    },
+    {
+      "name": "normal_p::-7.25",
+      "pass": true,
+      "got": 4.1677772344428377e-13,
+      "expected": 4.167716317344139e-13
+    },
+    {
+      "name": "normal_p::-7.125",
+      "pass": true,
+      "got": 1.0408340855860843e-12,
+      "expected": 1.0408068800633564e-12
+    },
+    {
+      "name": "normal_p::-7",
+      "pass": true,
+      "got": 2.5596191832732984e-12,
+      "expected": 2.5596250877716703e-12
+    },
+    {
+      "name": "normal_p::-6.875",
+      "pass": true,
+      "got": 6.199041280297024e-12,
+      "expected": 6.198985903514432e-12
+    },
+    {
+      "name": "normal_p::-6.75",
+      "pass": true,
+      "got": 1.4784506952025822e-11,
+      "expected": 1.4784515556035646e-11
+    },
+    {
+      "name": "normal_p::-6.625",
+      "pass": true,
+      "got": 3.472477860810841e-11,
+      "expected": 3.472481790704114e-11
+    },
+    {
+      "name": "normal_p::-6.5",
+      "pass": true,
+      "got": 8.031997289492665e-11,
+      "expected": 8.032001167718236e-11
+    },
+    {
+      "name": "normal_p::-6.375",
+      "pass": true,
+      "got": 1.829629781013864e-10,
+      "expected": 1.8296295167217222e-10
+    },
+    {
+      "name": "normal_p::-6.25",
+      "pass": true,
+      "got": 4.104526718506918e-10,
+      "expected": 4.1045268504378777e-10
+    },
+    {
+      "name": "normal_p::-6.125",
+      "pass": true,
+      "got": 9.068360506958584e-10,
+      "expected": 9.068360653390571e-10
+    },
+    {
+      "name": "normal_p::-6",
+      "pass": true,
+      "got": 1.9731752898266564e-9,
+      "expected": 1.973175290075396e-9
+    },
+    {
+      "name": "normal_p::-5.875",
+      "pass": true,
+      "got": 4.228433492237116e-9,
+      "expected": 4.2284334848816935e-9
+    },
+    {
+      "name": "normal_p::-5.75",
+      "pass": true,
+      "got": 8.924344929717165e-9,
+      "expected": 8.924344907803225e-9
+    },
+    {
+      "name": "normal_p::-5.625",
+      "pass": true,
+      "got": 1.8550797453720236e-8,
+      "expected": 1.855079746912165e-8
+    },
+    {
+      "name": "normal_p::-5.5",
+      "pass": true,
+      "got": 3.797912495606681e-8,
+      "expected": 3.797912493177544e-8
+    },
+    {
+      "name": "normal_p::-5.375",
+      "pass": true,
+      "got": 7.658268208476926e-8,
+      "expected": 7.658268212248856e-8
+    },
+    {
+      "name": "normal_p::-5.25",
+      "pass": true,
+      "got": 1.5209921033765283e-7,
+      "expected": 1.5209921032977426e-7
+    },
+    {
+      "name": "normal_p::-5.125",
+      "pass": true,
+      "got": 2.9753774632990115e-7,
+      "expected": 2.9753774637553257e-7
+    },
+    {
+      "name": "normal_p::-5",
+      "pass": true,
+      "got": 5.733031437360481e-7,
+      "expected": 5.733031437583878e-7
+    },
+    {
+      "name": "normal_p::-4.875",
+      "pass": true,
+      "got": 0.0000010880845511263004,
+      "expected": 0.0000010880845511498323
+    },
+    {
+      "name": "normal_p::-4.75",
+      "pass": true,
+      "got": 0.0000020341664851430963,
+      "expected": 0.0000020341664851374068
+    },
+    {
+      "name": "normal_p::-4.625",
+      "pass": true,
+      "got": 0.000003745984011094272,
+      "expected": 0.0000037459840111134185
+    },
+    {
+      "name": "normal_p::-4.5",
+      "pass": true,
+      "got": 0.000006795346249477419,
+      "expected": 0.00000679534624946012
+    },
+    {
+      "name": "normal_p::-4.375",
+      "pass": true,
+      "got": 0.000012143247822615777,
+      "expected": 0.000012143247822661195
+    },
+    {
+      "name": "normal_p::-4.25",
+      "pass": true,
+      "got": 0.00002137705154992009,
+      "expected": 0.000021377051549868834
+    },
+    {
+      "name": "normal_p::-4.125",
+      "pass": true,
+      "got": 0.00003707347569237296,
+      "expected": 0.00003707347569240399
+    },
+    {
+      "name": "normal_p::-4",
+      "pass": true,
+      "got": 0.00006334248366623996,
+      "expected": 0.00006334248366623985
+    },
+    {
+      "name": "normal_p::-3.875",
+      "pass": true,
+      "got": 0.00010662469950217801,
+      "expected": 0.00010662469950219266
+    },
+    {
+      "name": "normal_p::-3.75",
+      "pass": true,
+      "got": 0.00017683457040162942,
+      "expected": 0.00017683457040160776
+    },
+    {
+      "name": "normal_p::-3.625",
+      "pass": true,
+      "got": 0.00028896145176249277,
+      "expected": 0.00028896145176247163
+    },
+    {
+      "name": "normal_p::-3.5",
+      "pass": true,
+      "got": 0.0004652581580710802,
+      "expected": 0.00046525815807104987
+    },
+    {
+      "name": "normal_p::-3.375",
+      "pass": true,
+      "got": 0.0007381569085501694,
+      "expected": 0.0007381569085501349
+    },
+    {
+      "name": "normal_p::-3.25",
+      "pass": true,
+      "got": 0.0011540500847815327,
+      "expected": 0.0011540500847815342
+    },
+    {
+      "name": "normal_p::-3.125",
+      "pass": true,
+      "got": 0.001778050598216896,
+      "expected": 0.0017780505982168636
+    },
+    {
+      "name": "normal_p::-3",
+      "pass": true,
+      "got": 0.002699796063260207,
+      "expected": 0.002699796063260189
+    },
+    {
+      "name": "normal_p::-2.875",
+      "pass": true,
+      "got": 0.004040274979892011,
+      "expected": 0.004040274979892004
+    },
+    {
+      "name": "normal_p::-2.75",
+      "pass": true,
+      "got": 0.005959526470109111,
+      "expected": 0.005959526470109113
+    },
+    {
+      "name": "normal_p::-2.625",
+      "pass": true,
+      "got": 0.008664896726025106,
+      "expected": 0.008664896726025117
+    },
+    {
+      "name": "normal_p::-2.5",
+      "pass": true,
+      "got": 0.012419330651552318,
+      "expected": 0.01241933065155227
+    },
+    {
+      "name": "normal_p::-2.375",
+      "pass": true,
+      "got": 0.01754895019147673,
+      "expected": 0.017548950191476724
+    },
+    {
+      "name": "normal_p::-2.25",
+      "pass": true,
+      "got": 0.024448945310089454,
+      "expected": 0.024448945310089412
+    },
+    {
+      "name": "normal_p::-2.125",
+      "pass": true,
+      "got": 0.03358661289689746,
+      "expected": 0.03358661289689763
+    },
+    {
+      "name": "normal_p::-2",
+      "pass": true,
+      "got": 0.045500263896358306,
+      "expected": 0.045500263896358424
+    },
+    {
+      "name": "normal_p::-1.875",
+      "pass": true,
+      "got": 0.06079272353052245,
+      "expected": 0.06079272353052275
+    },
+    {
+      "name": "normal_p::-1.75",
+      "pass": true,
+      "got": 0.080118313727634,
+      "expected": 0.0801183137276342
+    },
+    {
+      "name": "normal_p::-1.625",
+      "pass": true,
+      "got": 0.10416255883043846,
+      "expected": 0.10416255883043912
+    },
+    {
+      "name": "normal_p::-1.5",
+      "pass": true,
+      "got": 0.13361440253771573,
+      "expected": 0.13361440253771614
+    },
+    {
+      "name": "normal_p::-1.375",
+      "pass": true,
+      "got": 0.16913144470267094,
+      "expected": 0.16913144470267144
+    },
+    {
+      "name": "normal_p::-1.25",
+      "pass": true,
+      "got": 0.21129954733371015,
+      "expected": 0.21129954733371048
+    },
+    {
+      "name": "normal_p::-1.125",
+      "pass": true,
+      "got": 0.26058903427361757,
+      "expected": 0.2605890342736177
+    },
+    {
+      "name": "normal_p::-1",
+      "pass": true,
+      "got": 0.3173105078629138,
+      "expected": 0.3173105078629141
+    },
+    {
+      "name": "normal_p::-0.875",
+      "pass": true,
+      "got": 0.3815739057050209,
+      "expected": 0.38157390570502125
+    },
+    {
+      "name": "normal_p::-0.75",
+      "pass": true,
+      "got": 0.4532547047537361,
+      "expected": 0.45325470475373647
+    },
+    {
+      "name": "normal_p::-0.625",
+      "pass": true,
+      "got": 0.5319710580974009,
+      "expected": 0.5319710580974011
+    },
+    {
+      "name": "normal_p::-0.5",
+      "pass": true,
+      "got": 0.6170750774519737,
+      "expected": 0.6170750774519739
+    },
+    {
+      "name": "normal_p::-0.375",
+      "pass": true,
+      "got": 0.7076604666545523,
+      "expected": 0.7076604666545524
+    },
+    {
+      "name": "normal_p::-0.25",
+      "pass": true,
+      "got": 0.8025873486341526,
+      "expected": 0.8025873486341526
+    },
+    {
+      "name": "normal_p::-0.125",
+      "pass": true,
+      "got": 0.9005235503397742,
+      "expected": 0.9005235503397743
+    },
+    {
+      "name": "normal_p::0",
+      "pass": true,
+      "got": 1,
+      "expected": 1
+    },
+    {
+      "name": "normal_p::0.125",
+      "pass": true,
+      "got": 0.9005235503397742,
+      "expected": 0.9005235503397743
+    },
+    {
+      "name": "normal_p::0.25",
+      "pass": true,
+      "got": 0.8025873486341526,
+      "expected": 0.8025873486341526
+    },
+    {
+      "name": "normal_p::0.375",
+      "pass": true,
+      "got": 0.7076604666545523,
+      "expected": 0.7076604666545524
+    },
+    {
+      "name": "normal_p::0.5",
+      "pass": true,
+      "got": 0.6170750774519737,
+      "expected": 0.6170750774519739
+    },
+    {
+      "name": "normal_p::0.625",
+      "pass": true,
+      "got": 0.5319710580974009,
+      "expected": 0.5319710580974011
+    },
+    {
+      "name": "normal_p::0.75",
+      "pass": true,
+      "got": 0.4532547047537361,
+      "expected": 0.45325470475373647
+    },
+    {
+      "name": "normal_p::0.875",
+      "pass": true,
+      "got": 0.3815739057050209,
+      "expected": 0.38157390570502125
+    },
+    {
+      "name": "normal_p::1",
+      "pass": true,
+      "got": 0.3173105078629138,
+      "expected": 0.3173105078629141
+    },
+    {
+      "name": "normal_p::1.125",
+      "pass": true,
+      "got": 0.26058903427361757,
+      "expected": 0.2605890342736177
+    },
+    {
+      "name": "normal_p::1.25",
+      "pass": true,
+      "got": 0.21129954733371015,
+      "expected": 0.21129954733371048
+    },
+    {
+      "name": "normal_p::1.375",
+      "pass": true,
+      "got": 0.16913144470267094,
+      "expected": 0.16913144470267144
+    },
+    {
+      "name": "normal_p::1.5",
+      "pass": true,
+      "got": 0.13361440253771573,
+      "expected": 0.13361440253771614
+    },
+    {
+      "name": "normal_p::1.625",
+      "pass": true,
+      "got": 0.10416255883043846,
+      "expected": 0.10416255883043912
+    },
+    {
+      "name": "normal_p::1.75",
+      "pass": true,
+      "got": 0.080118313727634,
+      "expected": 0.0801183137276342
+    },
+    {
+      "name": "normal_p::1.875",
+      "pass": true,
+      "got": 0.06079272353052245,
+      "expected": 0.06079272353052275
+    },
+    {
+      "name": "normal_p::2",
+      "pass": true,
+      "got": 0.045500263896358306,
+      "expected": 0.045500263896358424
+    },
+    {
+      "name": "normal_p::2.125",
+      "pass": true,
+      "got": 0.03358661289689746,
+      "expected": 0.03358661289689763
+    },
+    {
+      "name": "normal_p::2.25",
+      "pass": true,
+      "got": 0.024448945310089454,
+      "expected": 0.024448945310089412
+    },
+    {
+      "name": "normal_p::2.375",
+      "pass": true,
+      "got": 0.01754895019147673,
+      "expected": 0.017548950191476724
+    },
+    {
+      "name": "normal_p::2.5",
+      "pass": true,
+      "got": 0.012419330651552318,
+      "expected": 0.01241933065155227
+    },
+    {
+      "name": "normal_p::2.625",
+      "pass": true,
+      "got": 0.008664896726025106,
+      "expected": 0.008664896726025117
+    },
+    {
+      "name": "normal_p::2.75",
+      "pass": true,
+      "got": 0.005959526470109111,
+      "expected": 0.005959526470109113
+    },
+    {
+      "name": "normal_p::2.875",
+      "pass": true,
+      "got": 0.004040274979892011,
+      "expected": 0.004040274979892004
+    },
+    {
+      "name": "normal_p::3",
+      "pass": true,
+      "got": 0.002699796063260207,
+      "expected": 0.002699796063260189
+    },
+    {
+      "name": "normal_p::3.125",
+      "pass": true,
+      "got": 0.001778050598216896,
+      "expected": 0.0017780505982168636
+    },
+    {
+      "name": "normal_p::3.25",
+      "pass": true,
+      "got": 0.0011540500847815327,
+      "expected": 0.0011540500847815342
+    },
+    {
+      "name": "normal_p::3.375",
+      "pass": true,
+      "got": 0.0007381569085501694,
+      "expected": 0.0007381569085501349
+    },
+    {
+      "name": "normal_p::3.5",
+      "pass": true,
+      "got": 0.0004652581580710802,
+      "expected": 0.00046525815807104987
+    },
+    {
+      "name": "normal_p::3.625",
+      "pass": true,
+      "got": 0.00028896145176249277,
+      "expected": 0.00028896145176247163
+    },
+    {
+      "name": "normal_p::3.75",
+      "pass": true,
+      "got": 0.00017683457040162942,
+      "expected": 0.00017683457040160776
+    },
+    {
+      "name": "normal_p::3.875",
+      "pass": true,
+      "got": 0.00010662469950217801,
+      "expected": 0.00010662469950219266
+    },
+    {
+      "name": "normal_p::4",
+      "pass": true,
+      "got": 0.00006334248366623996,
+      "expected": 0.00006334248366623985
+    },
+    {
+      "name": "normal_p::4.125",
+      "pass": true,
+      "got": 0.00003707347569237296,
+      "expected": 0.00003707347569240399
+    },
+    {
+      "name": "normal_p::4.25",
+      "pass": true,
+      "got": 0.00002137705154992009,
+      "expected": 0.000021377051549868834
+    },
+    {
+      "name": "normal_p::4.375",
+      "pass": true,
+      "got": 0.000012143247822615777,
+      "expected": 0.000012143247822661195
+    },
+    {
+      "name": "normal_p::4.5",
+      "pass": true,
+      "got": 0.000006795346249477419,
+      "expected": 0.00000679534624946012
+    },
+    {
+      "name": "normal_p::4.625",
+      "pass": true,
+      "got": 0.000003745984011094272,
+      "expected": 0.0000037459840111134185
+    },
+    {
+      "name": "normal_p::4.75",
+      "pass": true,
+      "got": 0.0000020341664851430963,
+      "expected": 0.0000020341664851374068
+    },
+    {
+      "name": "normal_p::4.875",
+      "pass": true,
+      "got": 0.0000010880845511263004,
+      "expected": 0.0000010880845511498323
+    },
+    {
+      "name": "normal_p::5",
+      "pass": true,
+      "got": 5.733031437360481e-7,
+      "expected": 5.733031437583878e-7
+    },
+    {
+      "name": "normal_p::5.125",
+      "pass": true,
+      "got": 2.9753774632990115e-7,
+      "expected": 2.9753774637553257e-7
+    },
+    {
+      "name": "normal_p::5.25",
+      "pass": true,
+      "got": 1.5209921033765283e-7,
+      "expected": 1.5209921032977426e-7
+    },
+    {
+      "name": "normal_p::5.375",
+      "pass": true,
+      "got": 7.658268208476926e-8,
+      "expected": 7.658268212248856e-8
+    },
+    {
+      "name": "normal_p::5.5",
+      "pass": true,
+      "got": 3.797912495606681e-8,
+      "expected": 3.797912493177544e-8
+    },
+    {
+      "name": "normal_p::5.625",
+      "pass": true,
+      "got": 1.8550797453720236e-8,
+      "expected": 1.855079746912165e-8
+    },
+    {
+      "name": "normal_p::5.75",
+      "pass": true,
+      "got": 8.924344929717165e-9,
+      "expected": 8.924344907803225e-9
+    },
+    {
+      "name": "normal_p::5.875",
+      "pass": true,
+      "got": 4.228433492237116e-9,
+      "expected": 4.2284334848816935e-9
+    },
+    {
+      "name": "normal_p::6",
+      "pass": true,
+      "got": 1.9731752898266564e-9,
+      "expected": 1.973175290075396e-9
+    },
+    {
+      "name": "normal_p::6.125",
+      "pass": true,
+      "got": 9.068360506958584e-10,
+      "expected": 9.068360653390571e-10
+    },
+    {
+      "name": "normal_p::6.25",
+      "pass": true,
+      "got": 4.104526718506918e-10,
+      "expected": 4.1045268504378777e-10
+    },
+    {
+      "name": "normal_p::6.375",
+      "pass": true,
+      "got": 1.829629781013864e-10,
+      "expected": 1.8296295167217222e-10
+    },
+    {
+      "name": "normal_p::6.5",
+      "pass": true,
+      "got": 8.031997289492665e-11,
+      "expected": 8.032001167718236e-11
+    },
+    {
+      "name": "normal_p::6.625",
+      "pass": true,
+      "got": 3.472477860810841e-11,
+      "expected": 3.472481790704114e-11
+    },
+    {
+      "name": "normal_p::6.75",
+      "pass": true,
+      "got": 1.4784506952025822e-11,
+      "expected": 1.4784515556035646e-11
+    },
+    {
+      "name": "normal_p::6.875",
+      "pass": true,
+      "got": 6.199041280297024e-12,
+      "expected": 6.198985903514432e-12
+    },
+    {
+      "name": "normal_p::7",
+      "pass": true,
+      "got": 2.5596191832732984e-12,
+      "expected": 2.5596250877716703e-12
+    },
+    {
+      "name": "normal_p::7.125",
+      "pass": true,
+      "got": 1.0408340855860843e-12,
+      "expected": 1.0408068800633564e-12
+    },
+    {
+      "name": "normal_p::7.25",
+      "pass": true,
+      "got": 4.1677772344428377e-13,
+      "expected": 4.167716317344139e-13
+    },
+    {
+      "name": "normal_p::7.375",
+      "pass": true,
+      "got": 1.6431300764452317e-13,
+      "expected": 1.6434505215168678e-13
+    },
+    {
+      "name": "normal_p::7.5",
+      "pass": true,
+      "got": 6.38378239159465e-14,
+      "expected": 6.381783345821793e-14
+    },
+    {
+      "name": "normal_p::7.625",
+      "pass": true,
+      "got": 2.4424906541753444e-14,
+      "expected": 2.4403438635798475e-14
+    },
+    {
+      "name": "normal_p::7.75",
+      "pass": true,
+      "got": 9.2148511043888e-15,
+      "expected": 9.189254871557191e-15
+    },
+    {
+      "name": "normal_p::7.875",
+      "pass": true,
+      "got": 3.4416913763379853e-15,
+      "expected": 3.4074285832657466e-15
+    },
+    {
+      "name": "normal_p::8",
+      "pass": true,
+      "got": 1.2212453270876722e-15,
+      "expected": 1.244192114854357e-15
+    },
+    {
+      "name": "normal_p::8.125",
+      "pass": true,
+      "got": 4.440892098500626e-16,
+      "expected": 4.473624128888211e-16
+    },
+    {
+      "name": "normal_p::8.25",
+      "pass": true,
+      "got": 1.1102230246251565e-16,
+      "expected": 1.5839452629284956e-16
+    },
+    {
+      "name": "normal_p::8.375",
+      "pass": true,
+      "got": 0,
+      "expected": 5.522387181450524e-17
+    },
+    {
+      "name": "normal_p::8.5",
+      "pass": true,
+      "got": 0,
+      "expected": 1.8959069644406638e-17
+    },
+    {
+      "name": "normal_p::8.625",
+      "pass": true,
+      "got": 0,
+      "expected": 6.40926545404152e-18
+    },
+    {
+      "name": "normal_p::8.75",
+      "pass": true,
+      "got": 0,
+      "expected": 2.1335274750949717e-18
+    },
+    {
+      "name": "normal_p::8.875",
+      "pass": true,
+      "got": 0,
+      "expected": 6.993341396427802e-19
+    },
+    {
+      "name": "normal_p::9",
+      "pass": true,
+      "got": 0,
+      "expected": 2.2571768119076816e-19
+    },
+    {
+      "name": "normal_p::9.125",
+      "pass": true,
+      "got": 0,
+      "expected": 7.173625873299457e-20
+    },
+    {
+      "name": "normal_p::9.25",
+      "pass": true,
+      "got": 0,
+      "expected": 2.2449267182655967e-20
+    },
+    {
+      "name": "normal_p::9.375",
+      "pass": true,
+      "got": 0,
+      "expected": 6.91757697446716e-21
+    },
+    {
+      "name": "normal_p::9.5",
+      "pass": true,
+      "got": 0,
+      "expected": 2.0989030150725216e-21
+    },
+    {
+      "name": "normal_p::9.625",
+      "pass": true,
+      "got": 0,
+      "expected": 6.270692463774953e-22
+    },
+    {
+      "name": "normal_p::9.75",
+      "pass": true,
+      "got": 0,
+      "expected": 1.844682704987884e-22
+    },
+    {
+      "name": "normal_p::9.875",
+      "pass": true,
+      "got": 0,
+      "expected": 5.34329605750645e-23
+    },
+    {
+      "name": "normal_p::10",
+      "pass": true,
+      "got": 0,
+      "expected": 1.5239706048321054e-23
+    },
+    {
+      "name": "normal_p::1.959963984540054",
+      "pass": true,
+      "got": 0.050000000000000044,
+      "expected": 0.050000000000000024
+    },
+    {
+      "name": "normal_p::0",
+      "pass": true,
+      "got": 1,
+      "expected": 1
+    },
+    {
+      "name": "normal_p::1e-12",
+      "pass": true,
+      "got": 0.9999999999992021,
+      "expected": 0.9999999999992021
+    },
+    {
+      "name": "FE::short::reason",
+      "pass": true,
+      "got": {
+        "state": {
+          "status": "refused",
+          "reason": "At least 3 valid contrasts are required."
+        },
+        "error": null
+      },
+      "expected": "At least 3 valid contrasts are required."
+    },
+    {
+      "name": "FE::short::clear",
+      "pass": true,
+      "got": {
+        "table": "",
+        "plot": ""
+      },
+      "expected": "cleared"
+    },
+    {
+      "name": "FE::disconnected::reason",
+      "pass": true,
+      "got": {
+        "state": {
+          "status": "refused",
+          "reason": "The treatment network is disconnected."
+        },
+        "error": null
+      },
+      "expected": "The treatment network is disconnected."
+    },
+    {
+      "name": "FE::disconnected::clear",
+      "pass": true,
+      "got": {
+        "table": "",
+        "plot": ""
+      },
+      "expected": "cleared"
+    },
+    {
+      "name": "FE::multiarm::reason",
+      "pass": true,
+      "got": {
+        "state": {
+          "status": "refused",
+          "reason": "Multi-arm studies are unsupported: correlated contrasts require study covariance."
+        },
+        "error": null
+      },
+      "expected": "Multi-arm studies are unsupported: correlated contrasts require study covariance."
+    },
+    {
+      "name": "FE::multiarm::clear",
+      "pass": true,
+      "got": {
+        "table": "",
+        "plot": ""
+      },
+      "expected": "cleared"
+    },
+    {
+      "name": "FE::repeated::reason",
+      "pass": true,
+      "got": {
+        "state": {
+          "status": "refused",
+          "reason": "Repeated study IDs are unsupported: enter one independent contrast per study."
+        },
+        "error": null
+      },
+      "expected": "Repeated study IDs are unsupported: enter one independent contrast per study."
+    },
+    {
+      "name": "FE::repeated::clear",
+      "pass": true,
+      "got": {
+        "table": "",
+        "plot": ""
+      },
+      "expected": "cleared"
+    },
+    {
+      "name": "FE::bridge_membership",
+      "pass": true,
+      "got": [
+        "A vs B",
+        "B vs C",
+        "A vs C"
+      ],
+      "expected": [
+        "A vs B",
+        "B vs C",
+        "A vs C"
+      ]
+    },
+    {
+      "name": "DL::short::reason",
+      "pass": true,
+      "got": {
+        "state": {
+          "status": "refused",
+          "reason": "At least 3 valid contrasts are required."
+        },
+        "error": null
+      },
+      "expected": "At least 3 valid contrasts are required."
+    },
+    {
+      "name": "DL::short::clear",
+      "pass": true,
+      "got": {
+        "table": "",
+        "plot": ""
+      },
+      "expected": "cleared"
+    },
+    {
+      "name": "DL::disconnected::reason",
+      "pass": true,
+      "got": {
+        "state": {
+          "status": "refused",
+          "reason": "The treatment network is disconnected."
+        },
+        "error": null
+      },
+      "expected": "The treatment network is disconnected."
+    },
+    {
+      "name": "DL::disconnected::clear",
+      "pass": true,
+      "got": {
+        "table": "",
+        "plot": ""
+      },
+      "expected": "cleared"
+    },
+    {
+      "name": "DL::multiarm::reason",
+      "pass": true,
+      "got": {
+        "state": {
+          "status": "refused",
+          "reason": "Multi-arm studies are unsupported: correlated contrasts require study covariance."
+        },
+        "error": null
+      },
+      "expected": "Multi-arm studies are unsupported: correlated contrasts require study covariance."
+    },
+    {
+      "name": "DL::multiarm::clear",
+      "pass": true,
+      "got": {
+        "table": "",
+        "plot": ""
+      },
+      "expected": "cleared"
+    },
+    {
+      "name": "DL::repeated::reason",
+      "pass": true,
+      "got": {
+        "state": {
+          "status": "refused",
+          "reason": "Repeated study IDs are unsupported: enter one independent contrast per study."
+        },
+        "error": null
+      },
+      "expected": "Repeated study IDs are unsupported: enter one independent contrast per study."
+    },
+    {
+      "name": "DL::repeated::clear",
+      "pass": true,
+      "got": {
+        "table": "",
+        "plot": ""
+      },
+      "expected": "cleared"
+    },
+    {
+      "name": "DL::bridge_membership",
+      "pass": true,
+      "got": [
+        "A vs B",
+        "B vs C",
+        "A vs C"
+      ],
+      "expected": [
+        "A vs B",
+        "B vs C",
+        "A vs C"
+      ]
+    },
+    {
+      "name": "PM::short::reason",
+      "pass": true,
+      "got": {
+        "state": {
+          "status": "refused",
+          "reason": "At least 3 valid contrasts are required."
+        },
+        "error": null
+      },
+      "expected": "At least 3 valid contrasts are required."
+    },
+    {
+      "name": "PM::short::clear",
+      "pass": true,
+      "got": {
+        "table": "",
+        "plot": ""
+      },
+      "expected": "cleared"
+    },
+    {
+      "name": "PM::disconnected::reason",
+      "pass": true,
+      "got": {
+        "state": {
+          "status": "refused",
+          "reason": "The treatment network is disconnected."
+        },
+        "error": null
+      },
+      "expected": "The treatment network is disconnected."
+    },
+    {
+      "name": "PM::disconnected::clear",
+      "pass": true,
+      "got": {
+        "table": "",
+        "plot": ""
+      },
+      "expected": "cleared"
+    },
+    {
+      "name": "PM::multiarm::reason",
+      "pass": true,
+      "got": {
+        "state": {
+          "status": "refused",
+          "reason": "Multi-arm studies are unsupported: correlated contrasts require study covariance."
+        },
+        "error": null
+      },
+      "expected": "Multi-arm studies are unsupported: correlated contrasts require study covariance."
+    },
+    {
+      "name": "PM::multiarm::clear",
+      "pass": true,
+      "got": {
+        "table": "",
+        "plot": ""
+      },
+      "expected": "cleared"
+    },
+    {
+      "name": "PM::repeated::reason",
+      "pass": true,
+      "got": {
+        "state": {
+          "status": "refused",
+          "reason": "Repeated study IDs are unsupported: enter one independent contrast per study."
+        },
+        "error": null
+      },
+      "expected": "Repeated study IDs are unsupported: enter one independent contrast per study."
+    },
+    {
+      "name": "PM::repeated::clear",
+      "pass": true,
+      "got": {
+        "table": "",
+        "plot": ""
+      },
+      "expected": "cleared"
+    },
+    {
+      "name": "PM::bridge_membership",
+      "pass": true,
+      "got": [
+        "A vs B",
+        "B vs C",
+        "A vs C"
+      ],
+      "expected": [
+        "A vs B",
+        "B vs C",
+        "A vs C"
+      ]
+    },
+    {
+      "name": "quoted::input",
+      "pass": true,
+      "got": {
+        "error": null,
+        "parsed": [
+          {
+            "A": "A, comma",
+            "B": "B\"quote",
+            "te": 0.2,
+            "se": 0.1,
+            "study": "row_1"
+          },
+          {
+            "A": "B\"quote",
+            "B": "C",
+            "te": 0.3,
+            "se": 0.2,
+            "study": "row_2"
+          },
+          {
+            "A": "A, comma",
+            "B": "C",
+            "te": 0.6,
+            "se": 0.15,
+            "study": "row_3"
+          }
+        ]
+      },
+      "expected": "three exact labeled rows"
+    },
+    {
+      "name": "quoted::splits",
+      "pass": true,
+      "got": 3,
+      "expected": 3
+    },
+    {
+      "name": "quoted::network_keys",
+      "pass": true,
+      "got": [
+        "A, comma",
+        "B\"quote",
+        "C"
+      ],
+      "expected": [
+        "A, comma",
+        "B\"quote",
+        "C"
+      ]
+    },
+    {
+      "name": "pipe::input",
+      "pass": true,
+      "got": {
+        "error": null,
+        "parsed": [
+          {
+            "A": "A|B",
+            "B": "C",
+            "te": 0.2,
+            "se": 0.1,
+            "study": "row_1"
+          },
+          {
+            "A": "C",
+            "B": "D",
+            "te": 0.3,
+            "se": 0.2,
+            "study": "row_2"
+          },
+          {
+            "A": "A|B",
+            "B": "D",
+            "te": 0.6,
+            "se": 0.15,
+            "study": "row_3"
+          }
+        ]
+      },
+      "expected": "three exact labeled rows"
+    },
+    {
+      "name": "pipe::splits",
+      "pass": true,
+      "got": 3,
+      "expected": 3
+    },
+    {
+      "name": "pipe::network_keys",
+      "pass": true,
+      "got": [
+        "A|B",
+        "C",
+        "D"
+      ],
+      "expected": [
+        "A|B",
+        "C",
+        "D"
+      ]
+    },
+    {
+      "name": "prototype::input",
+      "pass": true,
+      "got": {
+        "error": null,
+        "parsed": [
+          {
+            "A": "__proto__",
+            "B": "constructor",
+            "te": 0.2,
+            "se": 0.1,
+            "study": "row_1"
+          },
+          {
+            "A": "constructor",
+            "B": "toString",
+            "te": 0.3,
+            "se": 0.2,
+            "study": "row_2"
+          },
+          {
+            "A": "__proto__",
+            "B": "toString",
+            "te": 0.6,
+            "se": 0.15,
+            "study": "row_3"
+          }
+        ]
+      },
+      "expected": "three exact labeled rows"
+    },
+    {
+      "name": "prototype::splits",
+      "pass": true,
+      "got": 3,
+      "expected": 3
+    },
+    {
+      "name": "prototype::network_keys",
+      "pass": true,
+      "got": [
+        "__proto__",
+        "constructor",
+        "toString"
+      ],
+      "expected": [
+        "__proto__",
+        "constructor",
+        "toString"
+      ]
+    },
+    {
+      "name": "markup::input",
+      "pass": true,
+      "got": {
+        "error": null,
+        "parsed": [
+          {
+            "A": "<b>A</b>",
+            "B": "B&C",
+            "te": 0.2,
+            "se": 0.1,
+            "study": "row_1"
+          },
+          {
+            "A": "B&C",
+            "B": "D",
+            "te": 0.3,
+            "se": 0.2,
+            "study": "row_2"
+          },
+          {
+            "A": "<b>A</b>",
+            "B": "D",
+            "te": 0.6,
+            "se": 0.15,
+            "study": "row_3"
+          }
+        ]
+      },
+      "expected": "three exact labeled rows"
+    },
+    {
+      "name": "markup::splits",
+      "pass": true,
+      "got": 3,
+      "expected": 3
+    },
+    {
+      "name": "markup::network_keys",
+      "pass": true,
+      "got": [
+        "<b>A</b>",
+        "B&C",
+        "D"
+      ],
+      "expected": [
+        "<b>A</b>",
+        "B&C",
+        "D"
+      ]
+    },
+    {
+      "name": "escaped_markup",
+      "pass": true,
+      "got": "<tr><td><code>&lt;b&gt;A&lt;/b&gt; vs B&amp;C</code></td>\n          <td>0.200 (0.100)</td>\n          <td>0.300 (0.250)</td>\n          <td>-0.100 (0.269)</td>\n          <td>-0.37</td>\n          <td>0.710</td>\n          <td><span class=\"chip cons\">consistent</span></td></tr><tr><td><code>B&amp;C vs D</code></td>\n          <td>0.300 (0.200)</td>\n          <td>0.400 (0.180)</td>\n          <td>-0.100 (0.269)</td>\n          <td>-0.37</td>\n          <td>0.710</td>\n          <td><span class=\"chip cons\">consistent</span></td></tr><tr><td><code>&lt;b&gt;A&lt;/b&gt; vs D</code></td>\n          <td>0.600 (0.150)</td>\n          <td>0.500 (0.224)</td>\n          <td>0.100 (0.269)</td>\n          <td>0.37</td>\n          <td>0.710</td>\n          <td><span class=\"chip cons\">consistent</span></td></tr>",
+      "expected": "escaped label"
+    },
+    {
+      "name": "bus_numeric::OR::FALSE::count",
+      "pass": true,
+      "got": 3,
+      "expected": 3
+    },
+    {
+      "name": "bus_numeric::OR::FALSE::0::A",
+      "pass": true,
+      "got": "A",
+      "expected": "A"
+    },
+    {
+      "name": "bus_numeric::OR::FALSE::0::B",
+      "pass": true,
+      "got": "B",
+      "expected": "B"
+    },
+    {
+      "name": "bus_numeric::OR::FALSE::0::te",
+      "pass": true,
+      "got": -0.2876820724517809,
+      "expected": -0.2876820724517809
+    },
+    {
+      "name": "bus_numeric::OR::FALSE::0::se",
+      "pass": true,
+      "got": 0.9916316520429012,
+      "expected": 0.9916316520429012
+    },
+    {
+      "name": "bus_numeric::OR::FALSE::1::A",
+      "pass": true,
+      "got": "B",
+      "expected": "B"
+    },
+    {
+      "name": "bus_numeric::OR::FALSE::1::B",
+      "pass": true,
+      "got": "C",
+      "expected": "C"
+    },
+    {
+      "name": "bus_numeric::OR::FALSE::1::te",
+      "pass": true,
+      "got": 0.6931471805599453,
+      "expected": 0.6931471805599452
+    },
+    {
+      "name": "bus_numeric::OR::FALSE::1::se",
+      "pass": true,
+      "got": 1,
+      "expected": 1
+    },
+    {
+      "name": "bus_numeric::OR::FALSE::2::A",
+      "pass": true,
+      "got": "A",
+      "expected": "A"
+    },
+    {
+      "name": "bus_numeric::OR::FALSE::2::B",
+      "pass": true,
+      "got": "C",
+      "expected": "C"
+    },
+    {
+      "name": "bus_numeric::OR::FALSE::2::te",
+      "pass": true,
+      "got": 0.9808292530117262,
+      "expected": 0.9808292530117264
+    },
+    {
+      "name": "bus_numeric::OR::FALSE::2::se",
+      "pass": true,
+      "got": 1.3017082793177757,
+      "expected": 1.3017082793177757
+    },
+    {
+      "name": "bus_numeric::RR::FALSE::count",
+      "pass": true,
+      "got": 3,
+      "expected": 3
+    },
+    {
+      "name": "bus_numeric::RR::FALSE::0::A",
+      "pass": true,
+      "got": "A",
+      "expected": "A"
+    },
+    {
+      "name": "bus_numeric::RR::FALSE::0::B",
+      "pass": true,
+      "got": "B",
+      "expected": "B"
+    },
+    {
+      "name": "bus_numeric::RR::FALSE::0::te",
+      "pass": true,
+      "got": -0.16989903679539747,
+      "expected": -0.16989903679539742
+    },
+    {
+      "name": "bus_numeric::RR::FALSE::0::se",
+      "pass": true,
+      "got": 0.5892556509887896,
+      "expected": 0.5892556509887896
+    },
+    {
+      "name": "bus_numeric::RR::FALSE::1::A",
+      "pass": true,
+      "got": "B",
+      "expected": "B"
+    },
+    {
+      "name": "bus_numeric::RR::FALSE::1::B",
+      "pass": true,
+      "got": "C",
+      "expected": "C"
+    },
+    {
+      "name": "bus_numeric::RR::FALSE::1::te",
+      "pass": true,
+      "got": 0.336472236621213,
+      "expected": 0.33647223662121295
+    },
+    {
+      "name": "bus_numeric::RR::FALSE::1::se",
+      "pass": true,
+      "got": 0.50709255283711,
+      "expected": 0.50709255283711
+    },
+    {
+      "name": "bus_numeric::RR::FALSE::2::A",
+      "pass": true,
+      "got": "A",
+      "expected": "A"
+    },
+    {
+      "name": "bus_numeric::RR::FALSE::2::B",
+      "pass": true,
+      "got": "C",
+      "expected": "C"
+    },
+    {
+      "name": "bus_numeric::RR::FALSE::2::te",
+      "pass": true,
+      "got": 0.8602012652231116,
+      "expected": 0.8602012652231115
+    },
+    {
+      "name": "bus_numeric::RR::FALSE::2::se",
+      "pass": true,
+      "got": 1.1541957512345262,
+      "expected": 1.1541957512345262
+    },
+    {
+      "name": "bus_numeric::MD::FALSE::count",
+      "pass": true,
+      "got": 3,
+      "expected": 3
+    },
+    {
+      "name": "bus_numeric::MD::FALSE::0::A",
+      "pass": true,
+      "got": "A",
+      "expected": "A"
+    },
+    {
+      "name": "bus_numeric::MD::FALSE::0::B",
+      "pass": true,
+      "got": "B",
+      "expected": "B"
+    },
+    {
+      "name": "bus_numeric::MD::FALSE::0::te",
+      "pass": true,
+      "got": -1,
+      "expected": -1
+    },
+    {
+      "name": "bus_numeric::MD::FALSE::0::se",
+      "pass": true,
+      "got": 0.70789201938651,
+      "expected": 0.70789201938651
+    },
+    {
+      "name": "bus_numeric::MD::FALSE::1::A",
+      "pass": true,
+      "got": "B",
+      "expected": "B"
+    },
+    {
+      "name": "bus_numeric::MD::FALSE::1::B",
+      "pass": true,
+      "got": "C",
+      "expected": "C"
+    },
+    {
+      "name": "bus_numeric::MD::FALSE::1::te",
+      "pass": true,
+      "got": -1.2000000000000002,
+      "expected": -1.2000000000000002
+    },
+    {
+      "name": "bus_numeric::MD::FALSE::1::se",
+      "pass": true,
+      "got": 0.486679712806218,
+      "expected": 0.486679712806218
+    },
+    {
+      "name": "bus_numeric::MD::FALSE::2::A",
+      "pass": true,
+      "got": "A",
+      "expected": "A"
+    },
+    {
+      "name": "bus_numeric::MD::FALSE::2::B",
+      "pass": true,
+      "got": "C",
+      "expected": "C"
+    },
+    {
+      "name": "bus_numeric::MD::FALSE::2::te",
+      "pass": true,
+      "got": 2.5999999999999996,
+      "expected": 2.5999999999999996
+    },
+    {
+      "name": "bus_numeric::MD::FALSE::2::se",
+      "pass": true,
+      "got": 0.8369525138796768,
+      "expected": 0.8369525138796768
+    },
+    {
+      "name": "bus_numeric::SMD::FALSE::count",
+      "pass": true,
+      "got": 3,
+      "expected": 3
+    },
+    {
+      "name": "bus_numeric::SMD::FALSE::0::A",
+      "pass": true,
+      "got": "A",
+      "expected": "A"
+    },
+    {
+      "name": "bus_numeric::SMD::FALSE::0::B",
+      "pass": true,
+      "got": "B",
+      "expected": "B"
+    },
+    {
+      "name": "bus_numeric::SMD::FALSE::0::te",
+      "pass": true,
+      "got": -0.6378907025487027,
+      "expected": -0.6378907025487033
+    },
+    {
+      "name": "bus_numeric::SMD::FALSE::0::se",
+      "pass": true,
+      "got": 0.4980751870414232,
+      "expected": 0.4980751870414232
+    },
+    {
+      "name": "bus_numeric::SMD::FALSE::1::A",
+      "pass": true,
+      "got": "B",
+      "expected": "B"
+    },
+    {
+      "name": "bus_numeric::SMD::FALSE::1::B",
+      "pass": true,
+      "got": "C",
+      "expected": "C"
+    },
+    {
+      "name": "bus_numeric::SMD::FALSE::1::te",
+      "pass": true,
+      "got": -1.2223373096039059,
+      "expected": -1.2223373096039067
+    },
+    {
+      "name": "bus_numeric::SMD::FALSE::1::se",
+      "pass": true,
+      "got": 0.5355385237857357,
+      "expected": 0.5355385237857359
+    },
+    {
+      "name": "bus_numeric::SMD::FALSE::2::A",
+      "pass": true,
+      "got": "A",
+      "expected": "A"
+    },
+    {
+      "name": "bus_numeric::SMD::FALSE::2::B",
+      "pass": true,
+      "got": "C",
+      "expected": "C"
+    },
+    {
+      "name": "bus_numeric::SMD::FALSE::2::te",
+      "pass": true,
+      "got": 1.2132084557170226,
+      "expected": 1.2132084557170313
+    },
+    {
+      "name": "bus_numeric::SMD::FALSE::2::se",
+      "pass": true,
+      "got": 0.44552915198688503,
+      "expected": 0.44552915198688553
+    },
+    {
+      "name": "bus_numeric::OR::TRUE::count",
+      "pass": true,
+      "got": 3,
+      "expected": 3
+    },
+    {
+      "name": "bus_numeric::OR::TRUE::0::A",
+      "pass": true,
+      "got": "A",
+      "expected": "A"
+    },
+    {
+      "name": "bus_numeric::OR::TRUE::0::B",
+      "pass": true,
+      "got": "B",
+      "expected": "B"
+    },
+    {
+      "name": "bus_numeric::OR::TRUE::0::te",
+      "pass": true,
+      "got": -2.632542648594065,
+      "expected": -2.632542648594065
+    },
+    {
+      "name": "bus_numeric::OR::TRUE::0::se",
+      "pass": true,
+      "got": 1.5879821985349627,
+      "expected": 1.5879821985349627
+    },
+    {
+      "name": "bus_numeric::OR::TRUE::1::A",
+      "pass": true,
+      "got": "B",
+      "expected": "B"
+    },
+    {
+      "name": "bus_numeric::OR::TRUE::1::B",
+      "pass": true,
+      "got": "C",
+      "expected": "C"
+    },
+    {
+      "name": "bus_numeric::OR::TRUE::1::te",
+      "pass": true,
+      "got": -2.340325420976893,
+      "expected": -2.3403254209768924
+    },
+    {
+      "name": "bus_numeric::OR::TRUE::1::se",
+      "pass": true,
+      "got": 1.584109121683765,
+      "expected": 1.584109121683765
+    },
+    {
+      "name": "bus_numeric::OR::TRUE::2::A",
+      "pass": true,
+      "got": "A",
+      "expected": "A"
+    },
+    {
+      "name": "bus_numeric::OR::TRUE::2::B",
+      "pass": true,
+      "got": "C",
+      "expected": "C"
+    },
+    {
+      "name": "bus_numeric::OR::TRUE::2::te",
+      "pass": true,
+      "got": 1.960835799271989,
+      "expected": 1.9608357992719891
+    },
+    {
+      "name": "bus_numeric::OR::TRUE::2::se",
+      "pass": true,
+      "got": 1.6060315164930017,
+      "expected": 1.6060315164930017
+    },
+    {
+      "name": "bus_numeric::RR::TRUE::count",
+      "pass": true,
+      "got": 3,
+      "expected": 3
+    },
+    {
+      "name": "bus_numeric::RR::TRUE::0::A",
+      "pass": true,
+      "got": "A",
+      "expected": "A"
+    },
+    {
+      "name": "bus_numeric::RR::TRUE::0::B",
+      "pass": true,
+      "got": "B",
+      "expected": "B"
+    },
+    {
+      "name": "bus_numeric::RR::TRUE::0::te",
+      "pass": true,
+      "got": -2.0918640616783932,
+      "expected": -2.0918640616783932
+    },
+    {
+      "name": "bus_numeric::RR::TRUE::0::se",
+      "pass": true,
+      "got": 1.4181364924121764,
+      "expected": 1.4181364924121764
+    },
+    {
+      "name": "bus_numeric::RR::TRUE::1::A",
+      "pass": true,
+      "got": "B",
+      "expected": "B"
+    },
+    {
+      "name": "bus_numeric::RR::TRUE::1::B",
+      "pass": true,
+      "got": "C",
+      "expected": "C"
+    },
+    {
+      "name": "bus_numeric::RR::TRUE::1::te",
+      "pass": true,
+      "got": -0.46155457475920786,
+      "expected": -0.4615545747592079
+    },
+    {
+      "name": "bus_numeric::RR::TRUE::1::se",
+      "pass": true,
+      "got": 0.26696515928187387,
+      "expected": 0.26696515928187387
+    },
+    {
+      "name": "bus_numeric::RR::TRUE::2::A",
+      "pass": true,
+      "got": "A",
+      "expected": "A"
+    },
+    {
+      "name": "bus_numeric::RR::TRUE::2::B",
+      "pass": true,
+      "got": "C",
+      "expected": "C"
+    },
+    {
+      "name": "bus_numeric::RR::TRUE::2::te",
+      "pass": true,
+      "got": 1.7635885922613588,
+      "expected": 1.7635885922613586
+    },
+    {
+      "name": "bus_numeric::RR::TRUE::2::se",
+      "pass": true,
+      "got": 1.4984118576806895,
+      "expected": 1.4984118576806895
+    },
+    {
+      "name": "bus_numeric::MD::TRUE::count",
+      "pass": true,
+      "got": 3,
+      "expected": 3
+    },
+    {
+      "name": "bus_numeric::MD::TRUE::0::A",
+      "pass": true,
+      "got": "A",
+      "expected": "A"
+    },
+    {
+      "name": "bus_numeric::MD::TRUE::0::B",
+      "pass": true,
+      "got": "B",
+      "expected": "B"
+    },
+    {
+      "name": "bus_numeric::MD::TRUE::0::te",
+      "pass": true,
+      "got": -1,
+      "expected": -1
+    },
+    {
+      "name": "bus_numeric::MD::TRUE::0::se",
+      "pass": true,
+      "got": 0.70789201938651,
+      "expected": 0.70789201938651
+    },
+    {
+      "name": "bus_numeric::MD::TRUE::1::A",
+      "pass": true,
+      "got": "B",
+      "expected": "B"
+    },
+    {
+      "name": "bus_numeric::MD::TRUE::1::B",
+      "pass": true,
+      "got": "C",
+      "expected": "C"
+    },
+    {
+      "name": "bus_numeric::MD::TRUE::1::te",
+      "pass": true,
+      "got": -1.2000000000000002,
+      "expected": -1.2000000000000002
+    },
+    {
+      "name": "bus_numeric::MD::TRUE::1::se",
+      "pass": true,
+      "got": 0.486679712806218,
+      "expected": 0.486679712806218
+    },
+    {
+      "name": "bus_numeric::MD::TRUE::2::A",
+      "pass": true,
+      "got": "A",
+      "expected": "A"
+    },
+    {
+      "name": "bus_numeric::MD::TRUE::2::B",
+      "pass": true,
+      "got": "C",
+      "expected": "C"
+    },
+    {
+      "name": "bus_numeric::MD::TRUE::2::te",
+      "pass": true,
+      "got": 2.5999999999999996,
+      "expected": 2.5999999999999996
+    },
+    {
+      "name": "bus_numeric::MD::TRUE::2::se",
+      "pass": true,
+      "got": 0.8369525138796768,
+      "expected": 0.8369525138796768
+    },
+    {
+      "name": "bus_numeric::SMD::TRUE::count",
+      "pass": true,
+      "got": 3,
+      "expected": 3
+    },
+    {
+      "name": "bus_numeric::SMD::TRUE::0::A",
+      "pass": true,
+      "got": "A",
+      "expected": "A"
+    },
+    {
+      "name": "bus_numeric::SMD::TRUE::0::B",
+      "pass": true,
+      "got": "B",
+      "expected": "B"
+    },
+    {
+      "name": "bus_numeric::SMD::TRUE::0::te",
+      "pass": true,
+      "got": -0.6378907025487027,
+      "expected": -0.6378907025487033
+    },
+    {
+      "name": "bus_numeric::SMD::TRUE::0::se",
+      "pass": true,
+      "got": 0.4980751870414232,
+      "expected": 0.4980751870414232
+    },
+    {
+      "name": "bus_numeric::SMD::TRUE::1::A",
+      "pass": true,
+      "got": "B",
+      "expected": "B"
+    },
+    {
+      "name": "bus_numeric::SMD::TRUE::1::B",
+      "pass": true,
+      "got": "C",
+      "expected": "C"
+    },
+    {
+      "name": "bus_numeric::SMD::TRUE::1::te",
+      "pass": true,
+      "got": -1.2223373096039059,
+      "expected": -1.2223373096039067
+    },
+    {
+      "name": "bus_numeric::SMD::TRUE::1::se",
+      "pass": true,
+      "got": 0.5355385237857357,
+      "expected": 0.5355385237857359
+    },
+    {
+      "name": "bus_numeric::SMD::TRUE::2::A",
+      "pass": true,
+      "got": "A",
+      "expected": "A"
+    },
+    {
+      "name": "bus_numeric::SMD::TRUE::2::B",
+      "pass": true,
+      "got": "C",
+      "expected": "C"
+    },
+    {
+      "name": "bus_numeric::SMD::TRUE::2::te",
+      "pass": true,
+      "got": 1.2132084557170226,
+      "expected": 1.2132084557170313
+    },
+    {
+      "name": "bus_numeric::SMD::TRUE::2::se",
+      "pass": true,
+      "got": 0.44552915198688503,
+      "expected": 0.44552915198688553
+    },
+    {
+      "name": "bus::empty::cleared",
+      "pass": true,
+      "got": {
+        "status": "refused",
+        "reason": "Shared network bus is empty."
+      },
+      "expected": "cleared refusal"
+    },
+    {
+      "name": "bus::HR::cleared",
+      "pass": true,
+      "got": {
+        "status": "refused",
+        "reason": "The shared network has no supported contrasts."
+      },
+      "expected": "cleared refusal"
+    },
+    {
+      "name": "bus::RD::cleared",
+      "pass": true,
+      "got": {
+        "status": "refused",
+        "reason": "The shared network has no supported contrasts."
+      },
+      "expected": "cleared refusal"
+    },
+    {
+      "name": "bus::OR::twoarm",
+      "pass": true,
+      "got": {
+        "error": null,
+        "state": {
+          "trts": [
+            "A",
+            "B",
+            "C"
+          ],
+          "Q": 0.00004257768482298792,
+          "df": 1,
+          "estimates": {
+            "A": {
+              "est": 0,
+              "se": 0
+            },
+            "B": {
+              "est": 0.10496334794340381,
+              "se": 0.3766543104749952
+            },
+            "C": {
+              "est": 0.20992669588680762,
+              "se": 0.37453360981804207
+            }
+          },
+          "estimatesRandom": {
+            "A": {
+              "est": 0,
+              "se": 0
+            },
+            "B": {
+              "est": 0.10496334794340381,
+              "se": 0.3766543104749952
+            },
+            "C": {
+              "est": 0.20992669588680762,
+              "se": 0.37453360981804207
+            }
+          },
+          "Qrandom": 0.00004257768482298792,
+          "model": "FE",
+          "tau2": 0,
+          "nodeSplit": [
+            {
+              "comparison": "A vs B",
+              "direct": {
+                "mean": -0.1067109547556977,
+                "se": 0.4621679637935991
+              },
+              "indirect": {
+                "mean": -0.10150694634183643,
+                "se": 0.649965151966233
+              },
+              "diff": -0.005204008413861261,
+              "seDiff": 0.7975298900527866,
+              "z": -0.006525157838932933,
+              "p": 0.9947937142488055
+            },
+            {
+              "comparison": "B vs C",
+              "direct": {
+                "mean": -0.1067109547556977,
+                "se": 0.4621679637935991
+              },
+              "indirect": {
+                "mean": -0.10150694634183643,
+                "se": 0.6499651519662328
+              },
+              "diff": -0.005204008413861261,
+              "seDiff": 0.7975298900527864,
+              "z": -0.006525157838932935,
+              "p": 0.9947937142488055
+            },
+            {
+              "comparison": "A vs C",
+              "direct": {
+                "mean": -0.20821790109753413,
+                "se": 0.45700708092256814
+              },
+              "indirect": {
+                "mean": -0.21342190951139542,
+                "se": 0.6536042024912654
+              },
+              "diff": 0.0052040084138612885,
+              "seDiff": 0.7975298900527866,
+              "z": 0.0065251578389329675,
+              "p": 0.9947937142488055
+            }
+          ],
+          "dbt": {
+            "Q": 0.00004257768482298837,
+            "df": 1,
+            "p": 0.9947937142488055
+          }
+        }
+      },
+      "expected": "three computed splits"
+    },
+    {
+      "name": "bus::OR::multiarm_refusal",
+      "pass": true,
+      "got": {
+        "error": null,
+        "state": {
+          "status": "refused",
+          "reason": "Multi-arm studies are unsupported: correlated contrasts require study covariance."
+        }
+      },
+      "expected": "explicit refusal"
+    },
+    {
+      "name": "bus::RR::twoarm",
+      "pass": true,
+      "got": {
+        "error": null,
+        "state": {
+          "trts": [
+            "A",
+            "B",
+            "C"
+          ],
+          "Q": 0.00009913760587081505,
+          "df": 1,
+          "estimates": {
+            "A": {
+              "est": 0,
+              "se": 0
+            },
+            "B": {
+              "est": 0.07803386792597994,
+              "se": 0.28204786447689645
+            },
+            "C": {
+              "est": 0.15606773585195988,
+              "se": 0.27873135975539326
+            }
+          },
+          "estimatesRandom": {
+            "A": {
+              "est": 0,
+              "se": 0
+            },
+            "B": {
+              "est": 0.07803386792597994,
+              "se": 0.28204786447689645
+            },
+            "C": {
+              "est": 0.15606773585195988,
+              "se": 0.27873135975539326
+            }
+          },
+          "Qrandom": 0.00009913760587081505,
+          "model": "FE",
+          "tau2": 0,
+          "nodeSplit": [
+            {
+              "comparison": "A vs B",
+              "direct": {
+                "mean": -0.0800427076735365,
+                "se": 0.3467800603500874
+              },
+              "indirect": {
+                "mean": -0.07410797215372197,
+                "se": 0.4847868758725993
+              },
+              "diff": -0.005934735519814521,
+              "seDiff": 0.5960492641340356,
+              "z": -0.00995678692504846,
+              "p": 0.9920557646995949
+            },
+            {
+              "comparison": "B vs C",
+              "direct": {
+                "mean": -0.0800427076735365,
+                "se": 0.3467800603500874
+              },
+              "indirect": {
+                "mean": -0.07410797215372206,
+                "se": 0.4847868758725993
+              },
+              "diff": -0.005934735519814438,
+              "seDiff": 0.5960492641340356,
+              "z": -0.00995678692504832,
+              "p": 0.992055764699595
+            },
+            {
+              "comparison": "A vs C",
+              "direct": {
+                "mean": -0.1541506798272585,
+                "se": 0.338765264987284
+              },
+              "indirect": {
+                "mean": -0.160085415347073,
+                "se": 0.490421064507654
+              },
+              "diff": 0.0059347355198144935,
+              "seDiff": 0.5960492641340356,
+              "z": 0.009956786925048413,
+              "p": 0.9920557646995949
+            }
+          ],
+          "dbt": {
+            "Q": 0.00009913760587081505,
+            "df": 1,
+            "p": 0.9920557646995949
+          }
+        }
+      },
+      "expected": "three computed splits"
+    },
+    {
+      "name": "bus::RR::multiarm_refusal",
+      "pass": true,
+      "got": {
+        "error": null,
+        "state": {
+          "status": "refused",
+          "reason": "Multi-arm studies are unsupported: correlated contrasts require study covariance."
+        }
+      },
+      "expected": "explicit refusal"
+    },
+    {
+      "name": "bus::MD::twoarm",
+      "pass": true,
+      "got": {
+        "error": null,
+        "state": {
+          "trts": [
+            "A",
+            "B",
+            "C"
+          ],
+          "Q": 0,
+          "df": 1,
+          "estimates": {
+            "A": {
+              "est": 0,
+              "se": 0
+            },
+            "B": {
+              "est": 1,
+              "se": 0.32659863237109044
+            },
+            "C": {
+              "est": 2,
+              "se": 0.32659863237109044
+            }
+          },
+          "estimatesRandom": {
+            "A": {
+              "est": 0,
+              "se": 0
+            },
+            "B": {
+              "est": 1,
+              "se": 0.32659863237109044
+            },
+            "C": {
+              "est": 2,
+              "se": 0.32659863237109044
+            }
+          },
+          "Qrandom": 0,
+          "model": "FE",
+          "tau2": 0,
+          "nodeSplit": [
+            {
+              "comparison": "A vs B",
+              "direct": {
+                "mean": -1,
+                "se": 0.4
+              },
+              "indirect": {
+                "mean": -1,
+                "se": 0.5656854249492381
+              },
+              "diff": 0,
+              "seDiff": 0.692820323027551,
+              "z": 0,
+              "p": 1
+            },
+            {
+              "comparison": "B vs C",
+              "direct": {
+                "mean": -1,
+                "se": 0.4
+              },
+              "indirect": {
+                "mean": -1,
+                "se": 0.5656854249492381
+              },
+              "diff": 0,
+              "seDiff": 0.692820323027551,
+              "z": 0,
+              "p": 1
+            },
+            {
+              "comparison": "A vs C",
+              "direct": {
+                "mean": -2,
+                "se": 0.4
+              },
+              "indirect": {
+                "mean": -2,
+                "se": 0.5656854249492381
+              },
+              "diff": 0,
+              "seDiff": 0.692820323027551,
+              "z": 0,
+              "p": 1
+            }
+          ],
+          "dbt": {
+            "Q": 0,
+            "df": 1,
+            "p": 1
+          }
+        }
+      },
+      "expected": "three computed splits"
+    },
+    {
+      "name": "bus::MD::multiarm_refusal",
+      "pass": true,
+      "got": {
+        "error": null,
+        "state": {
+          "status": "refused",
+          "reason": "Multi-arm studies are unsupported: correlated contrasts require study covariance."
+        }
+      },
+      "expected": "explicit refusal"
+    },
+    {
+      "name": "bus::SMD::twoarm",
+      "pass": true,
+      "got": {
+        "error": null,
+        "state": {
+          "trts": [
+            "A",
+            "B",
+            "C"
+          ],
+          "Q": 4.23851004158815e-31,
+          "df": 1,
+          "estimates": {
+            "A": {
+              "est": 0,
+              "se": 0
+            },
+            "B": {
+              "est": 0.49616204371027983,
+              "se": 0.16698999039916035
+            },
+            "C": {
+              "est": 0.9923240874205597,
+              "se": 0.17053111105560487
+            }
+          },
+          "estimatesRandom": {
+            "A": {
+              "est": 0,
+              "se": 0
+            },
+            "B": {
+              "est": 0.49616204371027983,
+              "se": 0.16698999039916035
+            },
+            "C": {
+              "est": 0.9923240874205597,
+              "se": 0.17053111105560487
+            }
+          },
+          "Qrandom": 4.23851004158815e-31,
+          "model": "FE",
+          "tau2": 0,
+          "nodeSplit": [
+            {
+              "comparison": "A vs B",
+              "direct": {
+                "mean": -0.49616204371027994,
+                "se": 0.20305389399884408
+              },
+              "indirect": {
+                "mean": -0.4961620437102794,
+                "se": 0.29352073068263684
+              },
+              "diff": -5.551115123125783e-16,
+              "seDiff": 0.35691077765817447,
+              "z": -1.5553229183911821e-15,
+              "p": 0.9999999999999988
+            },
+            {
+              "comparison": "B vs C",
+              "direct": {
+                "mean": -0.49616204371027994,
+                "se": 0.20305389399884408
+              },
+              "indirect": {
+                "mean": -0.49616204371028005,
+                "se": 0.2935207306826369
+              },
+              "diff": 1.1102230246251565e-16,
+              "seDiff": 0.35691077765817447,
+              "z": 3.110645836782364e-16,
+              "p": 0.9999999999999998
+            },
+            {
+              "comparison": "A vs C",
+              "direct": {
+                "mean": -0.9923240874205597,
+                "se": 0.21195172910918947
+              },
+              "indirect": {
+                "mean": -0.9923240874205599,
+                "se": 0.2871615707858341
+              },
+              "diff": 2.220446049250313e-16,
+              "seDiff": 0.35691077765817447,
+              "z": 6.221291673564728e-16,
+              "p": 0.9999999999999996
+            }
+          ],
+          "dbt": {
+            "Q": 5.978989770634847e-31,
+            "df": 1,
+            "p": 0.9999999999999993
+          }
+        }
+      },
+      "expected": "three computed splits"
+    },
+    {
+      "name": "bus::SMD::multiarm_refusal",
+      "pass": true,
+      "got": {
+        "error": null,
+        "state": {
+          "status": "refused",
+          "reason": "Multi-arm studies are unsupported: correlated contrasts require study covariance."
+        }
+      },
+      "expected": "explicit refusal"
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+During startup - Warning messages:
+1: Setting LC_COLLATE=C.UTF-8 failed 
+2: Setting LC_CTYPE=C.UTF-8 failed 
+3: Setting LC_MONETARY=C.UTF-8 failed 
+4: Setting LC_TIME=C.UTF-8 failed 
+R version 4.6.0 (2026-04-24 ucrt) 
+.libPaths():
+[1] "<R_LIBS>"
+[2] "<R_LIBS_USER>"  
+[3] "<R_HOME>/library"         
+netmeta 3.7.0 
+meta 8.5.0 
+metadat 1.6.0 
+metafor 5.2.1 
+jsonlite 2.0.0 
+1 cached netmeta::Baker2009::exac::OR::full::FE 
+2 cached netmeta::Baker2009::exac::OR::full::DL 
+3 cached netmeta::Baker2009::exac::OR::full::PM 
+10 cached netmeta::Baker2009::exac::RR::two-arm-only::FE 
+11 cached netmeta::Baker2009::exac::RR::two-arm-only::DL 
+12 netmeta::Baker2009::exac::RR::two-arm-only::PM ok  
+19 cached netmeta::Dogliotti2014::stroke::RR::full::FE 
+20 cached netmeta::Dogliotti2014::stroke::RR::full::DL 
+21 cached netmeta::Dogliotti2014::stroke::RR::full::PM 
+28 cached netmeta::Dong2013::death::OR::two-arm-only::FE 
+29 cached netmeta::Dong2013::death::OR::two-arm-only::DL 
+30 netmeta::Dong2013::death::OR::two-arm-only::PM ok  
+37 cached netmeta::Franchini2012::change::MD::full::FE 
+38 cached netmeta::Franchini2012::change::MD::full::DL 
+39 cached netmeta::Franchini2012::change::MD::full::PM 
+46 cached netmeta::Franchini2012::change::SMD::two-arm-only::FE 
+47 cached netmeta::Franchini2012::change::SMD::two-arm-only::DL 
+48 netmeta::Franchini2012::change::SMD::two-arm-only::PM ok  
+55 cached netmeta::Gurusamy2011::death::RR::full::FE 
+56 cached netmeta::Gurusamy2011::death::RR::full::DL 
+57 cached netmeta::Gurusamy2011::death::RR::full::PM 
+64 cached netmeta::Linde2015::resp::OR::two-arm-only::FE 
+65 cached netmeta::Linde2015::resp::OR::two-arm-only::DL 
+66 netmeta::Linde2015::resp::OR::two-arm-only::PM ok  
+73 cached netmeta::Linde2015::remi::OR::full::FE 
+74 cached netmeta::Linde2015::remi::OR::full::DL 
+75 cached netmeta::Linde2015::remi::OR::full::PM 
+82 cached netmeta::Linde2015::remi::RR::two-arm-only::FE 
+83 cached netmeta::Linde2015::remi::RR::two-arm-only::DL 
+84 netmeta::Linde2015::remi::RR::two-arm-only::PM ok  
+91 cached netmeta::Linde2015::loss::RR::full::FE 
+92 cached netmeta::Linde2015::loss::RR::full::DL 
+93 cached netmeta::Linde2015::loss::RR::full::PM 
+100 cached netmeta::Linde2015::loss.ae::OR::two-arm-only::FE 
+101 cached netmeta::Linde2015::loss.ae::OR::two-arm-only::DL 
+102 netmeta::Linde2015::loss.ae::OR::two-arm-only::PM ok  
+109 cached netmeta::Linde2015::ae::OR::full::FE 
+110 cached netmeta::Linde2015::ae::OR::full::DL 
+111 cached netmeta::Linde2015::ae::OR::full::PM 
+118 cached netmeta::Linde2015::ae::RR::two-arm-only::FE 
+119 cached netmeta::Linde2015::ae::RR::two-arm-only::DL 
+120 netmeta::Linde2015::ae::RR::two-arm-only::PM ok  
+127 cached netmeta::Senn2013::stored::MD::full::FE 
+128 cached netmeta::Senn2013::stored::MD::full::DL 
+129 cached netmeta::Senn2013::stored::MD::full::PM 
+136 cached netmeta::Stowe2010::change::MD::two-arm-only::FE 
+137 cached netmeta::Stowe2010::change::MD::two-arm-only::DL 
+138 netmeta::Stowe2010::change::MD::two-arm-only::PM ok  
+145 cached netmeta::Woods2010::r::OR::full::FE 
+146 cached netmeta::Woods2010::r::OR::full::DL 
+147 cached netmeta::Woods2010::r::OR::full::PM 
+154 cached netmeta::Woods2010::r::RR::two-arm-only::FE 
+155 cached netmeta::Woods2010::r::RR::two-arm-only::DL 
+156 cached netmeta::Woods2010::r::RR::two-arm-only::PM 
+163 cached netmeta::parkinson::change::MD::full::FE 
+164 cached netmeta::parkinson::change::MD::full::DL 
+165 cached netmeta::parkinson::change::MD::full::PM 
+172 cached netmeta::parkinson::change::SMD::two-arm-only::FE 
+173 cached netmeta::parkinson::change::SMD::two-arm-only::DL 
+174 netmeta::parkinson::change::SMD::two-arm-only::PM ok  
+181 cached netmeta::smokingcessation::cessation::RR::full::FE 
+182 cached netmeta::smokingcessation::cessation::RR::full::DL 
+183 cached netmeta::smokingcessation::cessation::RR::full::PM 
+190 cached metadat::dat.axfors2021::event::OR::two-arm-only::FE 
+191 cached metadat::dat.axfors2021::event::OR::two-arm-only::DL 
+192 metadat::dat.axfors2021::event::OR::two-arm-only::PM ok  
+199 cached metadat::dat.baker2009::exac::OR::full::FE 
+200 cached metadat::dat.baker2009::exac::OR::full::DL 
+201 cached metadat::dat.baker2009::exac::OR::full::PM 
+208 cached metadat::dat.baker2009::exac::RR::two-arm-only::FE 
+209 metadat::dat.baker2009::exac::RR::two-arm-only::DL ok  
+210 metadat::dat.baker2009::exac::RR::two-arm-only::PM ok  
+217 metadat::dat.chiarito2020::stroke::OR::full::FE ok  
+218 metadat::dat.chiarito2020::stroke::OR::full::DL ok  
+219 metadat::dat.chiarito2020::stroke::OR::full::PM ok  
+226 metadat::dat.chiarito2020::death::RR::full::FE ok  
+227 metadat::dat.chiarito2020::death::RR::full::DL ok  
+228 metadat::dat.chiarito2020::death::RR::full::PM ok  
+235 metadat::dat.collins1985a::b::OR::full::FE ok  
+236 metadat::dat.collins1985a::b::OR::full::DL ok  
+237 metadat::dat.collins1985a::b::OR::full::PM ok  
+244 metadat::dat.collins1985a::o::RR::full::FE ok  
+245 metadat::dat.collins1985a::o::RR::full::DL ok  
+246 metadat::dat.collins1985a::o::RR::full::PM ok  
+253 metadat::dat.dagostino1998::rnic1::MD::full::FE ok  
+254 metadat::dat.dagostino1998::rnic1::MD::full::DL ok  
+255 metadat::dat.dagostino1998::rnic1::MD::full::PM ok  
+262 metadat::dat.dagostino1998::rnic2::SMD::full::FE ok  
+263 metadat::dat.dagostino1998::rnic2::SMD::full::DL ok  
+264 metadat::dat.dagostino1998::rnic2::SMD::full::PM ok  
+271 metadat::dat.dagostino1998::rngoal2::OR::full::FE ok  
+272 metadat::dat.dagostino1998::rngoal2::OR::full::DL ok  
+273 metadat::dat.dagostino1998::rngoal2::OR::full::PM ok  
+280 metadat::dat.dagostino1998::snic1::SMD::full::FE ok  
+281 metadat::dat.dagostino1998::snic1::SMD::full::DL ok  
+282 metadat::dat.dagostino1998::snic1::SMD::full::PM ok  
+289 metadat::dat.dagostino1998::sngoal1::OR::full::FE ok  
+290 metadat::dat.dagostino1998::sngoal1::OR::full::DL ok  
+291 metadat::dat.dagostino1998::sngoal1::OR::full::PM ok  
+298 metadat::dat.dagostino1998::sngoal2::RR::full::FE ok  
+299 metadat::dat.dagostino1998::sngoal2::RR::full::DL ok  
+300 metadat::dat.dagostino1998::sngoal2::RR::full::PM ok  
+307 metadat::dat.dogliotti2014::stroke::RR::full::FE refused Multi-arm studies are unsupported: correlated contrasts require study covariance. 
+308 metadat::dat.dogliotti2014::stroke::RR::full::DL refused Multi-arm studies are unsupported: correlated contrasts require study covariance. 
+309 metadat::dat.dogliotti2014::stroke::RR::full::PM refused Multi-arm studies are unsupported: correlated contrasts require study covariance. 
+316 metadat::dat.dong2013::death::OR::two-arm-only::FE ok  
+317 metadat::dat.dong2013::death::OR::two-arm-only::DL ok  
+318 metadat::dat.dong2013::death::OR::two-arm-only::PM ok  
+325 metadat::dat.franchini2012::change::MD::full::FE refused Multi-arm studies are unsupported: correlated contrasts require study covariance. 
+326 metadat::dat.franchini2012::change::MD::full::DL refused Multi-arm studies are unsupported: correlated contrasts require study covariance. 
+327 metadat::dat.franchini2012::change::MD::full::PM refused Multi-arm studies are unsupported: correlated contrasts require study covariance. 
+334 metadat::dat.franchini2012::change::SMD::two-arm-only::FE ok  
+335 metadat::dat.franchini2012::change::SMD::two-arm-only::DL ok  
+336 metadat::dat.franchini2012::change::SMD::two-arm-only::PM ok  
+343 metadat::dat.gurusamy2011::death::RR::full::FE refused Multi-arm studies are unsupported: correlated contrasts require study covariance. 
+344 metadat::dat.gurusamy2011::death::RR::full::DL refused Multi-arm studies are unsupported: correlated contrasts require study covariance. 
+345 metadat::dat.gurusamy2011::death::RR::full::PM refused Multi-arm studies are unsupported: correlated contrasts require study covariance. 
+352 metadat::dat.hart1999::event::RR::full::FE ok  
+353 metadat::dat.hart1999::event::RR::full::DL ok  
+354 metadat::dat.hart1999::event::RR::full::PM ok  
+361 metadat::dat.hartmannboyce2018::event::RR::full::FE refused Multi-arm studies are unsupported: correlated contrasts require study covariance. 
+362 metadat::dat.hartmannboyce2018::event::RR::full::DL refused Multi-arm studies are unsupported: correlated contrasts require study covariance. 
+363 metadat::dat.hartmannboyce2018::event::RR::full::PM refused Multi-arm studies are unsupported: correlated contrasts require study covariance. 
+370 metadat::dat.hasselblad1998::xi::OR::two-arm-only::FE ok  
+371 metadat::dat.hasselblad1998::xi::OR::two-arm-only::DL ok  
+372 metadat::dat.hasselblad1998::xi::OR::two-arm-only::PM ok  
+379 metadat::dat.laopaiboon2015::event::OR::full::FE ok  
+380 metadat::dat.laopaiboon2015::event::OR::full::DL ok  
+381 metadat::dat.laopaiboon2015::event::OR::full::PM ok  
+388 metadat::dat.linde2005::event::RR::full::FE ok  
+389 metadat::dat.linde2005::event::RR::full::DL ok  
+390 metadat::dat.linde2005::event::RR::full::PM ok  
+397 metadat::dat.linde2015::resp::RR::full::FE refused Multi-arm studies are unsupported: correlated contrasts require study covariance. 
+398 metadat::dat.linde2015::resp::RR::full::DL refused Multi-arm studies are unsupported: correlated contrasts require study covariance. 
+399 metadat::dat.linde2015::resp::RR::full::PM refused Multi-arm studies are unsupported: correlated contrasts require study covariance. 
+406 metadat::dat.linde2015::remi::OR::two-arm-only::FE ok  
+407 metadat::dat.linde2015::remi::OR::two-arm-only::DL ok  
+408 metadat::dat.linde2015::remi::OR::two-arm-only::PM ok  
+415 metadat::dat.linde2015::loss::OR::full::FE refused Multi-arm studies are unsupported: correlated contrasts require study covariance. 
+416 metadat::dat.linde2015::loss::OR::full::DL refused Multi-arm studies are unsupported: correlated contrasts require study covariance. 
+417 metadat::dat.linde2015::loss::OR::full::PM refused Multi-arm studies are unsupported: correlated contrasts require study covariance. 
+424 metadat::dat.linde2015::loss::RR::two-arm-only::FE ok  
+425 metadat::dat.linde2015::loss::RR::two-arm-only::DL ok  
+426 metadat::dat.linde2015::loss::RR::two-arm-only::PM ok  
+433 metadat::dat.linde2015::loss.ae::RR::full::FE refused Multi-arm studies are unsupported: correlated contrasts require study covariance. 
+434 metadat::dat.linde2015::loss.ae::RR::full::DL refused Multi-arm studies are unsupported: correlated contrasts require study covariance. 
+435 metadat::dat.linde2015::loss.ae::RR::full::PM refused Multi-arm studies are unsupported: correlated contrasts require study covariance. 
+442 metadat::dat.linde2015::ae::OR::two-arm-only::FE ok  
+443 metadat::dat.linde2015::ae::OR::two-arm-only::DL ok  
+444 metadat::dat.linde2015::ae::OR::two-arm-only::PM ok  
+451 metadat::dat.linde2016::resp::OR::full::FE refused Multi-arm studies are unsupported: correlated contrasts require study covariance. 
+452 metadat::dat.linde2016::resp::OR::full::DL refused Multi-arm studies are unsupported: correlated contrasts require study covariance. 
+453 metadat::dat.linde2016::resp::OR::full::PM refused Multi-arm studies are unsupported: correlated contrasts require study covariance. 
+460 metadat::dat.linde2016::resp::RR::two-arm-only::FE refused The treatment network is disconnected. 
+461 metadat::dat.linde2016::resp::RR::two-arm-only::DL refused The treatment network is disconnected. 
+462 metadat::dat.linde2016::resp::RR::two-arm-only::PM refused The treatment network is disconnected. 
+469 metadat::dat.nissen2007::infarction::OR::full::FE refused The treatment network is disconnected. 
+470 metadat::dat.nissen2007::infarction::OR::full::DL refused The treatment network is disconnected. 
+471 metadat::dat.nissen2007::infarction::OR::full::PM refused The treatment network is disconnected. 
+478 metadat::dat.nissen2007::death::RR::full::FE refused The treatment network is disconnected. 
+479 metadat::dat.nissen2007::death::RR::full::DL refused The treatment network is disconnected. 
+480 metadat::dat.nissen2007::death::RR::full::PM refused The treatment network is disconnected. 
+487 metadat::dat.pagliaro1992::xi::RR::full::FE refused Multi-arm studies are unsupported: correlated contrasts require study covariance. 
+488 metadat::dat.pagliaro1992::xi::RR::full::DL refused Multi-arm studies are unsupported: correlated contrasts require study covariance. 
+489 metadat::dat.pagliaro1992::xi::RR::full::PM refused Multi-arm studies are unsupported: correlated contrasts require study covariance. 
+496 metadat::dat.senn2013::change::MD::two-arm-only::FE ok  
+497 metadat::dat.senn2013::change::MD::two-arm-only::DL ok  
+498 metadat::dat.senn2013::change::MD::two-arm-only::PM ok  
+505 metadat::dat.stowe2010::change::MD::full::FE refused Multi-arm studies are unsupported: correlated contrasts require study covariance. 
+506 metadat::dat.stowe2010::change::MD::full::DL refused Multi-arm studies are unsupported: correlated contrasts require study covariance. 
+507 metadat::dat.stowe2010::change::MD::full::PM refused Multi-arm studies are unsupported: correlated contrasts require study covariance. 
+514 metadat::dat.stowe2010::change::SMD::two-arm-only::FE ok  
+515 metadat::dat.stowe2010::change::SMD::two-arm-only::DL ok  
+516 metadat::dat.stowe2010::change::SMD::two-arm-only::PM ok  
+523 metadat::dat.tian2009::infarcts::OR::full::FE refused The treatment network is disconnected. 
+524 metadat::dat.tian2009::infarcts::OR::full::DL refused The treatment network is disconnected. 
+525 metadat::dat.tian2009::infarcts::OR::full::PM refused The treatment network is disconnected. 
+532 metadat::dat.woods2010::r::OR::two-arm-only::FE refused At least 3 valid contrasts are required. 
+533 metadat::dat.woods2010::r::OR::two-arm-only::DL refused At least 3 valid contrasts are required. 
+534 metadat::dat.woods2010::r::OR::two-arm-only::PM refused At least 3 valid contrasts are required. 
+Reference shard complete 1 3 

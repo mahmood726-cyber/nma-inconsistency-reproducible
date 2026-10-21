@@ -1,0 +1,75 @@
+_S_t_u_d_i_e_s _o_n _P_o_t_a_s_s_i_u_m _S_u_p_p_l_e_m_e_n_t_a_t_i_o_n _t_o _R_e_d_u_c_e _D_i_a_s_t_o_l_i_c _B_l_o_o_d _P_r_e_s_s_u_r_e
+
+_D_e_s_c_r_i_p_t_i_o_n:
+
+     Results from 21 cross-over studies evaluating the effect of
+     potassium supplementation to reduce diastolic blood pressure.
+
+_U_s_a_g_e:
+
+     dat.curtin2002
+     
+_F_o_r_m_a_t:
+
+     The data frame contains the following columns:
+
+       *author*  'character'  first author                                
+       *year*    'character'  year of publication                         
+       *N*       'integer'    total sample size                           
+       *mean*    'numeric'    mean difference in diastolic blood pressure 
+       *SE*      'numeric'    standard error                              
+       *corr*    'numeric'    within-patient correlation                  
+      
+_D_e_t_a_i_l_s:
+
+     Results from 21 cross-over studies evaluating the effect of
+     potassium supplementation to reduce diastolic blood pressure
+     (Curtin et al., 2002, Table II).
+
+     This data set is used as an example in Schwarzer et al. (2015),
+     Chapter 2.
+
+_C_o_n_c_e_p_t_s:
+
+     raw mean differences
+
+_A_u_t_h_o_r(_s):
+
+     Guido Schwarzer, <mailto:guido.schwarzer@uniklinik-freiburg.de>,
+     <https://github.com/guido-s/>
+
+_S_o_u_r_c_e:
+
+     Curtin, F., Altman, D. G., & Elbourne, D. (2002). Meta-analysis
+     combining parallel and cross-over clinical trials. I: Continuous
+     outcomes. _Statistics in Medicine_, *21*(15), 2131-2144.
+     https://doi.org/10.1002/sim.1205
+
+_R_e_f_e_r_e_n_c_e_s:
+
+     Schwarzer, G., Carpenter, J. R., & R<c3><bc>cker, G. (2015).
+     _Meta-analysis with R_. Cham, Switzerland: Springer.
+
+_E_x_a_m_p_l_e_s:
+
+     ### Show first five studies
+     head(dat.curtin2002, 5)
+     
+     ## Not run:
+     
+     ### Load meta package
+     suppressPackageStartupMessages(library(meta))
+     
+     ### Use DerSimonian-Laird estimator (which was the default in meta in the year 2015).
+     ### Furthermore, print meta-analysis results with two digits.
+     oldset <- settings.meta(method.tau = "DL", digits = 2)
+     
+     ### Conduct meta-analysis
+     mg2 <- metagen(mean, SE, studlab = paste(author, year),
+                    data = dat.curtin2002, sm = "MD")
+     mg2
+     
+     ### Use previous settings
+     settings.meta(oldset)
+     ## End(Not run)
+     

@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "Please cite this validation archive."
+title: "Node-splitting and design-by-treatment inconsistency in the browser: validation against the R package netmeta"
+type: software
+authors:
+  - family-names: Ahmad
+    given-names: Mahmood
+version: 1.0.0
+license: MIT
+references:
+  - type: software
+    title: allmeta
+    authors:
+      - family-names: Ahmad
+        given-names: Mahmood
+    url: https://github.com/mahmood726-cyber/allmeta
+    notes: "isDerivedFrom; current source allmeta v1.8.0 (tag commit 1cb3f8409c7af75ed41f7e1811f9c502f900fc79); PR heads #143 0bea27b258fe73a1f7a1dbd90693c5ce7a8eb4b9, #160 dd9f2a863dffc0f34f715442f1698633cfb133a2; historical nma-inconsistency page at source commit 7966530de875d22253f0557c7b447ed9d917685d plus bench/fix.patch; fixes merged in PR #143 (merge commit acdb28371560a797eb256c591edb5969d4675f62)"
+  - type: software
+    title: allmeta
+    authors:
+      - family-names: Ahmad
+        given-names: Mahmood
+    version: "v1.8.0"
+    doi: "10.5281/zenodo.23515177"
+    url: "https://github.com/mahmood726-cyber/allmeta/releases/tag/v1.8.0"
+    notes: "isDerivedFrom; allmeta release v1.8.0 (commit 1cb3f8409c7af75ed41f7e1811f9c502f900fc79); DOI 10.5281/zenodo.23515177"
